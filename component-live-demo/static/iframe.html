@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+
+    <style id="baseStyle">
+
+    </style>
+</head>
+<body>
+<div id="baseRoot"></div>
+<script>
+   function editHTML(template) {
+       document.getElementById('baseRoot').innerHTML=template;
+   }
+   function editStyle(style) {
+       document.getElementById('baseStyle').innerHTML=style;
+   }
+   function evalScript(script) {
+       eval(script);
+   }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/babel-polyfill/dist/polyfill.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vuetify/1.2.9/vuetify.min.js"></script>
+</body>
+</html>
