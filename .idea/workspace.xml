@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c215bf0e-771a-492c-915f-2a2fb948f825" name="Default Changelist" comment="" />
+    <list default="true" id="c215bf0e-771a-492c-915f-2a2fb948f825" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/component-live-demo/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/component-live-demo/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/component-live-demo/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/component-live-demo/src/App.vue" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +64,25 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="1771450154">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="vue" value="814" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="Vue.js" value="814" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FavoritesManager">
     <favorites_list name="mock-project" />
@@ -69,52 +92,22 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/component-live-demo/src/App.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="11" column="64" selection-start-line="11" selection-start-column="64" selection-end-line="11" selection-end-column="64" />
+            <state relative-caret-position="136">
+              <caret line="8" column="44" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#v-flex#0;n#v-layout#0;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#v-flex#0;n#v-layout#0;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#v-flex#0;n#v-layout#0;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#v-card-actions#0;n#div#1;n#div#0;n#v-flex#0;n#v-layout#0;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#strong#0;n#v-card-actions#0;n#div#1;n#div#0;n#v-flex#0;n#v-layout#0;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#iframe#0;n#v-layout#0;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#v-container#0;n#v-content#0;n#v-app#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#v-flex#0;n#v-layout#0;n#v-container#0;n#v-content#0;n#v-app#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#v-flex#0;n#v-layout#0;n#v-container#0;n#v-content#0;n#v-app#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#v-flex#0;n#v-layout#0;n#v-container#0;n#v-content#0;n#v-app#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#v-card-actions#0;n#div#1;n#div#0;n#v-flex#0;n#v-layout#0;n#v-container#0;n#v-content#0;n#v-app#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#strong#0;n#v-card-actions#0;n#div#1;n#div#0;n#v-flex#0;n#v-layout#0;n#v-container#0;n#v-content#0;n#v-app#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#v-layout#0;n#v-container#0;n#v-content#0;n#v-app#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#v-flex#1;n#v-layout#0;n#v-container#0;n#v-content#0;n#v-app#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#v-layout#0;n#v-container#0;n#v-content#0;n#v-app#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#iframe#0;n#v-layout#0;n#v-container#0;n#v-content#0;n#v-app#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#v-layout#0;n#v-container#0;n#v-content#0;n#v-app#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="e#2227#2264#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/component-live-demo/static/iframe.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="28" column="7" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/component-live-demo/src/js/util/api.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="32" selection-start-line="32" selection-end-line="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/component-live-demo/src/js/util/Loader.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="816">
-              <caret line="48" column="1" selection-start-line="48" selection-start-column="1" selection-end-line="48" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/component-live-demo/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -129,6 +122,9 @@
         <option value="JavaScript File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -157,7 +153,6 @@
   </component>
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/component-live-demo/node_modules" />
-    <handled-path value="$PROJECT_DIR$/component-management/node_modules" />
   </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths>
@@ -165,10 +160,13 @@
       <path value="$PROJECT_DIR$/component-management/package.json" />
     </packageJsonPaths>
   </component>
+  <component name="PackageJsonUpdateNotifier">
+    <dismissed value="$PROJECT_DIR$/component-live-demo/package.json" />
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-7" />
-    <option name="width" value="697" />
-    <option name="height" value="745" />
+    <option name="x" value="953" />
+    <option name="width" value="974" />
+    <option name="height" value="1057" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -183,6 +181,17 @@
               <item name="mock-project" type="b2602c69:ProjectViewProjectNode" />
               <item name="mock-project" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="mock-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mock-project" type="462c0819:PsiDirectoryNode" />
+              <item name="component-live-demo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mock-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mock-project" type="462c0819:PsiDirectoryNode" />
+              <item name="component-live-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -192,9 +201,10 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="D:/vuejs/mock/component-management-3" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PhpStorm 2018.2.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="typescript-compiler-editor-notification" value="false" />
   </component>
@@ -225,16 +235,17 @@
       <workItem from="1540044117888" duration="3971000" />
       <workItem from="1540089425169" duration="25034000" />
       <workItem from="1540135372952" duration="28000" />
+      <workItem from="1540190881541" duration="9247000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35207000" />
+    <option name="totallyTimeSpent" value="44454000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49759614" visible="true" weight="0.2375189" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49759614" visible="true" weight="0.23987207" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.50240386" side_tool="true" weight="0.23373677" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -246,8 +257,8 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32903227" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32832617" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="TypeScript" order="12" weight="0.32903227" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -279,11 +290,6 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-    <option name="exactExcludedFiles">
-      <list>
-        <option value="$PROJECT_DIR$/component-management/node_modules/karma/config.tpl.js" />
-      </list>
-    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -349,16 +355,21 @@
     <entry file="file://$PROJECT_DIR$/component-live-demo/src/js/util/hello.js" />
     <entry file="file://$PROJECT_DIR$/component-live-demo/src/App.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="11" column="64" selection-start-line="11" selection-start-column="64" selection-end-line="11" selection-end-column="64" />
+        <state relative-caret-position="136">
+          <caret line="8" column="44" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#v-flex#0;n#v-layout#0;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#v-flex#0;n#v-layout#0;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#v-flex#0;n#v-layout#0;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#v-card-actions#0;n#div#1;n#div#0;n#v-flex#0;n#v-layout#0;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#strong#0;n#v-card-actions#0;n#div#1;n#div#0;n#v-flex#0;n#v-layout#0;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#iframe#0;n#v-layout#0;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="e#1976#2013#0" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#v-container#0;n#v-content#0;n#v-app#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#v-flex#0;n#v-layout#0;n#v-container#0;n#v-content#0;n#v-app#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#v-flex#0;n#v-layout#0;n#v-container#0;n#v-content#0;n#v-app#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#v-flex#0;n#v-layout#0;n#v-container#0;n#v-content#0;n#v-app#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#v-card-actions#0;n#div#1;n#div#0;n#v-flex#0;n#v-layout#0;n#v-container#0;n#v-content#0;n#v-app#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#strong#0;n#v-card-actions#0;n#div#1;n#div#0;n#v-flex#0;n#v-layout#0;n#v-container#0;n#v-content#0;n#v-app#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#v-layout#0;n#v-container#0;n#v-content#0;n#v-app#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#v-flex#1;n#v-layout#0;n#v-container#0;n#v-content#0;n#v-app#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#v-layout#0;n#v-container#0;n#v-content#0;n#v-app#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#iframe#0;n#v-layout#0;n#v-container#0;n#v-content#0;n#v-app#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#v-layout#0;n#v-container#0;n#v-content#0;n#v-app#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="e#2227#2264#0" expanded="true" />
           </folding>
         </state>
       </provider>
