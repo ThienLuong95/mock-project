@@ -12,8 +12,11 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "@mdi/font": "^3.0.39",
     "vue": "^2.5.2",
+    "vue-codemirror": "^4.0.5",
     "vue-router": "^3.0.1",
+    "vuedraggable": "^2.16.0",
     "vuetify": "^1.0.0"
   },
   "devDependencies": {

@@ -3,11 +3,14 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-
+import '@mdi/font/css/materialdesignicons.css'
+import VueCodemirror from 'vue-codemirror'
+import 'codemirror/lib/codemirror.css'
+import '../node_modules/vuetify/src/stylus/app.styl'
 //Event bus
 const EventBus = new Vue();
 Vue.prototype.$eventBus = EventBus;
-
+Vue.use(VueCodemirror);
 import {
     Vuetify,
     VApp,
@@ -22,9 +25,15 @@ import {
     VMenu,
     VSelect,
     VTextField,
+    VCard,
+    VTooltip,
+    VDivider,
+    VDialog,
+    VTabs,
+    VTextarea,
     transitions
 } from 'vuetify'
-import '../node_modules/vuetify/src/stylus/app.styl'
+
 
 Vue.use(Vuetify, {
     components: {
@@ -40,6 +49,12 @@ Vue.use(Vuetify, {
         VMenu,
         VSelect,
         VTextField,
+        VCard,
+        VTooltip,
+        VDivider,
+        VDialog,
+        VTabs,
+        VTextarea,
         transitions
     },
     theme: {
