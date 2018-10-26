@@ -12,10 +12,10 @@ export default new Router({
             component: HelloWorld
         },
         {
-            path: '/',
+            path: '/component/:id',
             name: 'component',
             component: ComponentDetail
         }
     ]
 })
-///component/:id
+

@@ -1,62 +1,16 @@
 <template>
     <v-app>
         <!--Navigation-->
-        <v-navigation-drawer
-                persistent
-                v-model="drawer"
-                fixed
-                app
-        >
-            <v-select
-                    :items="projects"
-                    item-text="projectName"
-                    item-value="projectName"
-                    v-model="selectedProject"
-                    return-object
-                    label="Selected"
-                    v-on:change="onProjectSelection"
-                    style="padding: 24px 16px 0 16px"
-                    outline
+        <cm-navigation :projects="projects">
 
-            ></v-select>
-
-            <!--Search box search component-->
-            <v-text-field
-                    v-model="keyword"
-                    append-icon="search"
-                    label="Search"
-                    single-line
-                    hide-details
-                    v-on:change="onSearch(keyword)"
-                    v-on:blur="onSearch(keyword)"
-                    style="padding: 0 16px"
-                    outline
-            ></v-text-field>
-
-            <!--Show list Component after search, default return all list-->
-            <v-list>
-                <v-list-tile
-                        v-for="(item) in listResult"
-                        :key="item.id"
-                        :to="{ name: 'component', params: { id: item.id, data: item }}"
-                        active-class="primary--text"
-                        @click="onComponentSelected"
-                >
-                    <v-list-tile-content style="padding: 0 8px">
-                        <v-list-tile-title>{{item.name}}</v-list-tile-title>
-                    </v-list-tile-content>
-                </v-list-tile>
-            </v-list>
-
-        </v-navigation-drawer>
+        </cm-navigation>
 
         <!--Toolbar-->
         <v-toolbar
                 dark
                 app
-
         >
-            <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+            <v-toolbar-side-icon @click.stop="onNavDrawer"></v-toolbar-side-icon>
             <v-toolbar-title v-text="title"></v-toolbar-title>
             <v-spacer></v-spacer>
             <!--Toolbar items-->
@@ -87,7 +41,7 @@
 
             <!--Avatar-->
             <v-avatar v-on:click="rightDrawer = !rightDrawer" style=" cursor: pointer "
-                      size='40px'
+                      size='48px'
             >
                 <img src="/static/asset/avatar.svg" alt="avatar">
             </v-avatar>
@@ -99,51 +53,43 @@
         </v-content>
         <v-navigation-drawer
                 temporary
-                :right="right"
+                right
                 v-model="rightDrawer"
                 fixed
                 app
         >
-            User profile coming soon
+            <img src="/static/asset/user-profile.png">
+
         </v-navigation-drawer>
 
         <!--Footer-->
-        <v-footer >
+        <v-footer>
             <span>&copy; ATM</span>
         </v-footer>
     </v-app>
 </template>
 
 <script>
+    import CmNavigation from "./components/cm-navigation";
+    import projects from "./util/demo-data"
     export default {
+        name: 'App',
+        components: {CmNavigation},
         data() {
             return {
                 menuItems: ['New Project', 'New Component', 'New User'],
-                drawer: true,
-                projects: [],
-                keyword: '',
-                selectedProject: null,
-                listResult: [],
-                items: [{
-                    icon: 'bubble_chart',
-                    title: 'Inspire'
-                }],
-                right: true,
+                projects: projects,
                 rightDrawer: false,
                 title: 'Component Management'
             }
         },
-        name: 'App',
         methods: {
-            onProjectSelection: function () {
-
-            },
-            onSearch(){
-
-            },
-            onComponentSelected(){
-
+            onNavDrawer(){
+                this.$eventBus.$emit('onNavDrawer')
             }
+        },
+        created: function () {
+            this.$store.commit('setProjects', this.projects)
         }
     }
 </script>
