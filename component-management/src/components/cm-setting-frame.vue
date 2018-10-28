@@ -17,7 +17,7 @@
 
                 <v-tab-item value="tabHtml" class="tab-item">
 
-                    <div style="padding: 12px 0">npm
+                    <div style="padding: 12px 0">
                         <h2 class="headline cm-title">Stuff for tag head</h2>
 
                         <p class="body-1">Any tag like:
@@ -75,7 +75,7 @@
 
             },
             onFrameSetting(activeTab) {
-               this.setActiveTab(activeTab);np
+               this.setActiveTab(activeTab);
                 this.dialog = !this.dialog;
             },
             setActiveTab(name) {

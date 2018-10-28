@@ -3,9 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <title>Demo frame</title>
+    <style id="cmStyle"></style>
 </head>
 
 <body>
-<h1>hello</h1>
+<div id="cmRoot"> </div>
+<script>
+    function innerHTML(id, text) {
+        document.getElementById(id).innerHTML=text;
+    }
+    function innerElement(type, text) {
+
+        var id='';
+        switch (type) {
+            case 'html':
+                id='cmRoot';
+                break;
+            case 'css':
+                id='cmStyle';
+                break;
+            default: id='cmRoot';
+            break;
+        }
+        innerHTML(id, text);
+    }
+    function evalScript(script) {
+        eval(script);
+    }
+</script>
 </body>
 </html>

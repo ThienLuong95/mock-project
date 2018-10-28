@@ -10,6 +10,7 @@
                             style=" margin: 0 4px; ">{{item.name}}</strong>
                     <v-spacer></v-spacer>
                 </v-card-actions>
+
                 <codemirror
                         v-model="item.value"
                         :options="getCodeMirrorOption(item.name)"
@@ -36,13 +37,28 @@
     export default {
         name: "cm-view-code-panel",
         components: {CmSettingFrame},
+        props: {
+            html:{
+                type: String,
+                default: '',
+            },
+            css: {
+               type: String,
+               default: '',
+            },
+            js: {
+                type: String,
+                default: '',
+            }
+        },
+
         data: function () {
             return {
                 dialog: false,
                 cmItems: [
-                    {name: 'HTML', value: ''},
-                    {name: 'CSS', value: ''},
-                    {name: 'JS', value: ''}
+                    {name: 'HTML', value:  this.html},
+                    {name: 'CSS', value: this.css},
+                    {name: 'JS', value: this.js}
                 ],
             }
         },
@@ -69,10 +85,11 @@
                 }
             },
             onRun() {
-
+                // this.$emit('onRun', this.cmItems);
+                this.$eventBus.$emit('onRun', this.cmItems)
             },
             onSetting(name) {
-                this.$eventBus.$emit('onFrameSetting', name)
+                this.$eventBus.$emit('onFrameSetting', name);
             },
 
         },

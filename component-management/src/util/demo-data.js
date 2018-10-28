@@ -226,6 +226,16 @@ let projects = [
                 links: [],
                 scripts: [],
             },
+            {
+                id: 'cmpdemo',
+                name: 'demo',
+                template: "<h1>HELLO</h1>",
+                script: "console.log('Hello From iframe')",
+                style: '#demo {padding : 20px}',
+                headText: "",
+                links: [],
+                scripts: [],
+            },
 
         ]
     },
