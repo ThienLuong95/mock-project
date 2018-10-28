@@ -11,6 +11,34 @@ import '../node_modules/vuetify/src/stylus/app.styl'
 const EventBus = new Vue();
 Vue.prototype.$eventBus = EventBus;
 Vue.use(VueCodemirror);
+
+//store
+import Vuex from 'vuex'
+Vue.use(Vuex);
+const store = new Vuex.Store({
+    state: {
+        projects: [],
+    },
+    getters: {
+        getProjectById: (state) => (id) => {
+            for (let project of state.projects) {
+                if (project.projectId === id) {
+                    return project;
+                }
+            }
+            return null;
+        },
+    },
+    mutations: {
+        setProjects(state, projects) {
+            state.projects = projects;
+        }
+    },
+    actions:{}
+
+});
+
+//vuetify
 import {
     Vuetify,
     VApp,
@@ -33,8 +61,6 @@ import {
     VTextarea,
     transitions
 } from 'vuetify'
-
-
 Vue.use(Vuetify, {
     components: {
         VApp,
@@ -74,6 +100,7 @@ Vue.config.productionTip = false;
 new Vue({
     el: '#app',
     router,
+    store,
     components: {App},
     template: '<App/>'
 });

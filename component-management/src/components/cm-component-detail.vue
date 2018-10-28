@@ -3,7 +3,7 @@
 
         <v-layout row wrap>
             <v-flex xs12>
-                <h1  class="display-1 cm-title"> Component Name</h1>
+                <h1  class="display-1 cm-title"> {{componentData.name}}</h1>
                 <p class="body-1" style="margin-bottom: 8px">Component description</p>
             </v-flex>
 
@@ -64,11 +64,31 @@
         data: function (){
             return {
                 isShowCode: false,
+                componentData: null,
             }
         },
         methods: {
             onShowCode(){
 
+            }
+        },
+        watch: {
+            '$route'(to, from) {
+                this.componentData = this.$route.params.data;
+            }
+        },
+        created(){
+            let routeData = this.$route.params.data;
+            if (routeData == null || routeData === 'undefined') {
+                let project= this.$store.getters.getProjectById(localStorage.selectedProjectId);
+                for (let component of project.listComponents){
+                    if(component.id === this.$route.params.id){
+                        this.componentData= component;
+                        return;
+                    }
+                }
+            }else {
+                this.componentData= routeData;
             }
         }
 
