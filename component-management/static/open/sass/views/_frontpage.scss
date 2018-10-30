@@ -1,0 +1,184 @@
+.path-frontpage,
+.page-new-homepage {
+
+  .site-navigation {
+    position: absolute;
+    background: none;
+    border: none;
+    z-index: 99;
+
+    .nav-wrapper {
+      @include media($mqs-desktop-up) {
+        background: none;
+      }
+    }
+
+    .main-nav > li:last-child a {
+      background-image: url('../images/search_black.svg');
+    }
+
+  }
+
+  // if we are showing the beta notification, push the header down a bit
+  &.beta-show {
+    .site-navigation {
+      top: 70px;
+      @include media($mqs-desktop-up) {
+        top: 48px;
+      }
+    }
+
+    &.toolbar-fixed {
+      .site-navigation {
+        top: 0 !important;
+      }
+    }
+  }
+
+  .intro__inner {
+    padding: $base-spacing*2 0 $base-spacing/2 0;
+  }
+
+  #homepage-assets {
+    .intro__inner {
+      padding: 0 0 $base-spacing 0;
+    }
+  }
+
+
+  .home-page-header {
+    overflow: hidden;
+  }
+
+  #block-views-block-articles-block-5 {
+    > div {
+      > div {
+        @include media($mqs-tablet-landscape-up) {
+          display: flex;
+        }
+      }
+    }
+  }
+
+}
+
+#homepage-assets {
+
+  .cards__container {
+    @include media($mqs-desktop-up) {
+      display: flex;
+    }
+  }
+
+}
+
+.challenge-header {
+  background: tint($lavender, 15%);
+  height: auto;
+  padding: $base-spacing * 2;
+  margin-bottom: $base-spacing * 2;
+
+  .btn {
+    background: $white;
+    color: $green;
+    border: 1px solid $white--transparent;
+    margin: 0;
+  }
+}
+
+#partner-ecosystems {
+  background-color: $white;
+  margin-top: $base-spacing * 2;
+  color: $black;
+  display: block;
+  font-size: 0.8em;
+
+  @include clearfix;
+
+  @include media($mqs-desktop-up) {
+    align-items: center;
+    display: flex;
+    font-size: 1em;
+  }
+
+  .partner-ecosystems__image {
+
+    @include media($mqs-desktop-up) {
+      float: left;
+      width: 40%;
+      flex-basis: 40%;
+    }
+
+    img {
+      display: block;
+      min-width: 100%;
+    }
+  }
+
+  .partner-ecosystems__content {
+    padding: $base-spacing*2;
+
+    @include media($mqs-desktop-up) {
+      float: left;
+      width: 60%;
+      flex-basis: 60%;
+      padding: 0 $base-spacing*2 0 $base-spacing*2;
+    }
+
+    .heading {
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-family: $font-light;
+      font-size: em(20px);
+    }
+  }
+}
+
+#platform-partners-title {
+  margin: $base-spacing * 2 0 $base-spacing;
+}
+
+#platform-partners {
+  background-color: $white;
+  text-align: center;
+
+  .wrapper {
+    display: flex;
+  }
+
+  .platform-partner {
+    width: 50%;
+    flex-basis: 50%;
+    min-width: 0px;
+    float: left;
+    padding: $base-spacing*2 0;
+    
+    color: #0094da; // matches TraDove brand color
+    font-size: 14px;
+    font-family: $font-reg;
+
+    color: #0094da; // matches TraDove brand color
+    font-size: 14px;
+    font-family: $font-reg;
+
+    &--tradove {
+      img {
+        width: 200px;
+      }
+    }
+
+    &--nokia {
+      img {
+        width: 120px;
+        top: 35px;
+      }
+    }
+
+    img {
+      display: inline-block;
+      position: relative;
+    }
+  }
+}

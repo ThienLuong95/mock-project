@@ -1,0 +1,32 @@
+.js-pager__items {
+  clear:both;
+  padding-top:35px;
+  li {
+    display:inline-block;
+    padding-left:15px;
+    padding-right:15px;
+  }
+}
+
+.views-grid-cards .views-exposed-form {
+
+  @include media($mqs-desktop-up) {
+    display:flex;
+    margin-bottom:1.5em;
+  }
+
+  .form-item-search-api-fulltext {
+    @include media($mqs-desktop-up) {
+      margin-right: 0.75em;
+    }
+
+    label {
+      display:none;
+    }
+  }
+
+  .form-actions {
+    margin-bottom:.75em;
+  }
+
+}

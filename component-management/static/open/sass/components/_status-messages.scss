@@ -1,0 +1,54 @@
+.status-messages {
+  text-align: center;
+  color: $black;
+  font-family: $font-med;
+
+  em {
+    margin: 0 5px;
+    word-wrap: break-word;
+    word-break: break-all;
+    display: inline-block;
+  }
+
+  > ul {
+    > li {
+      padding: 1em;
+      background: $white;
+      margin: $base-spacing auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.08);
+      flex-wrap: wrap;
+
+      // default is status message
+      &:before {
+        content: "";
+        background: $green url('../images/icon_tick.svg') no-repeat 10px 10px;
+        background-size: 20px 20px;
+        margin-right: 1em;
+        border-radius: 50%;
+        @include size(40px);
+      }
+
+      ul {
+        li {
+          margin-top: 1em;
+        }
+      }
+    }
+
+    // overwrite default to error
+    > .error-message {
+      &:before {
+        content: "";
+        background: $red url('../images/icon_flag.svg') no-repeat 10px 10px;
+        background-size: 20px 20px;
+        margin-right: 1em;
+        border-radius: 50%;
+        @include size(40px);
+      }
+    }
+  }
+
+}

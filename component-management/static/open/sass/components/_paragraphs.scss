@@ -1,0 +1,443 @@
+.page-node-type-paragraphs-page{
+	.field--name-field-paragraphs-body {
+		.field-multiple-drag {
+		  display: block;
+		  padding: 40px;
+		  min-width: 40px;
+
+		}
+
+		.paragraph-type-title {
+			margin-left: $base-spacing;
+			font-size: 1.125em;
+		}
+
+		.field-multiple-table {
+			tr {
+				position: relative;
+				display: inline-block;
+				padding: 0;
+			}
+
+			tr.draggable {
+				border: $base-border;
+				display: inline-block;
+				width: 100% !important;
+
+				td.field-multiple-drag {
+					width: 30px;
+					height: 30px;
+					padding: 0;
+
+					a.tabledrag-handle {
+
+					}
+				}
+
+				td {
+					float: left;
+					&:nth-child(1) {
+						width: 40px;
+						display: block;
+						padding: 0;
+						position: absolute;
+						left: 20px;
+						top: 29px;
+						background: transparent !important;
+					}
+
+					&:nth-child(2) {
+						width: 100% !important;
+						display: inline-block;
+						padding: $base-spacing;
+						box-sizing: border-box;
+					}
+
+					&:nth-child(3),
+					.tabledrag-hide {
+						width: 60px;
+						display: block;
+						padding: 0;
+						position: absolute;
+						right: 20px;
+						top: 20px;
+					}
+
+					.paragraphs-subform {
+					  display: inline-block;
+					  width: 100% !important;
+
+					  table {
+					  	display: inline-block;
+					  	width: 100% !important;
+
+					  	td {
+					  		background-color: $lighter-gray;
+					  	}
+					  }
+					}
+				}
+			}
+		}
+
+		.dropbutton-wrapper {
+			&.dropbutton-multiple {
+				.dropbutton-action {
+					width: 300px;
+					input {
+						width: 100%;
+						box-sizing: border-box;
+						text-align: left;
+						border-radius: 0;
+					}
+				}
+
+				.dropbutton .dropbutton-action:first-child input {
+					border-top-left-radius: 1.5em;
+				}
+
+				.dropbutton.dropbutton-action:last-child input {
+					border-bottom-left-radius: 1.5em;
+				}
+
+				.dropbutton-toggle {
+					button {
+						display: block !important;
+						border-top-left-radius: 0;
+						border-bottom-left-radius: 0;
+						background: $dark-green !important;
+					}
+				}
+			}
+		}
+
+	}
+
+	.node-paragraphs-page {
+		.wrapper {
+			max-width: none;
+			.layout-container {
+				width: 100%;
+				padding: 0;
+
+				.paragraph {
+					width: 100%;
+				}
+
+				.paragraph-bgcol-transparent {
+					background: transparent;
+				}
+
+				.paragraph-bgcol-white {
+					background: $white;
+				}
+
+				.paragraph-bgcol-light-grey {
+					background: $light-gray;
+				}
+
+				.paragraph-bgcol-dark-grey {
+					background: $dark-gray;
+					color: $white !important;
+				}
+
+				.paragraph-bgcol-blue {
+					background: $blue;
+					color: $white !important;
+				}
+
+				.paragraph-bgcol-green {
+					background: $green;
+					color: $white !important;
+				}
+
+				.paragraph-small-spacer {
+					width: 100%;
+					margin: 0;
+					padding: 0;
+					height: $base-spacing;
+				}
+
+				.paragraph-large-spacer {
+					width: 100%;
+					margin: 0;
+					padding: 0;
+					height: 2*$base-spacing;
+				}
+
+				.paragraph-row {
+					margin: 0 auto;
+					display: flex;
+					flex-direction: row;
+
+					.field--name-field-row-content {
+						display: flex;
+						flex-direction: row;
+						width: 100%;
+					}
+
+					&.inset {
+						.field--name-field-row-content {
+							margin: 0 auto;
+							max-width: 75em;
+						}
+					}
+
+					&.nopadding {
+						padding: 0;
+					}
+
+					&.verticalspacing {
+						margin-top: 2*$base-spacing;
+						margin-bottom: 2*$base-spacing;
+					}
+
+					&.columns-1 {
+						.views-element-container {
+							.views-row {
+								.views-col {
+					  				width: 100% !important;
+								}
+							}
+						}
+						.platform-partner {
+							width: 100% !important;
+						}	
+						.paragraph--type--paragraphs-text,
+						.paragraph--type--paragraphs-video-upload,
+						.paragraph-cta-banner {
+							width: 100%;
+						}
+					}
+
+					&.columns-2 {
+						.views-element-container {
+							.views-row {
+								.views-col {
+					  				width: 50% !important;
+					  				flex-basis: 50%;
+								}
+							}
+						}
+						.platform-partner {
+							width: 50% !important;
+						}
+						.paragraph--type--paragraphs-text,
+						.paragraph--type--paragraphs-video-upload,
+						.paragraph-cta-banner {
+							float: left;
+							width: 50%;
+							flex-basis: 50%;
+						}
+					}
+
+					&.columns-3 {
+						.views-element-container {
+							.views-row {
+								.views-col {
+					  				width: 33% !important;
+					  				flex-basis: 33%;
+								}
+							}
+						}
+						.platform-partner {
+							width: 33% !important;
+						}
+						.paragraph--type--paragraphs-text,
+						.paragraph--type--paragraphs-video-upload {
+							float: left;
+							width: 33%;
+							flex-basis: 33%;
+						}
+						.paragraph-cta-banner {
+							float: left;
+							width: 66%;
+							flex-basis: 66%;
+						}
+					}
+
+					&.columns-4 {
+						.views-element-container {
+							.views-row {
+								.views-col {
+					  				width: 25% !important;
+					  				flex-basis: 25%;
+								}
+							}
+						}
+						.platform-partner {
+							width: 25% !important;
+						}
+						.paragraph--type--paragraphs-text,
+						.paragraph--type--paragraphs-video-upload {
+							float: left;
+							width: 25%;
+							flex-basis: 25%;
+						}
+						.paragraph-cta-banner {
+							float: left;
+							width: 50%;
+							flex-basis: 50%;
+						}
+					}
+
+					@media all and (max-width: 1039px) {
+						&.columns-1,
+						&.columns-2,
+						&.columns-3,
+						&.columns-4 {
+							.views-element-container {
+								.views-row {
+									.views-col {
+										display: block;
+						  				width: 100% !important;
+						  				flex-basis: none;
+									}
+								}
+							}
+							.platform-partner {
+								width: 100% !important;
+							}
+							.paragraph--type--paragraphs-text,
+							.paragraph--type--paragraphs-video-upload {
+								display: block;
+								float: none;
+								width: 100%;
+								flex-basis: none;
+							}
+							.paragraph-cta-banner {
+								display: block;
+								float: none;
+								width: 100%;
+								flex-basis: none;
+							}
+						}
+					}
+
+					.field {
+						width: 100%;
+					}
+
+					.platform-partner {
+						text-align: center;
+						display: inline-block;
+						float: left;
+						padding: $base-spacing;
+
+						.platform-partner-logo {
+							box-sizing: border-box;
+							padding: 0;
+							width: 100%;
+							height: 70px;
+							background-position: center;
+							background-size: contain;
+							background-repeat: no-repeat;
+							max-height: none;
+							min-height: auto;
+							max-width: 100%;
+							min-width: auto;
+							margin-right: 0px;
+						}
+
+						img {
+							width: 80%;
+							height: auto;
+							max-height: 50px;
+						}
+					}
+				}
+
+				.paragraph-header {
+					padding: $base-spacing;
+					width: 100% !important;
+					display: block;
+
+					&.left {
+						text-align: left;
+					}
+
+					&.right {
+						text-align: right;
+					}
+
+					&.center {
+						text-align: center;
+					}	
+				}
+
+				.paragraph-cta-banner {
+					display: flex; 
+					min-height: 220px;
+					height: auto;
+					overflow: hidden;
+
+					>a {
+						display: flex; 
+						width: 100%;
+						height: 100%;
+						color: inherit;
+					}
+
+					.inner {
+						width: 100%;
+						display: flex;
+						min-height: 220px;
+
+						.cta-image {
+							width: 40%;
+							flex-basis: 40%;
+							background-size: cover;
+							background-position: center;
+							background-repeat: no-repeat;
+						}
+
+						.cta-body {
+							box-sizing: border-box;
+							padding: 1.5*$base-spacing;
+							width: 60%;
+							flex-basis: 60%;
+
+							p {
+								font-family: GTWalsheimProLight;
+								font-size: 1.25em;
+							}
+
+							.btn {
+								margin-top: $base-spacing;
+							}
+						}
+					}
+				}
+
+				.paragraph--type--paragraphs-text {
+					box-sizing: border-box;
+					padding: $base-spacing;
+					height: auto;
+				}
+
+				.paragraph--type--paragraphs-video-upload {
+					position: relative;
+					background-color: #414141;
+					background-size: cover;
+					background-position: center;
+					background-repeat: no-repeat;
+
+					video {
+						position: relative;
+						width: 100%;
+						height: 100%;
+					}
+				}
+			}
+		}
+	}
+
+	@media all and (max-width: 1039px) {
+		.paragraph-row {
+			display: block !important;
+			.field--name-field-row-content {
+				display: block !important;
+			}
+		}
+	}
+}

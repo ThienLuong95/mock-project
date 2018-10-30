@@ -1,0 +1,225 @@
+.dashboard-cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  @include clearfix;
+}
+
+#block-nokiavue-views-block-user-admin-people-profile-block {
+  .views-field-field-picture {
+    width:90px;
+    height:90px;
+    border-radius:90px;
+    margin:0 auto 30px;
+    overflow:hidden;
+  }
+  .user-avatar {
+    &__image {
+      @include size(90px);
+      margin: 0;
+    }
+    &__name, &__title {
+      display: none;
+    }
+  }
+  .views-field-name {
+    text-align:center;
+    font-size:em(18);
+  }
+  .views-field-field-job-title {
+    text-align:center;
+    color:$dark-gray;
+  }
+  .views-field-field-employer {
+    text-align:center;
+  }
+  .views-field-nothing, .views-field-field-about-me {
+    margin-top:30px;
+    margin-bottom:50px;
+    padding-top:30px;
+    border-top:1px solid $light-gray;
+    color:$dark-gray;
+  }
+  .views-field-field-about-me {
+    border-bottom:1px solid $light-gray;
+    padding-bottom:30px;
+  }
+  .views-label-nothing, .views-label-field-about-me {
+    display:block;
+    color:#000;
+    font-size:em(18);
+  }
+}
+
+#block-nokiavue-views-block-my-projects-block-1,
+#block-nokiavue-views-block-my-groups-block-1,
+#block-views-block-group-invitations-by-user-block-1-2,
+#block-nokiavue-views-block-my-saved-articles-block-1 {
+  padding-bottom:60px;
+
+  h2 {
+    font-size:em(22);
+  }
+
+  footer {
+    clear:both;
+    padding-top:35px;
+    width:175px;
+    margin: 0 auto;
+
+    a {
+      text-align:center;
+      display:block;
+      width:100%;
+      border: $base-border;
+      color:$green;
+      border-radius: $base-font-size * 3;
+      font-size:em(16);
+      font-weight: normal;
+      padding: $small-spacing;
+
+      &:hover {
+        color: $blue;
+        border-color: $blue;
+      }
+    }
+  }
+}
+
+#block-views-block-group-invitations-by-user-block-1-2,
+#block-nokiavue-views-block-my-saved-articles-block-1,
+#block-nokiavue-views-block-project-submissions-block-1 {
+  clear:both;
+  overflow:hidden;
+
+  h2 {
+    text-align:left;
+    padding-top:30px;
+  }
+  p {
+    text-align: left;
+  }
+}
+
+#block-nokiavue-views-block-my-assets-block-1 {
+  // background:$lightest-gray;
+  // border-top:1px solid $light-gray;
+  // border-bottom:1px solid $light-gray;
+  .views-row {
+    display:flex;
+    justify-content:center;
+  }
+  .card {
+    // float:none;
+    flex:1;
+
+    // @include media($mqs-desktop-up) {
+    //   max-width:25%;
+    // }
+  }
+}
+
+#block-views-block-group-invitations-by-user-block-1-2 {
+  padding-bottom:0;
+}
+
+.views-field-field-about-me {
+  display: none;
+}
+
+#block-views-block-my-projects-block-1-2,
+#block-views-block-group-my-challenges-block-1,
+#block-nokiavue-views-block-my-assets-block-1 {
+  // padding: $base-spacing;
+  //
+  // @extend .wrapper;
+
+  .btn {
+    margin-top: 1em;
+    clear: left;
+    float: left;
+  }
+}
+
+#block-nokiavue-views-block-project-submissions-block-1 {
+  .btn {
+    @extend .btn--ghost;
+  }
+}
+
+#block-views-block-challenge-my-submissions-block-1,
+#block-dashboardmychallenges,
+#block-dashboardmycommunities,
+#block-myapikeys,
+#block-nokiavue-views-block-my-assets-block-1,
+#block-views-block-dashboard-all-projects-block-1,
+#block-mydashboardinvitations,
+#block-dashboardmypartners,
+#block-dashboardmypendingmembers{
+  margin-bottom: $base-spacing;
+
+  h2 {
+    @extend .heading;
+    @extend .heading--small;
+    @extend .heading--light;
+  }
+
+  table {
+    margin: 0;
+
+    thead {
+      border-bottom: $base-border;
+    }
+
+    tbody {
+      tr {
+        border-bottom: $base-border;
+
+        &:nth-child(even) {
+          background: #ffffff;
+        }
+
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+
+    td, th {
+      border-right: $base-border;
+      padding-left: 10px;
+
+      &:last-child {
+        border-right: none;
+      }
+    }
+    tbody > tr > td {
+      padding-left: 0 !important;
+    }
+
+    th {
+      border-right-color: $lighter-gray;
+    }
+  }
+}
+
+.block--dashboard-sidebar {
+  padding: $base-spacing;
+  a {
+    display: block;
+    margin-bottom: 1em;
+  }
+}
+
+.views-element-container {
+  margin-top: $base-spacing*2;
+
+  &:first-child {
+    margin-top: 0;    
+  }
+}
+
+.tabulator-header {
+  border-bottom: 0!important;
+}

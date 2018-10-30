@@ -1,0 +1,377 @@
+#edit-field-group-attachments-0-upload-button,
+#edit-field-group-attachments-1-upload-button {
+  display: none !important;
+}
+
+.field--name-field-group-attachments {
+  .js-hide {
+    display: none !important;
+  }
+}
+
+.dashboard-groups {
+  display: flex;
+  flex-direction: row;
+
+  .avatar {
+    flex: 1;
+  }
+}
+
+#block-views-block-node-tags-block-1 {
+  margin-top: $base-spacing;
+  padding-top: $base-spacing;
+  //border-top: $base-border;
+}
+
+#block-views-block-project-tools-block-1 {
+  .views-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    .avatar {
+      flex-basis: 25%;
+      flex-grow: 0;
+    }
+  }
+}
+
+
+#block-nokiavue-views-block-my-saved-articles-block-1 {
+  background-color: $lightest-gray;
+  padding-top: $base-spacing;
+  border-top: $base-border;
+  overflow: hidden;
+
+  h2 {
+    text-align: center;
+    font-size: modular-scale(2);
+  }
+}
+
+#block-nokiavue-views-block-challenges-block-2 {
+  h2 {
+    text-align: center;
+    font-size: em(26);
+    font-family: $font-light;
+    margin: 0;
+  }
+}
+
+.more-link,
+.flag-subscribe_node {
+  display: none;
+}
+
+aside {
+  .contextual-region {
+    @include clearfix;
+  }
+  > div > div {
+    @include clearfix;
+  }
+}
+
+.page-node-type-library-asset {
+  #block-projectprivacy,
+  #block-nokiavue-iwantto,
+  #block-views-block-project-challenge-block-1,
+  #block-nokiavue-views-block-group-members-group-members-block,
+  #block-views-block-project-tags-block-1,
+  #block-views-block-project-members-block-block-1{
+    padding-bottom: $base-spacing;
+    margin-bottom: $base-spacing;
+    border-bottom: $base-border;
+  }
+}
+
+
+#block-views-block-community-tags-block-1,
+#block-views-block-community-visibility-block-1{
+  .views-element-container{
+    margin-top: 1em;
+  }
+}
+#block-views-block-community-user-domain-whitelist-block-1{
+  .views-element-container{
+    margin-top: 1em;
+  }
+}
+#block-views-block-articles-block-3-2 {
+  .contextual-region {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.views-element-container {
+  clear: both;
+}
+
+// .comment-forbidden {
+//   display: none;
+//   visibility: hidden;
+// }
+
+.path-user-search {
+  .layout-container {
+    header p {
+      text-align: left;
+      width: 730px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 2em;
+    }
+  }
+}
+
+a.tabledrag-handle .handle {
+  height: 25px !important;
+  width: 25px !important;
+  background-position: 6px 7px !important;
+}
+
+.tabledrag-hide {
+  display: none;
+}
+
+#block-views-block-project-tags-block-1,
+#block-views-block-node-tags-block-1,
+#block-views-block-community-tags-block-1,
+.challenge-leader__contact {
+  @include clearfix;
+
+  a {
+    border: $base-border;
+    color: $dark-gray;
+    font-size: em(14);
+    padding: 0.5em $base-spacing;
+    margin: 0 10px 10px 0;
+    float: left;
+    font-family: $font-reg;
+
+    &:hover {
+      color: $blue;
+      border-color: $blue;
+    }
+  }
+}
+
+.privacy__state {
+  border: $base-border;
+  color: $dark-gray;
+  font-size: em(14);
+  padding: 0.5em $base-spacing;
+  margin: 0 10px 10px 0;
+  float: left;
+  pointer-events: none;
+  font-family: $font-reg;
+}
+
+.path-system {
+  .system-message {
+    + h1 {
+      display: none;
+    }
+  }
+}
+
+.group-invite-email-form {
+  margin: $base-spacing 0;
+}
+
+#block-assetcomments {
+  @extend .wrapper;
+
+  > h2 {
+    padding: $base-spacing;
+  }
+
+  .main-content {
+    @extend .layout-container;
+
+    @include media($mqs-desktop-up) {
+      float: left !important;
+    }
+  }
+}
+
+#block-views-block-project-comments-block-1 {
+  @extend .wrapper;
+
+  > div {
+    @extend .layout-container;
+
+    @include media($mqs-desktop-up) {
+      float: left !important;
+    }
+  }
+}
+
+#edit-field-headline-image-entity-browser-entity-browser-open-modal {
+  float: left;
+}
+
+#edit-field-headline-image summary {
+  text-align: left;
+}
+
+.field-multiple-drag,
+.tabledrag-handle {
+  display: none;
+  padding: 0;
+  width: 0;
+}
+
+#block-views-block-asset-challenges-block-1 {
+  margin-bottom: 3em;
+}
+
+/* Styling for maintenance page to override styling in other elements */
+
+.maintenance-page {
+  .site-navigation {
+    background-color: white;
+    position: relative;
+  }
+
+  #inner-wrap {
+    min-height: 350px;
+  }
+}
+
+/* Stop content wrapping on privacy options lists */
+
+#edit-field-group-public--wrapper--description,
+#edit-field-security-level--wrapper--description {
+  clear: both;
+}
+
+/*
+** stop forum question edit form from displaying shadow copy field.
+** See ticket: https://mirumeurope.atlassian.net/browse/NO-2080
+ */
+.node-forum-edit-form .form-item-shadow {
+  display: none;
+}
+
+#edit-field-project-links-wrapper {
+  margin-bottom: 2*$base-spacing;
+}
+
+#block-nokiavue-iwantto div:last-of-type .btn {
+  margin-bottom: 0;
+}
+
+#block-views-block-project-tags-block-1 {
+  margin-top: $base-spacing;
+}
+
+#block-projectsubmissionoptions {
+  div {
+    .btn {
+      margin-bottom: 0;
+    }
+  }
+}
+
+#block-projectprivacy {
+  border-bottom: 0;
+}
+
+nav.pager {
+  clear: both;
+}
+
+.views-element-container nav.pager {
+  clear:both;
+  width: 100%;
+}
+
+
+#block-nokiavue-local-tasks {
+  background-color: #414141;
+  padding: 0 $base-spacing;
+  position: absolute;
+  z-index: 100000;
+  left: 0;
+  top: -1.25*$base-spacing;;
+  width:100%;
+  height: 1.25*$base-spacing;
+  line-height: 1.25*$base-spacing;
+
+  a {
+    color: #fff !important;
+  }
+}
+
+.toolbar-tray-open #outer-wrap {
+  #inner-wrap {
+    margin-top: 1.25*$base-spacing;
+
+    header.site-navigation {
+      top: 1.25*$base-spacing !important;
+      }
+  }
+}
+
+.path-login, .path-register {
+  #recaptcha_image {
+    overflow: hidden;
+  }
+
+  .gigya-composite-control-submit {
+    padding-top: $base-spacing;
+  }
+
+  #password-row {
+    margin-bottom: $base-spacing;
+    .gigya-captcha {
+      height: auto !important;
+    }
+  }
+}
+
+#block-views-block-community-tags-block-1 .views-element-container,
+div[data-block-plugin-id="views_block:project_leaders_block-block_2"] .views-element-container {
+  margin-top: 1.2em;
+}
+
+div[data-block-plugin-id="views_block:project_leaders_block-block_3"] {
+  margin-top: 20px;
+}
+
+#inner-wrap .challenge-top-content .challenge__sidebar .field--type-text-long{
+  margin-bottom: 20px !important;
+}
+
+.disable-container{
+  position: relative;
+  .disable-action{
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    top: 0;
+    z-index: 10000;
+    position: absolute;
+    user-select: none;
+    cursor: not-allowed;
+  }
+}
+
+.back-to-challenge-link{
+  margin-bottom: 30px;
+  margin-left: 20px;
+}
+
+.search-card__metric{overflow: hidden;}
+
+div .cke_chrome{
+  padding-left: 3px;
+  padding-right: 3px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}

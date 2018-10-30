@@ -64,12 +64,14 @@
                 keyword: '',
                 listResult: [],
                 selectedProject: null,
+
             }
 
         },
         methods: {
             onProjectSelected() {
                 this.onSearch();
+
             },
             onSearch(keyword) {
                 if (keyword=== null || keyword=== undefined || keyword === '') {
@@ -84,6 +86,7 @@
             },
             onComponentSelected() {
                 localStorage.selectedProjectId = this.selectedProject.projectId;
+                this.$eventBus.$emit('onProjectSelectedId', this.selectedProject.projectId);
             },
             onNavDrawer() {
                 this.isDrawer = !this.isDrawer;
@@ -101,7 +104,6 @@
                     if (localStorage.selectedProjectId === 'null' ||
                         localStorage.selectedProjectId === 'undefined' ||
                         localStorage.selectedProjectId === '') {
-
                         localStorage.setItem("selectedProjectId", this.selectedProject.projectId);
                     }
                 } else {

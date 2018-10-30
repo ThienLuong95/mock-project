@@ -1,0 +1,36 @@
+.notification {
+  width: 100%;
+  text-align: center;
+  background: $dark-blue;
+  color: $white;
+  padding: .75em;
+  font-family: $font-reg;
+  height: 70px;
+  position: relative;
+
+  .toolbar-fixed & {
+    display: none;
+  }
+
+  @include media($mqs-desktop-up) {
+    height: auto;
+  }
+
+  &__content {
+    display: inline-block;
+    font-size: 0.9em;
+
+    a {
+      color: $white;
+      text-decoration: underline;
+    }
+  }
+
+  &__close {
+    font-size: 0.8em;
+    color: $white;
+    position: absolute;
+    top: 30%;
+    right: 1em;
+  }
+}

@@ -1,0 +1,114 @@
+
+#nokia-marketplace-add-new-product-model {
+  .modal-mask {
+    position: fixed;
+    z-index: 9998;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    display: table;
+    transition: opacity .3s ease;
+  }
+
+  .modal-wrapper {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .condition-modal .modal-container-save-modal {
+    width: 540px;
+    height: 120px;
+    margin: 0 auto;
+    padding-left: 40px;
+    padding-bottom: 40px;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
+    transition: all .3s ease;
+    font-family: Helvetica, Arial, sans-serif;
+  }
+
+  .condition-modal .modal-container-save-modal h3 {
+    margin-top: 0;
+    text-align: left;
+    font-weight: 700;
+    font-size: 28px;
+  }
+
+  .modal-body {
+    margin: 20px 0;
+    text-align: left;
+  }
+
+  .modal-default-button {
+    float: right;
+    background: none;
+    color: #000000;
+    border: 1px solid #dedede;
+    font-weight: inherit;
+    font-size: 16px;
+    margin-right: 20px;
+  }
+
+  .modal-default-button:hover {
+    background-color: #ffffff !important;
+    color: #000000;
+  }
+
+  .modal-primary-button {
+    float: right;
+    background-color: #0dc5a0;
+    color: #ffffff;
+    border: 1px solid #dedede;
+    font-weight: inherit;
+    font-size: 16px;
+    margin-right: 20px;
+  }
+
+  .modal-primary-button:hover {
+    background-color: #087660;
+    color: #fff;
+  }
+
+  .modal-enter, .modal-leave {
+    opacity: 0;
+  }
+
+  .modal-enter .modal-container-save-modal, .modal-leave .modal-container-save-modal {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  .condition-modal .condition-text {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #e3e3e3;
+  }
+  .content-save-for-later {
+    display: inline-flex;
+  }
+  .content-save-for-later, .view-my-orders {
+    margin-top: 15px;
+  }
+  .text-save-for-later {
+    margin-left: 30px;
+  }
+
+  .content-save-for-later img {
+    margin-top: 12px;
+  }
+  .icon-close-save-modal {
+    text-align: right;
+  }
+  .icon-close-save-modal img {
+    margin-right: 16px;
+    margin-top: 16px;
+    cursor: pointer;
+  }
+
+  .text-save-for-later a {
+    text-decoration: underline;
+  }
+}

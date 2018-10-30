@@ -1,0 +1,15 @@
+// this file was created AFTER we already declared the 'tag' style
+.real-tag {
+  border: $base-border;
+  color: $dark-gray;
+  font-size: em(14);
+  padding: 0.5em $base-spacing;
+  margin: 0 10px 10px 0;
+  float: left;
+  font-family: $font-reg;
+
+  &:hover {
+    color: $blue;
+    border-color: $blue;
+  }
+}

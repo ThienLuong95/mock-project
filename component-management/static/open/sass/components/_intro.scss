@@ -1,0 +1,14 @@
+.intro {
+  background: $lightest-gray;
+
+  &__inner {
+    max-width: 75%;
+    text-align: center;
+    margin: 0 auto;
+    padding: $base-spacing*2 0;
+
+    h4 {
+      margin: 0;
+    }
+  }
+}

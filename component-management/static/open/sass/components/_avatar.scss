@@ -1,0 +1,155 @@
+.avatar-container {
+  @include row;
+
+  &__header {
+    @include padding($base-spacing);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    a {
+      font-size: em(18px);
+      color: #9B9B9B;
+      letter-spacing: 0px;
+    }
+  }
+}
+
+.avatars {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.avatar {
+  flex: 1;
+  color: $base-font-color;
+  letter-spacing: 0px;
+  //float: left;
+
+  &__image {
+    @include size(90px);
+    @include margin($small-spacing auto);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    background-color: $lightest-gray;
+    text-align: center;
+
+    &--add-new {
+      border: $base-border;
+      background-color: transparent;
+      background-image: url('../images/add.svg');
+      background-size: 30px;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+
+    &:before {
+      font-size: 80px;
+    }
+  }
+
+  &__name {
+    display: block;
+    text-align: center;
+    font-size: em(18px);
+    color: #020522;
+  }
+
+  &__title, &__cta, &__users {
+    display: block;
+    text-align: center;
+    font-size: em(14px);
+    color: #999999;
+  }
+
+}
+
+.user-avatar {
+  //display: block;
+  display: flex;
+  margin-bottom: 1em;
+
+  @include clearfix;
+
+  &__image {
+    @include size(40px);
+    min-width: 40px;
+    float: left;
+    margin-right: $small-spacing;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    background-color: $lightest-gray;
+    text-align: center;
+    border: $base-border;
+  }
+
+  &__name {
+    font-size: em(18px);
+    color: #020522;
+    display: flex;
+    font-family: $font-med;
+    max-width: 250px;
+
+    & .user-name{
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow-x: hidden;
+    }
+    .project-owner &, .community-admin &, .challenge-admin & {
+      & .user-leader:after {
+        content: "Leader";
+        color: $pink;
+        font-size: 0.8em;
+        margin-left: 10px;
+      }
+    }
+  }
+
+  &__mail {
+    max-width: 250px;
+    overflow-x: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: block;
+  }
+
+  &__title, &__cta, &__users {
+    font-size: em(14px);
+    color: $dark-gray;
+    display: block;
+  }
+
+  &__notification {
+    background: red;
+    color: white;
+    border-radius: 8px;
+    width: 16px;
+    right: 14px;
+    position: absolute;
+    text-align: center;
+    height: 16px;
+    display: none;
+  }
+
+}
+
+.user-avatar-wrapper-information{
+  max-width: 250px;
+  overflow-x: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.user-avatar__title{
+  max-width: 250px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow-x: hidden;
+}

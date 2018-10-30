@@ -1,0 +1,41 @@
+.socials {
+  a {
+    color: $dark-gray;
+    float: left;
+    border: $base-border;
+    border-radius: 20px;
+    margin-left: 10px;
+
+    @include size(30px);
+    @include hide-text;
+
+    &:before {
+      content: "";
+      display: block;
+      background-size: cover;
+      background-position: center;
+      margin: 6px auto;
+
+      @include size(15px);
+    }
+  }
+  
+  &__facebook {
+    &:before {
+      background: url('../images/social_facebook.svg') no-repeat;
+      background-size: cover;
+    }
+  }
+  &__twitter {
+    &:before {
+      background: url('../images/social_twitter.svg') no-repeat;
+      background-size: cover;
+    }
+  }
+  &__linkedIn {
+    &:before {
+      background: url('../images/social_linkedin.svg') no-repeat;
+      background-size: cover;
+    }
+  }
+}

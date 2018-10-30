@@ -1,0 +1,18 @@
+diff a/docroot/themes/custom/nokiavue/sass/views/_community.scss b/docroot/themes/custom/nokiavue/sass/views/_community.scss	(rejected hunks)
+@@ -27,4 +27,14 @@
+ 
+ 	}
+ 	
+-}
+\ No newline at end of file
++}
++
++.community-social {
++	position: absolute;
++	margin: 0 auto;
++	font-size: .875em;
++	color: #fff;
++	z-index: 9999;
++	right: 10px;
++	top: 10px;
++}

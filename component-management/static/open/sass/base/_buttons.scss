@@ -1,0 +1,134 @@
+#{$all-buttons} {
+  appearance: none;
+  background-color: $green;
+  border: 0;
+  border-radius: 10em; // ensure always rounded
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $font-reg;
+  font-size: em(18);
+  -webkit-font-smoothing: antialiased;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.75em 1.75em;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color $base-duration $base-timing;
+  user-select: none;
+  vertical-align: middle;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    background-color: shade($green, 20%);
+    color: #fff;
+  }
+
+  &:active {
+    background-color: shade($green, 40%);
+    color: #fff;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+
+    &:hover {
+      background-color: $light-gray;
+    }
+  }
+}
+
+.btn, .button {
+  @extend button;
+
+  &--large {
+    font-size: 1.2em;
+    padding: $small-spacing*2 $base-spacing*2;
+  }
+
+  &--small {
+    font-size: 0.8em;
+    padding: $small-spacing/2 $base-spacing/2;
+  }
+
+  &--error {
+    background: $red;
+
+    &:hover,
+    &:focus {
+      background-color: shade($red, 20%);
+      color: #fff;
+    }
+
+    &:active {
+      background-color: shade($red, 40%);
+      color: #fff;
+    }
+  }
+
+  &--ghost {
+    // PFM: Sorry :( I had to add !important because on dynamic forms
+    // the input[type=submit] rule is overwriting it...
+    background: $white !important;
+    color: $green !important;
+    border: 1px solid $light-gray !important;
+    font-family: $font-reg !important;
+
+    &:hover {
+      border: 1px solid $light-gray;
+      background: $lightest-gray;
+      color: $green;
+    }
+  }
+
+  &--full {
+    display: block;
+    float: left;
+    width: 100%;
+  }
+
+  &--disabled {
+    background: $light-gray;
+    cursor: not-allowed;
+
+    &:hover,
+    &:focus {
+      background: $light-gray;
+    }
+
+    &:active {
+      background: $light-gray;
+    }
+  }
+
+  &--icon-left {
+    &:before {
+      content: "$";
+      margin-right: $small-spacing/2;
+    }
+  }
+
+  &--icon-right {
+    &:after {
+      content: "$";
+      margin-left: $small-spacing/2;
+    }
+  }
+
+}
+
+.button-holder {
+  text-align: center;
+  padding: $base-spacing 0;
+  background: $lightest-gray;
+
+  .btn {
+    display: inline-block;
+  }
+}
+
+.captcha{
+    margin-bottom: 20px;
+}
+

@@ -38,12 +38,13 @@
                                 :js="getCode('js')"
 
                         ></cm-view-code-panel>
+
                     </v-slide-y-transition>
 
                     <v-divider></v-divider>
 
                     <cm-view-demo-panel
-
+                            :componentData="componentData"
                     ></cm-view-demo-panel>
                     <v-divider></v-divider>
                     <v-card-title></v-card-title>
@@ -73,9 +74,7 @@
             }
         },
         methods: {
-            // onRun(cmItems){
-            //     console.log(cmItems);
-            // },
+
             getCode(type) {
                 let codeText = '';
                 switch (type) {
@@ -92,6 +91,7 @@
                 return codeText;
             }
         },
+        computed: {},
         watch: {
             '$route'(to, from) {
                 this.componentData = this.$route.params.data;

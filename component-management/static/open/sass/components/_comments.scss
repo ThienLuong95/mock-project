@@ -1,0 +1,61 @@
+.comments {
+	text-align: right;
+
+        .button--latest-comment,
+	.button--add-comment {
+		margin-bottom: $base-spacing;
+                @extend .btn;
+                @extend .btn--ghost;
+	}
+
+	.comment-form {
+		margin-bottom: $base-spacing;
+	}
+
+	.thread-wrapper {
+		background-color: $white;
+		border: $base-border;
+		margin: 0 0 $base-spacing 0;
+		padding: 0;
+		text-align: left;
+
+		.reply {
+			border-top: $base-border;
+			background-color: $comment-gray;
+
+			@media all and (min-width: 600px) {
+				padding-left: 2*$base-spacing;
+			}
+		}
+
+		.reply-reply {
+			padding-left: $base-spacing;
+			border-top: $base-border;
+			background-color: $comment-gray;
+
+			@media all and (min-width: 600px) {
+				padding-left: 4.3*$base-spacing;
+			}
+		}
+	}
+
+	#add-comment {
+		//margin-top: 2*$base-spacing;
+		
+		h2 {
+			text-align: left;
+		}
+	}
+}
+
+#block-assetcomments {
+	background-color: #f4f4f4;
+
+	.main-content {
+		width: 100%;
+
+		@media all and (max-width: 599px) {
+			padding: 1.5em 0;
+		}
+	}
+}

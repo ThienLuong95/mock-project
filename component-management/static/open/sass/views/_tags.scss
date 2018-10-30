@@ -1,0 +1,25 @@
+.path-tags {
+  .taxonomy-teaser__container {
+    &:last-of-type {
+      border-bottom: $base-border;
+
+      .taxonomy-teaser {
+        .search-card__wrapper {
+          border-bottom: none;
+        }
+      }
+    }
+
+    &:first-of-type {
+      .search-card__wrapper {
+        border-top: $base-border;
+      }
+    }
+  }
+
+  .empty-results {
+    background: white;
+    padding: $base-spacing;
+    border: $base-border;
+  }
+}

@@ -1,0 +1,18 @@
+#block-nokiavue-views-block-articles-block-1 {
+  h2 {
+      margin-top: 0.75em;
+      font-size: em(32);
+      font-family: $font-light;
+      text-align: center;
+  }
+}
+
+.articles__list-cards {
+  margin-bottom: $base-spacing * 2;
+}
+
+#views-exposed-form-articles-search-page-1 {
+  #edit-actions {
+    margin-top: 0px;
+  }
+}

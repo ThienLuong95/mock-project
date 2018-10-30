@@ -1,0 +1,66 @@
+.search-card {
+  background: #ffffff;
+  border-left: $base-border;
+  border-right: $base-border;
+
+  &__wrapper {
+    padding: $base-spacing 0;
+    margin: 0 $base-spacing;
+    border-bottom: $base-border;
+
+    @include clearfix;
+  }
+
+  &__label {
+    color: $dark-gray;
+    font-size: em(14px);
+    letter-spacing: 0.1em;
+    margin-bottom: $base-spacing;
+
+    @include media($mqs-tablet-portrait-up) {
+        float: left;
+        width: 25%;
+    }
+  }
+
+  &__content {
+    @include media($mqs-tablet-portrait-up) {
+        float: left;
+        width: 75%;
+    }
+  }
+
+  &__title {
+    color: $black;
+
+    &:hover {
+      color: $green;
+    }
+  }
+
+  &__metric {
+    color: $dark-gray;
+    font-size: em(14px);
+    font-family: $font-reg;
+
+    @include clearfix;
+
+    span {
+      float: left;
+      width: 90px;
+    }
+  }
+
+  &__tag-list {
+    margin-top: 1em;
+
+    @include clearfix;
+  }
+}
+
+.search-card__avatar {
+  width: auto;
+  height: auto;
+  overflow: hidden;
+  float: right;
+}

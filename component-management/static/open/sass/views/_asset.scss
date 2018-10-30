@@ -1,0 +1,263 @@
+#block-views-block-asset-projects-block-1,
+#block-views-block-asset-challenges-block-1,
+#block-views-block-asset-communities-block-1 {
+  margin-bottom: $base-spacing;
+  border-bottom: $base-border;
+
+  @include clearfix;
+
+  // h2 {
+  //     margin-top: 0.75em;
+  //     font-size: em(32);
+  //     font-family: $font-light;
+  //     text-align: center;
+  // }
+
+  .asset__linked_project {
+    margin-bottom: $base-spacing / 2;
+  }
+}
+
+#block-nokiavue-views-block-group-nodes-block-2 {
+  .views-field-field-state {
+    margin-bottom: $base-spacing;
+  }
+}
+
+.page-node-type-library-asset,
+.page-node-type-project {
+  .field--name-field-terms-of-use,
+  .field--name-field-owning-partner,
+  .field--name-field-security-level,
+  .field--name-field-challenge-type,
+  .field--name-field-challenge-attachments {
+    margin-bottom: $base-spacing * 2;
+    margin-right: 1%;
+    width: 30%;
+    word-wrap: break-word;
+
+    .field__label {
+      font-family: $font-med;
+    }
+  }
+}
+
+.field--name-field-terms-of-use {
+  display: none;
+}
+
+.asset-downloads {
+  margin-bottom: $base-spacing / 2;
+
+  @include clearfix;
+
+  &__item {
+    border: $base-border;
+    padding: $base-spacing*2 $base-spacing;
+    text-align: center;
+    border-radius: $base-border-radius;
+  }
+
+  &__type, img {
+    margin-bottom: $base-spacing / 2;
+  }
+
+  &__name {
+    font-size: 0.9em;
+    font-family: $font-med;
+    word-wrap: break-word;
+  }
+
+  &__type {
+    font-size: 0.9em;
+    color: $dark-gray;
+  }
+
+  .btn {
+    display: block;
+  }
+}
+
+.model {
+  .terms {
+    background-color: white;
+  }
+}
+
+.page-node-type-library-asset {
+
+  #edit-delete {
+    display: none !important;
+  }
+
+  .main-heading {
+    text-align: left;
+    margin: 0;
+    word-wrap: break-word;
+  }
+
+  // all below is restyling the details section at the
+  // top to appear as a unified block of details
+  #block-assettype,
+  #block-owningpartner-3,
+  #block-authoredon {
+    width: 100%;
+    float: left;
+
+    @include media($mqs-tablet-portrait-up) {
+      width: 33%;
+    }
+
+    .field--name-field-owning-partner {
+      width: 100%;
+      margin: 0;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 1em;
+      line-height: 1.5em;
+    }
+  }
+
+  #block-assettype {
+    @include media($mqs-tablet-portrait-up) {
+      width: 34%;
+    }
+  }
+
+  #block-nokiavue-content {
+    margin-bottom: $base-spacing;
+
+    .flag {
+      @extend .btn;
+      @extend .btn--ghost;
+
+      clear: left;
+      float: left;
+    }
+  }
+
+  .main-heading,
+  #block-assettype,
+  #block-owningpartner-3,
+  #block-authoredon,
+  #block-nokiavue-content {
+    padding: 24px;
+    background: $white;
+  }
+  // end of top content styling
+} // .page-node-type-library-asset
+
+#block-assetuserswhoacceptedtc {
+  td {
+    box-sizing: border-box;
+    padding-right: 1em;
+
+
+    &:nth-child(1) {
+      width: 50%;
+    }
+
+    &:nth-child(2) {
+      width: 30%;
+    }
+
+    &:nth-child(3) {
+      width: 20%;
+      padding-right: 0;
+    }
+  }
+}
+
+.node-library-asset {
+  .layout-container {
+    >div {
+      background-color: white;
+
+      .terms-conditions-accept-form {
+        padding: 0 $base-spacing $base-spacing $base-spacing;
+      }
+    }
+  }
+
+  .comments {
+    >div {
+      >h2 {
+        font-size: 1.375em;
+      }
+    }
+  }
+}
+
+#node-library-asset-edit-form {
+  background-color: #f4f4f4;
+}
+/* Override for /modules/contrib/field_group/formatters/tabs/horizontal-tabs.css */
+.horizontal-tabs .horizontal-tab-button {
+  background: #dedede;
+}
+.horizontal-tab-button.selected {
+  background-color: #f4f4f4;
+}
+.oen-api-consumer-request-for-api-key-wrapper, .oen-api-consumer-manage-api-key-wrapper, .oen-api-consumer-explore_api_specs-wrapper, .oen-api-consumer-view-api-key-wrapper {
+  margin-bottom: 15px;
+}
+.oen-api-consumer-manage-api-key-wrapper {
+  position: relative;
+}
+.oen-api-consumer-request-for-api-key {
+  width: 100%;
+}
+.oen-api-consumer-manage-nip-service-wrapper {
+  margin-bottom: 25px;
+}
+.right-wrapper {
+  float: right;
+}
+.oen-api-consumer-manage-api-key-count{
+  background: red;
+  color: #fff;
+  border-radius: 15px;
+  width: 30px;
+  right: 0;
+  position: absolute;
+  text-align: center;
+  height: 30px;
+  top: -8px;
+  line-height: 30px;
+  font-size: 0.8em;
+}
+
+#block-assets-test-lab-service{
+  margin-bottom: 4em;
+  .btn--ghost {
+    display: block;
+    width: 100%;
+  }
+}
+#edit-field-point-contact-email-wrapper{
+  display: none;
+}
+.btn-back-to-asset{
+  margin-top: 1.5em;
+}
+.form-item-title-column-1, .form-item-title-column-3 {
+  label {
+    font-size: 1.5em;
+  }
+}
+.form-item-collaborator-location, .form-item-collaborator-province{
+  label {
+    font-size: 0.8em;
+  }
+}
+
+.form-item-project-asset, .form-item-project-owner, .form-item-select-category, .form-item-date-start, .form-item-date-end, .form-item-services, .form-item-description-value {
+  label {
+    &:after {
+      content: "*";
+      margin-left: 5px;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+diff a/docroot/themes/custom/nokiavue/sass/views/_dashboard.scss b/docroot/themes/custom/nokiavue/sass/views/_dashboard.scss	(rejected hunks)
+@@ -147,13 +147,13 @@
+     @extend .btn--ghost;
+   }
+ }
+-
+ #block-views-block-challenge-my-submissions-block-1,
+ #block-dashboardmychallenges,
+ #block-dashboardmycommunities,
+ #block-myapikeys,
+ #block-nokiavue-views-block-my-assets-block-1,
+ #block-views-block-dashboard-all-projects-block-1,
+-#block-mydashboardinvitations {
++#block-mydashboardinvitations,
++#block-dashboardmyprojectpendingmembers {
+   margin-bottom: $base-spacing;
+ 
+   h2 {

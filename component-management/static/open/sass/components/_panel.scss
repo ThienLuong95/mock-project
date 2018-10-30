@@ -1,0 +1,140 @@
+.panel {
+  padding: $base-spacing;
+  background: $white;
+  margin: $base-spacing auto;
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.08);
+  position: relative;
+
+  @include media($mqs-desktop-up) {
+    padding: $base-spacing * 2;
+  }
+
+  @include clearfix;
+
+  &__tiles {
+    margin-top: $base-spacing * 2;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    flex-direction: row;
+  }
+
+  &__tile {
+    flex-basis: 47%;
+    margin: 0 6% $base-spacing 0;
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+
+    @include media($mqs-desktop-up) {
+      flex-basis: 30%;
+      margin: 0 5% $base-spacing 0;
+
+      &:nth-child(2n) {
+        margin-right: 5%;
+      }
+
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+    }
+
+    > a {
+      color: $black;
+    }
+
+    &__icon {
+      height: 50px;
+      width: 12%;
+      margin-right: 5%;
+      float: left;
+      // font-size: 40px;
+      // color: $blue;
+      // text-align: right;
+    }
+
+    &__content {
+      width: 83%;
+      float: left;
+
+      > * {
+        margin: 0 !important; // sorry :(
+      }
+
+      .heading {
+        strong {
+          font-size: 1.5em;
+        }
+      }
+
+      .btn {
+        margin-top:1em;
+      }
+    }
+  } // __tile
+
+  &__close {
+    color: $dark-gray;
+    position: absolute;
+    right: $base-spacing;
+    top: $base-spacing;
+    cursor: pointer;
+  }
+} // panel
+
+.panel-challenge-getting-started {
+  .panel__tile {
+    flex-basis: 100%;
+    margin: 0 0 $base-spacing 0;
+
+    @include media($mqs-desktop-up) {
+      flex-basis: 30%;
+      margin: 0 5% $base-spacing 0;
+
+      &:nth-child(2n) {
+        margin-right: 5%;
+      }
+
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+
+    }
+  }
+}
+
+.panel-403 {
+  .panel__icon {
+    clear:both;
+    background: $red;
+    margin: 0 auto 1em;
+    position: relative;
+    border-radius: 50%;
+    @include size(60px);
+
+    &:before {
+      position: absolute;
+      top: 50%;
+      left: 25%;
+      content: "";
+      width: 50%;
+      height: 2px;
+      background: $white;
+    }
+  }
+}
+
+.panel-invitation {
+  .panel-assets {
+    &__icon {  margin: 0 auto;  }
+  }
+
+  .reject {
+    &__button {
+      margin-left: $base-spacing;
+      @extend .btn;
+      @extend .btn--ghost;
+    }
+  }
+}

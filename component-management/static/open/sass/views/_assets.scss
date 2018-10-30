@@ -1,0 +1,151 @@
+.panel-assets {
+
+  @include media($mqs-tablet-portrait-up) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__icon {
+    margin: 0 auto 1em;
+    border-radius: 50%;
+    background: $mustard;
+    padding: 20px;
+    flex-shrink: 0;
+    @include size(74px);
+
+    @include media($mqs-tablet-portrait-up) {
+      margin: 0 $base-spacing 0 0;
+    }
+
+    .icon-custom {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &__content {
+    * {
+      margin: 0 !important; // sorry :(
+    }
+  }
+
+  .field--name-body & {
+    h4 {
+      @extend .heading--medium;
+    }
+  }
+
+}
+
+//manage api consumer
+.oen-asset-manage-api-consumer-and-request {
+  margin-bottom: 25px;
+  .back-to-asset-details-wrapper{
+    padding: 20px 0px;
+  }
+
+  .api-consumer-and-request-for-api-keys{
+    background-color: #ffffff;
+    padding: 20px;
+
+    .title-wrapper{
+      margin-bottom: 50px;
+
+      h1{
+        font-size: 1.5em;
+        font-weight: 700;
+      }
+    }
+    .pending-requests-for-api-keys-table-wrapper{
+      margin-bottom: 30px;
+
+    }
+
+    h1, h2, h3{
+      font-family: GTWalsheimProBold;
+    }
+    h3{
+      font-size: 1em;
+    }
+
+    table{
+      margin: 0;
+    }
+
+    .oen-manage-table-title{
+      font-weight: 700;
+      font-family: GTWalsheimProBold;
+    }
+    .item-wrapper-margin-top-20px{
+      margin: 20px 0 0 0;
+    }
+    .back-to-list{
+      color: #0dc5a0;
+      font-family: GTWalsheimProBold;
+    }
+    .rejected-format-text{
+      color:rgb(210, 41, 43);
+      font-family: GTWalsheimProBold;
+    }
+    .btn-reject-this-request{
+      background-color: rgb(210, 41, 43);
+    }
+    .btn-manage-api-page{
+      font-size: 1em !important;
+    }
+    .display-flex-content-between{
+      display: flex;
+      justify-content: space-between;
+    }
+    .request-for-api-key-detail-wrapper{
+      background-color: #f3f3f3;
+      padding: 15px;
+      margin-top: 10px;
+      .user-avatar__title {
+        max-width: 100%;
+      }
+    }
+    a:hover{
+      cursor: pointer;
+    }
+    .text-decoration{
+      text-decoration: underline;
+    }
+    .display-block{
+      display: block;
+    }
+  }
+  .api-consumers-table-wrapper {
+    .oen-vue-table-wrapper {
+      overflow: inherit;
+    }
+  }
+}
+
+.oen-api-consumer-manage-service-detail-and-request .service-detail-and-request-for-nip-service .list-of-pending-request-table-wrapper {
+  margin-bottom: 30px;
+}
+
+.oen-api-consumer-manage-service-detail-and-request .service-detail-and-request-for-nip-service .manage-nip-service-table-title {
+  font-weight: 700;
+  font-family: GTWalsheimProBold;
+}
+
+.oen-api-consumer-manage-service-detail-and-request .service-detail-and-request-for-nip-service table {
+  margin: 0;
+}
+
+.back-to-service-request-management {
+  margin-bottom: 3em;
+}
+
+.nip-service-instance-title-wrapper {
+  font-size: 2em;
+  font-family: GTWalsheimProBold;
+  margin: 0 0 2em;
+}
+
+.col-service-table {
+  word-wrap: break-word;
+}

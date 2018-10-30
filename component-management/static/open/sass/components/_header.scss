@@ -1,0 +1,306 @@
+.nokia-header {
+  text-align: center;
+  padding-top: $base-spacing;
+  padding-bottom: $base-spacing;
+  background: $dark-blue;
+  // margin-bottom:50px;
+  position:relative;
+  background-position: center;
+  background-size: cover;
+
+  .logo {
+    float: left;
+    display: none;
+  }
+
+  #nokia-header-video {
+    display: none;
+  }
+
+  @include media($mqs-desktop-up) {
+    #nokia-header-video {
+      display: none;
+
+      .path-frontpage &,
+      .page-new-homepage & {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+
+
+        video {
+          width: 100%;
+          // Pat: I removed this because of the space it creates between the header and the tiles underneath
+          // margin-top: -12%;
+        }
+
+        .nokia-header__video-wrapper {
+          @include aspect-ratio(16, 9);
+        }
+
+        iframe {
+          position: absolute;
+          z-index: 1;
+          width: 100%;
+          height: 100%;
+          left: 0;
+          top: 0;
+        }
+      }
+    }
+
+    // Pat: this is overwriting the other headers on the homepage
+    // .path-frontpage & {
+    //   background: none !important;
+    // }
+  }
+
+} // header
+
+#inner-wrap{
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.nokia-header {
+  display: flex;
+  display: -ms-flexbox;
+  align-items: center;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  justify-content: center;
+  -ms-flex-pack: center;
+  min-height: 400px;
+
+  .home-page-header & {
+    height: 601px; // we have fixed header on homepage
+    margin-bottom:0;
+    padding-top: 101px;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include media($mqs-desktop-up) {
+      padding-top: 80px;
+    }
+
+    &.has-video {
+      @include media($mqs-desktop-up) {
+        background-image: none !important;
+        background: none !important;
+      }
+    }
+  }
+
+  .play-btn {
+    display: inline-block;
+    cursor: pointer;
+  	animation-name: pulse;
+  	-webkit-animation-name: pulse;
+
+  	animation-duration: 2s;
+  	-webkit-animation-duration: 2s;
+
+  	animation-iteration-count: infinite;
+  	-webkit-animation-iteration-count: infinite;
+
+    @include size(70px);
+
+    @keyframes pulse {
+    	0% {
+    		transform: scale(0.95);
+    		opacity: 0.9;
+    	}
+    	50% {
+    		transform: scale(1);
+    		opacity: 1;
+    	}
+    	100% {
+    		transform: scale(0.95);
+    		opacity: 0.9;
+    	}
+    }
+
+    @-webkit-keyframes pulse {
+    	0% {
+    		-webkit-transform: scale(0.95);
+    		opacity: 0.9;
+    	}
+    	50% {
+    		-webkit-transform: scale(1);
+    		opacity: 1;
+    	}
+    	100% {
+    		-webkit-transform: scale(0.95);
+    		opacity: 0.9;
+    	}
+    }
+  }
+
+
+  &__content {
+    max-width: 75em;
+
+    // max-width: 70%;
+    h1, h2, h3, h4 {
+      color: white;
+      margin-bottom: 0;
+    }
+    .nokia-header__intro {
+      color: white;
+      text-align: center;
+      padding-bottom: $base-spacing;
+    }
+    &.black {
+      h1 {
+        color: black;
+      }
+      .nokia-header__intro {
+        color: black;
+      }
+    }
+  }
+
+  &__category {
+    color: $blue;
+    text-align: center;
+  }
+
+  &__top-meta {
+    text-align: center;
+    color: $medium-gray;
+    margin-bottom: $base-spacing * 2;
+  }
+
+  &__buttons {
+    text-align: center;
+
+    a {
+      margin: 0 0 $small-spacing 0;
+      box-shadow: 0px 12px 40px 0px rgba(0,0,0,0.22);
+      border: none !important;
+      font-size: em(14px);
+      padding: 1em 1.75em;
+      width: 180px;
+
+      @include media($mqs-desktop-up) {
+        margin-right: $base-spacing;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__meta {
+    font-family: $font-med;
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:25px;
+    margin:0 auto;
+    font-size: em(14);
+    color:#fff;
+
+    span {
+      color:$light-gray;
+    }
+
+    a {
+      color: $light-gray;
+    }
+
+
+    &__secondary {
+
+      div {
+        margin:0 20px;
+        float: left;
+      }
+      span {
+        padding-left:15px;
+      }
+
+    }
+
+    > div {
+      display:inline-block;
+      margin:0 40px;
+
+      div {
+        float: left;
+      }
+    }
+
+    // article change colors of meta
+    .page-node-type-realarticle & {
+      color: #000;
+
+      span {
+        color: #000;
+      }
+    }
+  }
+
+  &__icons {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-top: 20px;
+
+    .nokia-header__icon {
+      text-align: center;
+      flex-basis: 20%;
+
+      .nokia-header__icon__icon {
+        display: inline-block;
+        margin-bottom: 1em;
+
+        @include size(50px);
+      }
+
+      .nokia-header__icon__title {
+        font-size: 15px;
+        font-family: $font-med;
+      }
+    }
+  }
+
+  // page-specific variations on header
+  .page-node-type-challenge &, .path-challenges-search & {
+    background-color: $lavender;
+  }
+
+  .page-node-type-library-asset &, .path-asset-search & {
+    background-color: $pink;
+  }
+
+  .page-node-type-project &, .path-projects-search & {
+    background-color: $blue;
+  }
+
+  .page-node-type-partner_profile & {
+    background-color: $orange;
+  }
+
+  .page-node-type-realarticle & {
+    background: none !important;
+
+    h1 {
+      color: $base-font-color;
+    }
+  }
+} // nokia-header
+
+.path-frontpage {
+  &.toolbar-tray-open {
+    .site-navigation {
+      top: 2em !important;
+    }
+  }
+}

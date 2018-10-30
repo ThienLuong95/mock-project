@@ -1,0 +1,699 @@
+fieldset {
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+legend {
+  padding: 0;
+  font-family: $font-med;
+  font-size: 1.1em;
+}
+label {
+  // display: block;
+  margin-bottom: $small-spacing / 2;
+  font-family: $font-med;
+  font-size: 1.1em;
+}
+input,
+select,
+textarea {
+  display: block;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+
+  &.error {
+    border: 1px solid $red !important;
+
+    + .cke {
+      border: 1px solid $red !important;
+    }
+  }
+}
+#{$all-text-inputs} {
+  appearance: none;
+  background-color: $base-background-color;
+  border: $base-border;
+  height: $input-height;
+  // border-radius: $base-border-radius;
+  // box-shadow: $form-box-shadow;
+  box-sizing: border-box;
+  margin-bottom: $small-spacing;
+  padding: $base-spacing / 2 $base-spacing;
+  transition: border-color $base-duration $base-timing;
+  width: 100%;
+
+  &:hover {
+    border-color: shade($base-border-color, 20%);
+  }
+
+  &:focus {
+    border-color: $action-color;
+    box-shadow: $form-box-shadow-focus;
+    outline: none;
+  }
+
+  &:disabled {
+    background-color: shade($base-background-color, 5%);
+    cursor: not-allowed;
+
+    &:hover {
+      border: $base-border;
+    }
+  }
+
+  &::placeholder {
+    color: tint($base-font-color, 40%);
+  }
+}
+textarea {
+  resize: vertical;
+  height: auto;
+}
+[type="checkbox"],
+[type="radio"] {
+  display: inline;
+  margin-right: $small-spacing / 2;
+}
+[type="file"] {
+  margin-bottom: $small-spacing;
+  width: 100%;
+}
+select {
+  margin-bottom: $small-spacing;
+  width: 100%;
+}
+.select2-container {
+  width: 100% !important;
+
+  .select2-selection {
+
+    &__choice {
+      height: 35px;
+      line-height: 35px;
+      margin-top: 7px;
+    }
+    &--single {
+      height: $input-height !important;
+      border-radius: 0 !important;
+      border-color: $light-gray !important;
+    }
+
+    &__rendered {
+      max-height: 37px;
+      max-height: 37px;
+      line-height: $input-height !important;
+      padding-left: $base-spacing !important;
+      padding-right: $base-spacing !important;
+    }
+
+    &__arrow {
+      height: $input-height !important;
+      right: $small-spacing !important;
+
+      b {
+      }
+
+    }
+
+  }
+}
+.select2-container--default .select2-results__option {
+  padding: $base-spacing / 2 $base-spacing;
+}
+// TODO: move this into view sass file when its ready
+// page level styles
+
+.node-form {
+  .form-wrapper {
+    clear: both;
+    width: 100% !important;
+    margin-bottom: $base-spacing !important;
+  }
+}
+.js-form-type-vertical-tabs {
+  float: left;
+  width: 100%;
+  clear: both;
+}
+// asset search form
+#views-exposed-form-asset-search-page-1,
+#views-exposed-form-projects-search-page-1,
+#views-exposed-form-challenges-search-page-1,
+#views-exposed-form-user-search-page-1,
+#views-exposed-form-articles-search-page-1,
+#views-exposed-form-communities-search-page-1,
+#views-exposed-form-partners-search-page-1 {
+  margin-bottom: $base-spacing;
+
+  @include media($mqs-desktop-up) {
+    display: flex;
+    justify-content: center;
+  }
+
+  .form-item {
+    margin-bottom: $small-spacing;
+
+    @include media($mqs-desktop-up) {
+      margin-right: $small-spacing;
+      width: 50%;
+    }
+  }
+
+  .form-actions {
+    margin-bottom: $small-spacing;
+
+    @include media($mqs-desktop-up) {
+      width: 150px;
+    }
+
+    input {
+      width: 100%;
+    }
+  }
+
+  label {
+    display: none;
+  }
+}
+#views-exposed-form-asset-search-page-1 {
+  .form-actions {
+
+    @include media($mqs-desktop-up) {
+      width: 25%;
+    }
+
+    input {
+      width: 49%;
+
+      &:only-child {
+        width: 100%;
+      }
+    }
+
+    #edit-reset {
+      @extend .btn;
+      @extend .btn--ghost;
+      float: right;
+      margin-left: 2%;
+    }
+  }
+}
+.comment-form {
+  position: relative;
+  @include clearfix;
+
+  .field--name-subject {
+    display: none;
+  }
+
+  textarea {
+    height: $input-height * 4;
+  }
+
+  label {
+    // display: none;
+  }
+
+  .form-actions {
+
+    @include media($mqs-desktop-up) {
+      float: right;
+    }
+
+    input {
+      width: 100%;
+      margin-bottom: $small-spacing;
+
+      &#edit-preview {
+        display: none; // removed for now: Zack
+        @extend .btn--ghost;
+      }
+
+      @include media($mqs-desktop-up) {
+        width: auto;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .filter-wrapper {
+    display: none;
+  }
+
+}
+.form-item {
+  margin-bottom: $base-spacing;
+}
+.tabledrag-toggle-weight {
+  display: none;
+}
+.filter-wrapper {
+  display: none;
+  visibility: hidden;
+  .input-format-dropdown & {
+    display: block;
+    visibility: visible;
+  }
+}
+// fix the widths for auto-correct inputs
+.field--type-entity-reference {
+  table {
+    table-layout: auto;
+
+    th, td {
+      width: 85%;
+
+      &:first-child {
+        width: 15%;
+      }
+    }
+  }
+}
+input[type="radio"] {
+  display: none;
+}
+input[type="radio"] + label {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+input[type="radio"] + label span {
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  margin: -1px 4px 0 0;
+  vertical-align: middle;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid $light-gray;
+}
+input[type="radio"] + label span {
+  background-color: white;
+  margin-right: 10px;
+}
+input[type="radio"]:checked + label span {
+  background-color: white;
+  border: 6px solid $green;
+}
+input[type="radio"] + label span,
+input[type="radio"]:checked + label span {
+  -webkit-transition: background-color 0.4s linear;
+  -o-transition: background-color 0.4s linear;
+  -moz-transition: background-color 0.4s linear;
+  transition: background-color 0.4s linear;
+}
+input[type="radio"]:checked:disabled + label span{
+  border: 6px solid $black;
+}
+.form-item-challenge-type,
+.form-item-challenge-privacy,
+.webform-options-display-one-column .js-form-type-radio {
+  border: 1px solid $light-gray;
+  padding: 5px 20px;
+  float: left;
+  margin-right: $base-spacing;
+  background: white;
+}
+.webform-options-display-one-column .js-form-type-radio-disabled{
+  background: darkgray;
+}
+.form-required {
+  &:after {
+    content: "*";
+    margin-left: 5px;
+  }
+}
+// specific overwrites for the project create form
+#group-project-add-form,
+#group-project-edit-form {
+
+  // tags and assets linking
+  .field-multiple-drag {
+    display: none;
+  }
+  .field-add-more-submit {
+    @extend .btn;
+    @extend .btn--ghost;
+  }
+
+  table {
+    margin-bottom: 0;
+
+    .form-item, h4 {
+      margin: 0;
+    }
+  }
+
+  .description {
+    margin-bottom: 16px;
+  }
+
+  .field--name-field-project-problem,
+  .field--name-field-project-solution,
+  .field--name-field-project-alternative,
+  .field--name-field-project-benefits,
+  .field--name-field-project-unique-value,
+  .field--name-field-project-expectations {
+    margin: 0;
+    padding: $base-spacing;
+    border: $base-border;
+    border-bottom: none;
+
+    > div {
+      margin: 0;
+    }
+  }
+
+  .field--name-field-project-expectations {
+    border-bottom: $base-border;
+  }
+
+  // for opening / closing wysiwyg questions
+  .form-item-field-project-problem-0-value,
+  .form-item-field-project-solution-0-value,
+  .form-item-field-project-alternative-0-value,
+  .form-item-field-project-benefits-0-value,
+  .form-item-field-project-unique-value-0-value,
+  .form-item-field-project-expectations-0-value {
+    margin: 0;
+
+    label {
+      cursor: pointer;
+      position: relative;
+      display: block;
+
+      &:after {
+        content: "";
+        position: absolute;
+        right: $base-spacing;
+        top: 0;
+        background: url('../images/icon_plus.svg') no-repeat;
+        background-size: contain;
+        @include size(20px);
+      }
+
+      + div {
+        max-height: 0;
+        overflow: hidden;
+        @include transition(max-height 0.5s cubic-bezier(0.22, 0.61, 0.36, 1));
+      }
+
+      &.open {
+        &:after {
+          background: url('../images/icon_minus.svg') no-repeat;
+          background-size: contain;
+          top: 8px;
+        }
+
+        + div {
+          max-height: 1000px;
+        }
+      }
+    }
+  }
+  // classes to control wysiwyg content
+
+  .field--name-field-slack-url,
+  .field--name-field-skype,
+  .field--name-field-github-url,
+  .field--name-field-task-tracking-trello-,
+  .field--name-field-video-chatroom {
+    margin: 0;
+    padding: $base-spacing;
+    border: $base-border;
+
+    > fieldset {
+      margin: 0;
+    }
+
+    legend {
+      cursor: pointer;
+      position: relative;
+      display: block;
+      width: 100%;
+      margin: 0;
+
+      &:after {
+        content: "";
+        position: absolute;
+        right: $base-spacing;
+        top: 0;
+        background: url('../images/icon_plus.svg') no-repeat;
+        background-size: contain;
+        @include size(20px);
+      }
+
+      + div {
+        max-height: 0;
+        overflow: hidden;
+        @include transition(max-height 0.5s cubic-bezier(0.22, 0.61, 0.36, 1));
+      }
+
+      &.open {
+        &:after {
+          background: url('../images/icon_minus.svg') no-repeat;
+          background-size: contain;
+          top: 8px;
+        }
+
+        + div {
+          max-height: 100%;
+        }
+      }
+    }
+  }
+  // classes to control project tools
+
+  .field--name-field-video-chatroom {
+    border-bottom: $base-border;
+  }
+
+  .field--name-field-group-attachments {
+    summary {
+      @extend .heading;
+      @extend .heading--smallest;
+    }
+
+    label {
+      display: none;
+    }
+
+    .button {
+      @extend .btn;
+      @extend .btn--ghost;
+    }
+
+    .tabledrag-handle {
+      display: none;
+    }
+  }
+
+  // sort out spacing
+  .field--name-field-group-attachments,
+  .field--name-field-video-chatroom,
+  .field--name-field-project-assets-clone,
+  .field--name-field-tags {
+    margin-bottom: $base-spacing * 2;
+  }
+  // spacing
+}
+// artivle create form
+#node-realarticle-form {
+  #edit-preview {
+    display: none;
+  }
+}
+// challenge edit form
+.group-challenge-edit-form {
+  .field--name-field-started, .field--name-field-ends {
+    width: 44%;
+    float: left;
+  }
+  .field--name-field-started {
+    margin-right: 12%;
+  }
+
+  .field-multiple-drag {
+    display: none;
+  }
+
+  #edit-field-challenge-attachments-0-remove-button,
+  .field-add-more-submit {
+    @extend .btn;
+    @extend .btn--ghost;
+  }
+
+  #edit-field-challenge-featured-image-current {
+    input {
+      @extend .btn;
+      @extend .btn--ghost;
+    }
+    .tabledrag-handle {
+      display: none;
+    }
+  }
+}
+// challenge submission form
+.webform-submission-form {
+  .webform-button--draft {
+    @extend .btn;
+    @extend .btn--ghost;
+    margin-right: $base-spacing;
+  }
+}
+.clonedContent {
+  padding: 20px;
+  margin: 10px;
+  border: 1px solid #dedede;
+}
+.icon-close {
+  color: red;
+  background-size: contain;
+  top: 8px;
+  float: right;
+}
+.tool-icon {
+  font-size: xx-large;
+  margin: 4%;
+  img {
+    vertical-align: middle;
+    margin-bottom: 10px;
+  }
+}
+.tool-icon.selected {
+  box-shadow: 6px 1px 5px 0px;
+  background-color: #f4f4f4;
+}
+.icon-list-wrapper a:hover {
+  background: blanchedalmond;
+  box-shadow: 0px 2px 1px 1px;
+}
+.icon-list-wrapper {
+  background: azure;
+  display: none;
+  position: absolute;
+  border: outset;
+  width: 100%;
+  max-width: 30%;
+}
+.tool-icon-preview {
+  font-size: 3em;
+}
+
+#views-exposed-form-user-search-page-1 #edit-actions{
+  margin-top: 0;
+}
+.community-market-place .search-description{
+  margin: 0 0 .75em;
+  color: #000 !important;
+}
+.community-market-place .beta-title{
+  font-size: 30px;
+  font-weight: 400;
+  font-style: italic;
+  vertical-align: super;
+}
+.community-market-place .beta-title sup{
+  top: 0em;
+}
+
+#edit-field-challenge-featured-image {
+  summary {
+    font-weight: 700;
+  }
+}
+[id$="--description"], .oen-storage-file-wrapper .description, .question-description {
+  font-size: 14px;
+  color: #545454;
+  margin-bottom: 16px;
+}
+[id$="--library_asset--node.add"] {
+  margin-bottom: 16px;
+  display: inline-block;
+}
+[id$="--library_asset--entity.node.edit_form"] {
+  margin-bottom: 16px;
+  display: inline-block;
+}
+#edit-document-asset-label {
+  margin-bottom: 16px!important;
+}
+.oen-form-input-autocomplete {
+    background-image: url(../../../../core/themes/stable/images/core/throbber-inactive.png);
+    background-position: 100% center;
+    background-repeat: no-repeat;
+}
+.test-labs-service-request-form{
+  margin-bottom: 1.5em;
+  &::after{
+    content: "";
+    clear: both;
+    display: table;
+  }
+  .form-submit{
+    float: right;
+  }
+  @include media($mqs-desktop-up) {
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+}
+.form-item-form-test-labs-title {
+  label {
+
+  }
+}
+.oen-nokia-test-lab-element{
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  @include media($mqs-desktop-up) {
+    width: 50%;
+    float: left;
+  }
+  &.oen-nokia-test-lab-element-first {
+    padding-right: 0;
+    padding-left: 0;
+    @include media($mqs-desktop-up) {
+      padding-right: 15px;
+      padding-left: 0;
+    }
+  }
+  &.oen-nokia-test-lab-element-last {
+    padding-right: 0;
+    padding-left: 0;
+    @include media($mqs-desktop-up) {
+      padding-right: 0;
+      padding-left: 15px;
+    }
+  }
+}
+.path-nokia-labs-service{
+  .layout-container{
+    margin-right: 0;
+    padding-right: 0;
+    padding-left: 0;
+    @include media($mqs-desktop-up) {
+      width: 100%;
+    }
+  }
+}
+.form-select {
+  &.error {
+    + .select2 {
+      border: 1px solid $red !important;
+    }
+  }
+}
+.oen-checkbox-error{
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #DD4B39;
+  -webkit-box-shadow: none!important;
+  -moz-box-shadow: none!important;
+  box-shadow: none!important;
+}
+.oen-checkbox-wrapper{
+  display: inline-block
+}

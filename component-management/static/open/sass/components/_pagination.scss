@@ -1,0 +1,37 @@
+.pager {
+  color: $dark-gray;
+
+  @include clearfix;
+
+  &__items {
+    width: 100%;
+
+    @include clearfix;
+
+    .pager__item {
+      float: left;
+      padding: 0 2px;
+
+      a {
+        padding: 0 5px;
+        color: $dark-gray;
+        text-align: center;
+        display: block;
+
+        &:hover {
+          color: $black;
+        }
+      }
+
+      &.is-active {
+        a {
+          color: $black;
+          font-family: $font-med;
+          position: relative;
+          top: 1px;
+        }
+      }
+
+    }
+  }
+}

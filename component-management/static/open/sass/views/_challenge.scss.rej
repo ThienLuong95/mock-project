@@ -1,0 +1,25 @@
+diff a/docroot/themes/custom/nokiavue/sass/views/_challenge.scss b/docroot/themes/custom/nokiavue/sass/views/_challenge.scss	(rejected hunks)
+@@ -536,3 +544,23 @@
+   }
+ }
+ 
++.challenge-social {
++  right: 35%;
++  top: 2px;
++  position: absolute;
++  margin: 5px auto;
++  font-size: .875em;
++  color: #fff;
++
++}
++
++@media screen and (max-width: 1000px) {
++
++  .challenge-social {
++    right: 0%;
++    top: 2px;
++
++  }
++
++}
++

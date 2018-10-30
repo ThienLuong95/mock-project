@@ -1,0 +1,67 @@
+.tag {
+  color: $dark-gray;
+  font-family: $font-light;
+  font-weight: normal;
+  position: relative;
+  text-transform: capitalize;
+  margin-bottom: 0.2em;
+
+  &.tag-category {
+    .card--asset & {
+      padding-left: 25px;
+    }
+  }
+
+  &.tag--challenge {
+    color: $blue;
+  }
+
+  &--state {
+    color: $dark-gray;
+  }
+
+  &--alt {
+    border: $base-border;
+    color: $dark-gray;
+    border-radius: $base-font-size;
+  }
+
+  // asset types
+  &--white-paper {
+    color: $white-paper;
+
+    @extend .icon-white_papers;
+  }
+  &--procurement-data {
+    color: $procurement;
+
+    @extend .icon-service_catalogues;
+  }
+  &--roadmap-documentation {
+    color: $roadmap;
+
+    @extend .icon-technical_documentation;
+  }
+  &--technical-specification {
+    color: $source-code;
+
+    @extend .icon-source_code;
+  }
+  &--sdk-api {
+    color: $sdk-api;
+
+    @extend .icon-double-arrow;
+  }
+  &--patent {
+    color: $patents;
+
+    @extend .icon-patent_portfolios;
+  }
+
+  &:before {
+    font-size: 1.1em;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}

@@ -1,0 +1,27 @@
+.path-communities {
+	.layout-container {
+		width: 100%;
+
+		header {
+			width: 100%;
+			margin-bottom: $base-spacing;
+			text-align: center;
+		}
+	}
+
+	.card__image {
+		background-image: url('../images/hero_default.png');
+		background-size: cover;
+		background-position: center;
+	}
+
+	.card__membercount {
+
+	}
+	#views-exposed-form-communities-search-page-1 {
+		#edit-actions {
+	  		margin-top: 0px;
+		}		
+	}
+
+}

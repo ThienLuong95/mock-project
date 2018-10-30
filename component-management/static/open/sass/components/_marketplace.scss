@@ -1,0 +1,390 @@
+.text-error {
+  color: $red;
+}
+
+.community-market-place {
+  .search-description {
+    text-align: center;
+    color: #737373;
+  }
+  .product-price-new {
+    color: #0c97ed;
+  }
+  .card__content.bottom {
+    height: 100px;
+  }
+  #inner-wrap {
+    margin-top: 0 !important;
+  }
+  .margin-bottom-0em {
+    margin-bottom: 0;
+  }
+}
+
+.saved-orders {
+  padding: 40px;
+  background: #ffffff;
+}
+
+.md-card {
+  /*box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);*/
+  overflow: auto;
+  position: relative;
+  z-index: 1;
+  border-radius: 2px;
+  transition: .3s cubic-bezier(.4, 0, .2, 1);
+  transition-property: color, background-color;
+  will-change: color, background-color;
+}
+
+.md-table.md-theme-demo-light .md-table-alternate-header, .md-table.md-theme-demo-light .md-table-content {
+  background-color: #fff;
+}
+
+.md-content.md-theme-demo-light {
+  color: rgba(0, 0, 0, .87);
+}
+
+.md-table .md-table-content {
+  -webkit-box-flex: 1;
+  flex: 1;
+  overflow-x: auto;
+  overflow-y: auto;
+  height: 400px;
+  margin-bottom: 30px;
+  transition: height .3s cubic-bezier(.4, 0, .2, 1);
+}
+
+.md-table.md-theme-demo-light .md-table-row td {
+  border-top: 1px solid rgba(0, 0, 0, .12) !important;
+}
+
+.md-table-cell {
+  height: 48px;
+  position: relative;
+  transition: .3s cubic-bezier(.4, 0, .2, 1);
+  line-height: 18px;
+  padding: .5em 0 !important;
+}
+
+.md-table {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-flow: column wrap;
+  overflow-x: auto;
+}
+
+.md-table table {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+  overflow: hidden;
+  display: table;
+  border-color: grey;
+}
+
+.md-table-row {
+  transition: .3s cubic-bezier(.4, 0, .2, 1);
+  transition-property: background-color, font-weight;
+  will-change: background-color, font-weight;
+}
+
+.md-table-head-label {
+  padding-right: 5px;
+  padding-left: 5px;
+  display: inline-block;
+  position: relative;
+}
+
+.md-table-head-container, .md-table-head-label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.md-table.md-theme-demo-light .md-table-head {
+  color: rgba(0, 0, 0, .54);
+  padding: .5em 0 !important;
+}
+
+.md-table-cell-container {
+  padding: 6px 5px 6px 5px;
+}
+
+.md-table-content th {
+  background: #ffffff;
+  border-bottom: 0 !important;
+}
+
+.width-65px {
+  width: 65px;
+}
+
+.width-100px {
+  width: 100px;
+}
+
+.width-120px {
+  width: 120px;
+}
+
+.width-300px {
+  width: 300px;
+}
+
+.width-250px {
+  width: 250px;
+}
+
+.width-110px {
+  width: 110px;
+}
+
+.width-180px{
+  width: 180px;
+}
+.width-80px{
+  width: 80px;
+}
+.width-160px{
+  width: 160px;
+}
+.width-150px{
+  width: 150px;
+}
+.width-170px{
+  width: 170px;
+}
+.width-128px {
+  width: 128px;
+}
+.width-360px {
+  width: 360px;
+}
+.scroll-body{
+  height: 400px !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  display: block !important;
+}
+.link-action-primary {
+  color: #06A186;
+  text-decoration: underline;
+  /*font-weight: 700;*/
+}
+
+.link-action-default {
+  text-decoration: underline;
+  /*font-weight: 700;*/
+  color: #000000;
+}
+
+.link-action-primary:hover, .link-action-primary:active {
+  cursor: pointer;
+  color: #3CE19D !important;
+}
+
+.link-action-default:hover, .link-action-default:active {
+  cursor: pointer;
+  color: #545454
+}
+
+.save-orders-title {
+  font-family: GTWalsheimProBold;
+  font-size: 1.375em;
+}
+
+.text-overflow-ellipsis {
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.my-open-orders{
+  span {
+    @include media($mqs-desktop-up) {
+      font-size: 1.375em;
+    }
+  }
+}
+
+.marketplace-margin{
+  margin: 1em auto;
+}
+
+
+.supplier-registration-btn-next {
+  float: right;
+}
+
+.supplier-registration-page-content {
+  margin-top: -150px;
+  margin-bottom: 40px;
+  padding-right: 10px;
+  padding-left: 10px;
+  @include media($mqs-desktop-up) {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.supplier-registration-page {
+  .supplier-registration-form, .supplier-registration-btn-step {
+    &:after {
+      clear: both;
+      content: "";
+      display: block;
+    }
+  }
+  width: 100%;
+  padding: 10px;
+  background-color: #ffffff;
+  line-height: 1 !important;
+  position: relative;
+  @include media($mqs-desktop-up) {
+    width: 100%;
+    padding: 40px;
+  }
+  select {
+    height: 45px;
+    border: 1px solid #dedede;
+  }
+  select:focus {
+    height: 45px;
+    border-color: #0dc5a0;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, .06), 0 0 5px rgba(11, 173, 141, .7);
+    outline: none;
+  }
+  hr {
+    margin: 0;
+  }
+  .h2-supplier-registration {
+    font-size: 42px;
+    font-weight: bold;
+    font-family: 'GTWalsheimProBold';
+  }
+  .h3-supplier-registration {
+    font-size: 28px;
+  }
+  .h4-supplier-registration {
+    font-size: 25px;
+  }
+  .h5-supplier-registration {
+    font-size: 20px;
+  }
+  .margin-top-40-content {
+    margin-top: 30px;
+  }
+  .margin-top-20-content {
+    margin-top: 20px;
+  }
+  .margin-top-16-content {
+    margin-top: 16px;
+  }
+  .title-supplier-registration {
+    font-weight: bold;
+  }
+  .field-required {
+    color: red;
+  }
+  .market-place-supplier-registration-details-left {
+    width: 100%;
+    @include media($mqs-desktop-up) {
+      width: 45%;
+      float: left;
+      padding-right: 5%;
+    }
+    box-sizing: border-box;
+  }
+
+  .market-place-supplier-registration-details-right {
+    width: 100%;
+    @include media($mqs-desktop-up) {
+      width: 55%;
+      float: right;
+      padding-left: 5%;
+    }
+    box-sizing: border-box;
+  }
+  .street-name-region {
+    width: 60%;
+    display: inline-block;
+  }
+  .number-region {
+    width: 30%;
+    display: inline-block;
+    float: right;
+  }
+  .postcode-region {
+    width: 30%;
+    display: inline-block;
+  }
+  .town-region {
+    width: 60%;
+    display: inline-block;
+    float: right;
+  }
+
+  input[type=radio], input[type=checkbox] {
+    display: inline;
+  }
+  .market-place-supplier-registration-payment-method {
+
+  }
+  .market-place-supplier-registration-payment-left {
+    width: 100%;
+    @include media($mqs-desktop-up) {
+      width: 45%;
+      float: left;
+      padding-right: 5%;
+    }
+    box-sizing: border-box;
+  }
+  .market-place-supplier-registration-payment-right {
+    width: 100%;
+    @include media($mqs-desktop-up) {
+      width: 55%;
+      float: right;
+      padding-left: 5%;
+    }
+    box-sizing: border-box;
+  }
+  .market-place-supplier-registration-summary {
+    margin: 0;
+    padding-top: 40px;
+    position: relative;
+    h2 {
+      margin-bottom: 40px;
+      font-family: 'GTWalsheimProLight';
+      font-size: 22px;
+    }
+    h3 {
+      margin-bottom: 16px;
+      font-size: 16px;
+    }
+    p {
+      margin-bottom: 35px;
+      font-size: 16px;
+      line-height: 25px;
+    }
+  }
+  .border-top {
+    border-top: 1px solid #CCCCCC;
+  }
+  .mandatory {
+    text-align: right;
+    color: red;
+  }
+  .text-align-center {
+    text-align: center;
+  }
+}
+.text-align-right-price {
+  text-align: right;
+  margin-right: 15px;
+}
+#block-myprocessedorder .oen-vue-table-wrapper th {
+  padding: 10px;
+}

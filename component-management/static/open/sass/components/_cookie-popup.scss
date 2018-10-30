@@ -1,0 +1,72 @@
+#sliding-popup {
+  display: block;
+  margin: 0;
+  padding: 0px;
+  right: 0;
+  text-align: center;
+  z-index: 99999;
+  background: #ffffff !important;
+
+  .popup-content {
+
+    #popup-text {
+      color: #fff;
+      float: left;
+      font-weight: bold;
+      margin: 10px 0;
+      text-align: left;
+      max-width: 60%;
+
+      h2 {
+        color: #010522 !important;
+        display: block;
+        font-size: 14px;
+        margin: 0;
+      }
+
+      p {
+        color: #9b9b9b !important;
+        display: block;
+        font-size: 12px;
+        margin: 0;
+      }
+    } // popup-text
+
+    #popup-buttons button {
+      cursor: pointer;
+      margin-right: 5px;
+      margin-top: 0.7em;
+      vertical-align: middle;
+      overflow: visible;
+      width: auto;
+      border-radius: 100px;
+      display: inline-block;
+      text-decoration: none;
+      font-size: 14px;
+      box-shadow: none;
+      font-family: $font-med;
+      text-shadow: none;
+      padding: .75em 1.75em;
+
+      &:hover {
+        /* background: none; */
+          background: -moz-linear-gradient(center top,#dfdfdf 5%,#ededed 100%);
+          filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf',endColorstr='#ededed');
+        /* background-color: #dfdfdf; */
+        /* background-color: #dfdfdf; */
+      }
+
+      &.agree-button {
+        background: #0dc5a0;
+        color: #FFF;
+        border: none;
+      }
+
+      &.find-more-button {
+        background: none;
+        color: #0a9e80;
+        border: 1px solid #DEDEDE;
+      }
+    } // button
+  } // popup-content
+} // sliding-popup

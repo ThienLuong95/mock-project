@@ -1,0 +1,49 @@
+.user__actions {
+  margin-top: $base-spacing;
+
+  a {
+    float: left;
+  }
+
+  .flag {
+    @extend .btn;
+    @extend .btn--ghost;
+    margin-left: 0.1*$base-spacing;
+
+    .ajax-progress {
+      position: absolute;
+    }
+
+    a {
+      color: $green !important;
+    }
+  }
+}
+
+.path-user {
+  .dashboard-cards {
+    .card {
+      flex-basis: 25%;
+    }
+  }
+
+  .tab-links {
+    border-bottom: $base-border;
+
+    + p {
+      margin: $base-spacing;
+    }
+  }
+}
+
+.user-cancel-form {
+  padding: $base-spacing*2 0;
+
+  .form-actions {
+    margin-top: $base-spacing;
+
+    a {
+      margin-left: $base-spacing;
+    }
+  }
+}

@@ -1,0 +1,228 @@
+.mp-wrap{
+    top: -10px;
+}
+.product-detail-wrapper{
+    margin-top: -150px;
+}
+.wrapper-order-details{
+    margin: 20px 10px 0;
+    padding-bottom: 20px;
+    @include media($mqs-desktop-up) {
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+.hero {
+    &.product-banner{
+        background-image: none;
+        padding: 7.6em 0;
+    }
+}
+.layout-container {
+    &.product-detail-promotion {
+        position: relative;
+        padding: 0;
+        background-color: #fff;
+        margin-bottom: 40px;
+    }
+}
+.page-node-type-library-asset{
+    .product-detail-promotion {
+        .main-heading {
+            padding: 40px;
+        }
+    }
+    .order-details-page{
+        .main-heading{
+            padding: 0 0 40px;
+        }
+    }
+}
+.product-detail-promoion{
+    .community-social{
+        top: 20px;
+    }
+}
+.product-detail{
+    background-color: #fff;
+}
+.product-detail:after{
+    clear: both;
+    content: "";
+    width: 100%;
+}
+.product-feature-image{
+    width: 100%;
+    height: auto;
+    padding-right: 24px;
+    padding-left: 24px;
+    @include media($mqs-desktop-up) {
+        float: left;
+        width: 48%;
+    }
+}
+.product-feature-image-item{
+    background-color: #ffffff;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 325px;
+    height: 325px;
+    margin-right: auto;
+    margin-left: auto;
+    @include media($mqs-desktop-up) {
+        margin-right: initial;
+        margin-left: 0;
+    }
+}
+.product-summary{
+    padding: 24px 24px 0;
+    width: 100%;
+    .field__label{
+        font-family: 'GTWalsheimProBold';
+        display: inline-block;
+    }
+    .field__item{
+        display: inline-block;
+    }
+    @include media($mqs-desktop-up) {
+        float: right;
+        width: 52%;
+        padding: 0 24px 0 0;
+    }
+}
+.product-item{
+    &.price {
+        color: #84a6c8;
+    }
+}
+.product-detail-sidebar {
+
+    button {
+        display: block;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    @include media($mqs-desktop-up) {
+        padding-top: 290px;
+    }
+}
+.btn--saved{
+    &:before{
+        font: normal normal normal 18px/1 FontAwesome;
+        content: "\f005";
+        margin-right: 5px;
+    }
+}
+
+.supplier{
+
+}
+.supplier-img{
+    width: 44px;
+    height: 44px;
+    float: left;
+    background-color: #ccc;
+    border-radius: 22px;
+}
+h2{
+    &.supplier-name{
+        font-family: 'GTWalsheimProBold';
+        margin-bottom: 0.1em;
+    }
+}
+.supplier-name{
+    padding-left: 60px;
+}
+.order-detail{
+    margin: 0;
+    padding-top: 40px;
+    border-top: 1px solid #CCCCCC;
+    position: relative;
+    h2{
+        margin-bottom: 40px;
+        font-family: 'GTWalsheimProLight';
+        font-size: 22px;
+    }
+    h3{
+        margin-bottom: 16px;
+        font-size: 16px;
+    }
+    p{
+        margin-bottom: 35px;
+        font-size: 16px;
+        line-height: 25px;
+    }
+}
+.back-to-order-detail{
+    position: absolute;
+    bottom: 50px;
+    left: 40px;
+}
+.back-to-order-detail:hover{
+    cursor: pointer;
+}
+.order-button-area{
+    padding-bottom: 0px;
+    text-align: right;
+}
+.order-details-notification{
+    background-color: #fff;
+    position: relative;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    padding: 20px;
+    width: 55%;
+    border: 1px solid #CCCCCC;
+    @include media($mqs-desktop-up) {
+        margin-top: 10px;
+        margin-bottom: 40px;
+        padding: 40px;
+    }
+}
+.orer-details-notification-close{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 0.4;
+    @include media($mqs-desktop-up) {
+        top: 20px;
+        right: 20px;
+    }
+}
+.order-details-notification-icon{
+    background-color: #ffffff;
+    margin-top: 20px;
+    width: 54px;
+    height: 54px;
+    float: left;
+    border-radius: 27px;
+    .fa{
+        color: #3ce19d;
+        margin-top: -5px;
+    }
+}
+.order-details-notification-content{
+    padding-left: 74px;
+    h2{
+        font-size: 28px;
+        font-family: GTWalsheimProBold;
+        margin-bottom: 10px;
+    }
+    p{
+        margin-bottom: 5px;
+    }
+    @include media($mqs-desktop-up) {
+        padding-left: 94px;
+    }
+}
+.order-details-notification-order-id{
+    color: #F48B4C;
+    margin-bottom: 0;
+}
+.btn-accept-order, .btn-reject-order, .btn-fulfill-order, .btn-paid-order, .btn-unpaid-order {
+    float: left;
+    margin-right: 5px;
+}

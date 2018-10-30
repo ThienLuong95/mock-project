@@ -1,0 +1,695 @@
+.page-node-type-challenge {
+
+  #edit-delete {
+    display: none !important;
+  }
+
+  .links .comment-add {
+    display:none;
+  }
+
+  #block-views-block-node-comments-block-1 {
+    clear:both;
+    padding-top:50px;
+  }
+
+  #block-views-block-challenge-assets-block-1 {
+    margin-top: $base-spacing;
+  }
+
+  #edit-actions {
+    > * {
+      margin-right: $base-spacing;
+    }
+
+    a {
+      @extend .btn--ghost;
+    }
+
+
+  }
+
+  .group-challenge-edit-form {
+    .button--danger {
+      display: none;
+    }
+  }
+
+  .group-attachments-block {
+    margin-top: $base-spacing * 2;
+  }
+
+  .challenge-tags {
+    overflow: hidden;
+    height: auto;
+
+    .field__label {
+      @extend h2;
+    }
+
+    .field__item {
+      float: left;
+
+      a {
+        display: block;
+        border: $base-border;
+        color: $dark-gray;
+        font-size: em(14);
+        padding: 0.5em $base-spacing;
+        margin: 0 10px 10px 0;
+        float: left;
+        font-family: $font-reg;
+
+        &:hover {
+          color: $blue;
+          border-color: $blue;
+        }
+      }
+    }
+  }
+}
+
+.challenge-leader {
+  border:1px solid $light-gray;
+  border-radius:2px;
+  background:$lightest-gray;
+  padding:30px;
+  margin-bottom:50px;
+  text-align:center;
+}
+
+.challenge-leader__title, .challenge-leader__name {
+  font-size:em(18);
+}
+
+.challenge-leader__title {
+  margin-bottom:20px;
+  color:$blue;
+}
+
+.challenge-leader__position {
+  color:$dark-gray;
+}
+
+.challenge-leader__profile {
+  width:90px;
+  height:90px;
+  margin:0 auto;
+  border-radius:90px;
+  overflow:hidden;
+  margin-bottom:10px;
+}
+
+.challenge-leader .challenge-leader__contact {
+  margin-top:20px;
+  a {
+    display:block;
+    width:100%;
+    font-size:em(16);
+    color:$green;
+    border-width:2px;
+  }
+}
+
+.block-region-top-sidebar>div {
+  clear:both;
+}
+
+#block-views-block-challenge-responses-block-1 {
+  padding-bottom: $base-spacing;
+  border-bottom: $base-border;
+  margin-bottom: $base-spacing;
+
+  .views-field-label {
+    color: $dark-gray;
+    font-size: em(14);
+    margin-bottom: $base-spacing;
+  }
+
+  .views-field-id {
+    display: none;
+  }
+}
+
+.main-content {
+  .field--name-field-started, .field--name-field-ends {
+    display: none;
+  }
+}
+
+.challenge-top-content {
+  margin: $base-spacing 0 $base-spacing*2 0;
+
+  @include clearfix;
+
+  .challenge__main {
+    padding: 1.5em;
+    background: white;
+    margin-bottom: 50px;
+
+    .block-region-top-main {
+      > div {
+        @include clearfix;
+      }
+    }
+
+    .field--name-field-challenge-featured-image {
+      margin: -1.5em;
+      clear: both;
+
+      img {
+        display: block;
+        height: auto;
+        min-width: 100%;
+      }
+    }
+
+    .field--name-field-challenge-subtitle {
+      margin-bottom: 1.5em;
+    }
+
+    .field--label-inline {
+      float: left;
+      margin: 0 1em 1.5em 0;
+      font-size: 0.9em;
+
+      > * {
+        float: left;
+      }
+
+      .field__label {
+        margin-right: 10px;
+        color: $dark-gray;
+        font-family: $font-light;
+      }
+
+    }
+
+    .challenge_tab_content{
+      margin: 0 -1.5em -1.5em -1.5em;
+      background: #f4f4f4;
+      padding-top: 50px;
+    }
+  }
+}
+
+
+.challenge-tab-bodies {
+  border-bottom: 1px solid $light-gray;
+  padding: 3em 0;
+  //margin-bottom: 3em;
+  //width: 66.25%;
+
+  .tab-wrapper {
+
+    .challenge-tab {
+      @include clearfix;
+      width: 100%;
+
+      &__main {
+        &:last-child {
+          width: 100%;
+        }
+      }
+
+      &__single {
+        .views-element-container>div {
+          width: 100%;
+        }
+
+      }
+
+      &__sidebar {
+        footer {
+          a {
+            margin-top: $base-spacing;
+          }
+        }
+      }
+    }
+
+  }
+}
+
+.challenge-sidebar {
+  &__cta {
+    &:last-child {
+      border-bottom: none;
+    }
+
+    a {
+      @extend .btn;
+      display: block;
+      margin-bottom: $base-spacing / 2;
+
+      &.flag {
+        @extend .btn--ghost;
+      }
+    }
+
+    &.follow-challenge,
+    &.edit,
+    &.edit-form,
+    &.manage-team,
+    &.build-team,
+    &.invite,
+    &.edit-community,
+    &.leave-community {
+      a {
+        @extend .btn--ghost;
+      }
+    }
+  }
+
+  &__invitation {
+    &__button {
+      margin-top: $base-spacing / 2;
+      a {
+        @extend .btn;
+        width: 45%;
+
+        &.reject {
+          &__button {
+            @extend .btn--ghost;
+            float: right;
+          }
+        }
+      }
+    }
+  }
+}
+
+.challenge {
+  &__sidebar {
+    > div {
+      > div {
+        margin-bottom: $base-spacing;
+        margin-top: 0;
+        &:not(:first-of-type) {
+          border-top: $base-border;
+          padding-top: $base-spacing;
+        }
+      }
+    }
+  }
+}
+
+.page-node-type-community, .page-node-type-project {
+  aside.layout-sidebar-second {
+    > div {
+      > div {
+        margin-bottom: $base-spacing;
+        margin-top: 0;
+        &:not(:first-of-type):not([data-block-plugin-id="oen_storage"]):not([data-block-plugin-id="block_nokia_project_submissions"]) {
+          border-top: $base-border;
+          padding-top: $base-spacing;
+        }
+      }
+    }
+  }
+}
+
+div[data-block-plugin-id="oen_challenge_sidebar_ctas"],
+aside.layout-sidebar-second {
+  .item-description {
+    margin-bottom: $base-spacing;
+  }
+}
+
+// custom styling for each tab, based on the content in it
+// we have had to do it this way because we currently don't have any
+// other hook for the contents in the tabs... Not ideal.
+
+// 2 - updates
+.challenge-tab--two {
+  header {
+    color: $dark-gray;
+    margin-bottom: $base-spacing;
+  }
+
+  .views-field-created {
+    color: $dark-gray;
+    margin-top: $base-spacing*2;
+  }
+
+  .views-field-subject {
+    font-family: $font-med;
+  }
+
+  .views-field-created,
+  .views-field-subject,
+  .views-field-field-comment-body {
+    margin-bottom: 5px;
+    clear: both;
+  }
+
+  .views-field-edit-comment,
+  .views-field-delete-comment {
+    float: left;
+    margin: 0 $base-spacing $base-spacing 0;
+  }
+
+  section {
+    margin-top: $base-spacing;
+    clear: both;
+  }
+
+  .comment-group-form .field--name-subject {
+    display: block;
+  }
+
+  .views-field-delete-comment {
+    display: none;
+  }
+}
+
+// 3 - resources
+.challenge-tab--three {
+
+  footer {
+    clear: left;
+
+    a {
+      margin-top: $base-spacing;
+    }
+  }
+
+  .block-region-third-main {
+    > div {
+      @include clearfix;
+    }
+  }
+}
+
+// 4 - community
+.challenge-tab--four {
+  #challenge-add-question-form {
+    margin-bottom: $base-spacing * 2;
+    position: relative;
+    @include clearfix;
+
+    .user-avatar {
+      position: absolute;
+
+      &__name, &__title {
+        display: none;
+      }
+    }
+
+    .form-item {
+      padding-left: 60px;
+    }
+
+    #edit-submit {
+      float: right;
+
+      @extend .btn;
+      @extend .btn--ghost;
+    }
+  }
+
+  .comment-comment-forum-form {
+    .user-avatar {
+      position: absolute;
+
+      &__name, &__title {
+        display: none;
+      }
+    }
+
+    .form-item {
+      padding-left: 60px;
+    }
+
+    .field--type-text-long {
+      margin-bottom: $base-spacing;
+    }
+  }
+
+  article {
+    background: $white;
+    border: $base-border;
+    padding: $base-spacing;
+    margin-bottom: $base-spacing;
+
+    > h2 {
+      @extend .heading--large;
+      @extend .heading--light;
+
+      margin-bottom: 10px;
+    }
+
+    footer {
+      color: $dark-gray;
+      margin-bottom: $base-spacing / 2;
+
+      > div {
+        margin-left: 50px;
+      }
+    }
+
+    .field--name-body {
+      margin-bottom: $base-spacing;
+      margin-left: 50px;
+    }
+
+    .links {
+      margin-bottom: $base-spacing;
+      color: $dark-gray;
+      @include clearfix;
+
+      li {
+        float: right;
+        margin: 0 0 20px 20px;
+      }
+
+      a {
+        color: $dark-gray;
+      }
+    }
+
+    section {
+      border-top: $base-border;
+      padding-top: $base-spacing;
+
+      h2 {
+        margin-bottom: 10px;
+      }
+
+      .comment {
+        border-bottom: none;
+        padding-bottom: 10px;
+
+        @include clearfix;
+
+        &__credits {
+          margin-bottom: $base-spacing / 2;
+        }
+
+        &__name {
+          @extend .heading--smallest;
+
+          margin: 0;
+          float: none;
+        }
+
+        &__date {
+          float: none;
+        }
+
+        &__actions {
+          float: right;
+        }
+      }
+    }
+  }
+}
+
+// 5 - collaborate
+.challenge-tab--five {
+  .challenge-tab__main {
+    // hide unneeded fields
+    .views-field-created,
+    .views-field-subject,
+    .views-field-delete-comment {
+      display: none;
+    }
+
+    .views-field-edit-comment,
+    .views-field-delete-comment {
+      float: left;
+      margin-right: $base-spacing;
+
+      a {
+        @extend .btn;
+        @extend .btn--ghost;
+      }
+    }
+
+    .views-field-field-comment-body {
+      font-family: $font-light;
+      font-size: em(20px);
+      margin-bottom: $base-spacing / 2;
+    }
+
+    .challenge__collaborators {
+      margin-bottom: $base-spacing;
+
+      @include clearfix;
+
+      &__send {
+        color: $green;
+      }
+    }
+
+    .comment {
+      border: none;
+
+      &__text {
+        font-family: $font-light;
+        font-size: em(20px);
+        margin-bottom: $base-spacing / 2;
+      }
+    }
+
+  }
+
+  .challenge-linked-projects {
+    margin-top: $base-spacing * 2;
+  }
+
+
+}
+
+#edit-field-challenge-type--wrapper--description {
+  clear: both;
+}
+
+.challenge-tab-bodies {
+  .tab-wrapper {
+    .challenge-tab {
+      &__single {
+        .views-element-container>div {
+          width: 100% !important;
+        }
+      }
+
+      h2 {
+        margin-top: 0 !important;
+        font-size: 1.375em;
+      }
+
+      footer {
+        clear: both;
+        height: auto;
+        overflow: hidden;
+        padding-top: $base-spacing;
+      }
+    }
+  }
+}
+
+.challenge-social{
+float: right;
+margin: 5px auto;
+font-size: .875em;
+color: #fff;
+}
+
+@media screen and (max-width: 1000px) {
+  .challenge-social{
+     right: 0%;
+	 top: 2px;
+	 }
+}
+.challenge-privacy-and-whitelist {
+  .views-element-container {
+    margin-top: 1em;
+  }
+  .challenge-privacy {
+    margin-bottom: $base-spacing;
+  }
+}
+@media screen and (max-width: 1040px) {
+  .tab-links--holder{
+    width: 100%!important;
+  }
+  .challenge-tab-bodies {
+    width: 100%;
+  }
+}
+.tealbook-request-result-edit-message-text-description {
+  font-size: 0.9em;
+  margin-top: 2em;
+  .description-content {
+    margin-top: 1em
+  }
+  ul {
+    list-style-type: disc;
+    list-style-image: none;
+    margin: 0.25em 0 0.25em 2em;
+    display: block;
+    li {
+      display: list-item;
+    }
+  }
+}
+#tealbook-request-result-table-wrapper {
+  float: left;
+  width: 70%;
+}
+#tealbook-request-result-message-template-wrapper {
+  float: right;
+  width: 28%;
+}
+@media screen and (max-width: 1140px) {
+  #tealbook-request-result-message-template-wrapper, #tealbook-request-result-table-wrapper {
+    width: 100%;
+    float: none;
+  }
+}
+@media screen and (min-width: 65rem){
+  .challenge__sidebar{
+    float: right;
+  }
+}
+.challenge-tab-bodies {
+  .challenge-tab {
+    .challenge-tab__main {
+      .field--name-field-body {
+        p {
+          word-wrap: break-word;
+          text-align: justify;
+        }
+      }
+    }
+  }
+}
+
+#nokia-tealbook-request-management-table-wrapper {
+  width: 100% !important;
+  .action {
+    width: 160px;
+  }
+  @media screen and (min-width: 976px) {
+    .submittedBy {
+      width: 160px;
+    },
+    .id, .status {
+      width: 110px;
+    },
+    .date {
+      width: 120px;
+    }
+  }
+}
+
+.challenge-top-content {
+  .challenge__main {
+    .block-region-top-main {
+      .field--name-field-challenge-subtitle {
+        word-wrap: break-word;
+      }
+    }
+  }
+}

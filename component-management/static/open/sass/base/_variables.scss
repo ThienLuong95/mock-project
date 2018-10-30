@@ -1,0 +1,90 @@
+// Breakpoints
+$medium-screen: 600px;
+$large-screen: 900px;
+
+// Margins
+$wrapper-margin-mob: 20px;
+$wrapper-margin-desk: 60px;
+
+// Typography
+// Fonts
+$font-light: 'GTWalsheimProLight';
+$font-reg: 'GTWalsheimProReg';
+$font-med: 'GTWalsheimProMed';
+$font-bold: 'GTWalsheimProBold';
+$base-font-family: $font-light;
+$heading-font-family: $font-med;
+
+// Font Sizes
+$base-font-size: 1em;
+
+// Line height
+$base-line-height: 1.5;
+$heading-line-height: 1.2;
+
+// Other Sizes
+$base-border-radius: 4px;
+$base-spacing: $base-line-height * 1em;
+$small-spacing: $base-spacing / 2;
+$base-z-index: 0;
+
+$input-height: em(45);
+
+// Colors
+$dark-blue: #020522;
+$blue:      #599EE7;
+$purple:    #A813FF;
+$pink:      #DE6BAD;
+$green:     #0DC5A0;
+$dark-green:#0a9e80;
+$red:       #EE6A6A;
+$orange:    #F48A4B;
+$yellow:    #fdff63;
+$teal:      #00bcc9;
+$lavender:  #8081E8;
+$mustard:   #F4BD48;
+
+// asset type colours
+$patents: #61C3D6;
+$procurement: #EE6A6A;
+$roadmap: #D982E0;
+$sdk-api: #8081E8;
+$source-code:#DE6BAD;
+$white-paper: #FF9AC1;
+
+// Monochromatics
+$black:              #000000;
+// $dark-gray:          #9B9B9B;
+$dark-gray:          #737373;
+$mediumdark-gray:    #BBBBBB;
+$medium-gray:        #CCCCCC;
+$light-gray:         #DEDEDE;
+$lighter-gray:		 #EEEEEE;
+$comment-gray:     	 #F9F9F9;
+$lightest-gray:      #FBFBFB;
+$white:              #FFFFFF;
+$white--transparent: transparentize($white, 0.4);
+
+// Font Colors
+$base-font-color: $black;
+$action-color: $green;
+
+// Border
+$base-border-color: $light-gray;
+$base-border: 1px solid $base-border-color;
+
+// Background Colors
+$base-background-color: #fff;
+$secondary-background-color: tint($base-border-color, 75%);
+
+// Forms
+$form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3);
+
+// Animations
+$base-duration: 150ms;
+$base-timing: ease;
+
+$primaryColor: #06A186;
+$primaryHighlight: #3CE19D;
+

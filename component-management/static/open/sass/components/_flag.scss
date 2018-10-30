@@ -1,0 +1,18 @@
+.flag {
+  clear: both;
+  margin-bottom: 3em;
+}
+.flag-follow_challenge {
+  margin-bottom: 0!important;
+}
+
+
+.flag-report_content,
+.flag-report_project {
+  @extend .btn;
+  @extend .btn--ghost;
+
+  a {
+  	color: $green;
+  }
+}

@@ -1,0 +1,227 @@
+.path-login, .path-register {
+  h1.main-heading {
+    text-align: left;
+
+    &.heading--central {
+      text-align: left;
+    }
+  }
+
+  a.gigya-composite-control-link.button {
+    overflow: hidden;
+    float: left;
+    height: 49px;
+
+    input {
+      font-size: 1em;
+      padding: 0;
+      border-radius: 0;
+      line-height: 1.2;
+    }
+  }
+
+  .under-site-login {
+    label {
+      font-size: 1em;
+    }
+  }
+}
+
+#block-gigyaraaslogin, #block-gigyaraasregister {
+  > p {
+    clear: both;
+    display: block;
+    @include clearfix;
+  }
+}
+
+.gigya-screen-caption {
+  display: none !important;
+}
+
+.gigya-divider-content,
+.gigya-composite-control-header,
+.gigya-composite-control {
+  display: block;
+  margin-bottom: $base-spacing / 2;
+  text-align: left !important;
+}
+
+.gigyaDocButton,
+.gigya-input-submit {
+  margin-bottom: $base-spacing;
+}
+
+.gigya-register-here-link,
+.gigya-footer a {
+  @extend .btn;
+  @extend .btn--ghost;
+}
+
+#gigya-raas-profile-div {
+
+  @include media($mqs-tablet-portrait-up) {
+    .first-name-row {
+      float: left;
+      width: 45%;
+      margin-right: 10%;
+    }
+    .last-name-row {
+      float: left;
+      width: 45%;
+    }
+  }
+
+  .gigya-myPhoto {
+    margin-bottom: $base-spacing;
+  }
+
+  input, select {
+    margin-bottom: $base-spacing;
+  }
+}
+
+#gigya-cancel-account {
+  .btn {
+    @extend .btn;
+    @extend .btn--ghost;
+
+    margin-bottom: $base-spacing/2;
+  }
+}
+
+.gigya-error-msg, .gigya-error-display {
+  color: #DD4B39;
+  font-size: em(18px) !important;
+  margin-bottom: $base-spacing !important;
+  font-family: $font-reg;
+}
+
+a.gigya-composite-control.gigya-composite-control-link {
+  display: inline-block;
+  width: auto;
+  padding-top: 0;
+
+  input {
+    height: 49px;
+    background: transparent;
+  }
+}
+
+.hidden-skills-list {
+  overflow: hidden;
+  max-height: 0;
+  margin-bottom: 0;
+}
+
+@media (min-width: 720px) {
+
+  #gigya-login-form {
+    .gigya-layout-row.with-divider {
+      .gigya-layout-cell{
+        &.with-social-login {
+          float: left;
+          width:45%;
+
+          .gigyaDocButton {
+            width: 100%;
+          }
+        }
+
+        &.with-divider {
+          float: left;
+          width:10%;
+
+          label {
+            text-align: center !important;
+            font-size: 1.6em;
+          }
+        }
+
+        &.with-site-login {
+          clear: both;
+        }
+
+        .gigya-social-login-container,
+        #gigya-raas-login-div_social_0_uiContainer {
+          width: 100% !important;
+        }
+
+        .gigya-login-providers-container {
+          margin: 0;
+          width: 100% !important;
+
+          .gigya-login-provider {
+            display: inline-block;
+            box-sizing: border-box;
+            float: left;
+            width: 33% !important;
+            height: auto;
+            overflow: hidden;
+            padding-right: 1em;
+            margin: 0 !important;
+
+            .tabbing-button {
+              width: 100%;
+              height: auto !important;
+              overflow: hidden;
+
+              div {
+                width: 100% !important;
+                padding-top: 38.5%;
+                height: 0 !important;
+                background-size: 300% auto;
+              }
+
+            }
+
+            &:nth-child(1) .tabbing-button div {
+              background-position: 0 0 !important;
+            }
+
+            &:nth-child(2) .tabbing-button div {
+              background-position: 50% 0 !important;
+            }
+
+            &:nth-child(3) .tabbing-button div {
+              background-position: 100% 0 !important;
+            }
+          }
+        }
+
+      }
+    }
+
+  }
+
+}
+
+@media (max-width: 719px) {
+  .gigya-login-providers-container {
+    margin: 0 !important;
+  }
+
+  .gigya-layout-cell {
+    &.with-divider {
+      label {
+        font-size: 1.6em;
+      }
+    }
+  }
+}
+
+.gigya-login-providers-container .gigya-login-provider[data-gigya-provider='saml-Nokia']{
+  display: none !important;
+}
+.gigya-login-providers-container .gigya-login-provider[data-gigya-provider] img{
+  height: 38px !important;
+}
+
+.individua-employee-radio {
+  border: 1px solid #dedede;
+  padding: 5px 20px;
+  float: left;
+  margin-right: 1.5em;
+  background: #fff;
+  margin-bottom: 1.5em;
+}

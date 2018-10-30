@@ -1,0 +1,92 @@
+.icon-custom {
+  &:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  &.icon-overview {
+    &:before {
+      background: url('../icons/panel-overview.svg') no-repeat;
+      background-size: contain;
+    }
+  }
+  &.icon-resources {
+    &:before {
+      background: url('../icons/panel-resources.svg') no-repeat;
+      background-size: contain;
+    }
+  }
+  &.icon-submissions {
+    &:before {
+      background: url('../icons/panel-submissions.svg') no-repeat;
+      background-size: contain;
+    }
+  }
+  &.icon-updates {
+    &:before {
+      background: url('../icons/panel-updates.svg') no-repeat;
+      background-size: contain;
+    }
+  }
+  &.icon-faq {
+    &:before {
+      background: url('../icons/panel-faq.svg') no-repeat;
+      background-size: contain;
+    }
+  }
+  &.icon-community {
+    &:before {
+      background: url('../icons/panel-community.svg') no-repeat;
+      background-size: contain;
+    }
+  }
+  &.icon-community {
+    &:before {
+      background: url('../icons/panel-community.svg') no-repeat;
+      background-size: contain;
+    }
+  }
+  &.icon-alert {
+    &:before {
+      background: url('../images/icon_alert.svg') no-repeat;
+      background-size: contain;
+    }
+  }
+  &.icon-tick--gray {
+    &:before {
+      background: url('../images/icon_tick--gray.svg') no-repeat;
+      background-size: contain;
+    }
+  }
+  &.icon-login {
+    &:before {
+      background: url('../images/login.svg') no-repeat;
+      background-size: contain;
+    }
+  }
+  &.icon-permission {
+    &:before {
+      background: url('../images/permission.svg') no-repeat;
+      background-size: contain;
+    }
+  }
+  &.icon-key {
+    &:before {
+      background: url('../images/key.svg') no-repeat;
+      background-size: contain;
+    }
+  }
+}
+
+.status-messages {
+  .icon-alert {
+    &:before {
+      background-color: #f4bd48;
+      background-image: url(../images/icon_alert.svg);
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+  }
+}

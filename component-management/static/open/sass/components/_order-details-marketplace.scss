@@ -1,0 +1,204 @@
+.order-details-page {
+  width: 100%;
+  padding: 10px;
+  background-color: #ffffff;
+  line-height: 1 !important;
+  position: relative;
+  @include media($mqs-desktop-up) {
+    width: 640px;
+    padding: 40px;
+  }
+  .margin-top-40-content {
+    margin-top: 30px;
+    &:after{
+      clear: both;
+      content: "";
+      display: block;
+    }
+  }
+  .margin-top-20-content {
+    margin-top: 20px;
+  }
+  .margin-top-16-content {
+    margin-top: 16px;
+  }
+  hr {
+     margin: 0;
+  }
+  .h2-order-details {
+    font-size: 42px;
+    font-weight: bold;
+    font-family: 'GTWalsheimProBold';
+  }
+  hr {
+    margin: 0;
+  }
+  .h2-order-details {
+    font-size: 42px;
+    font-weight: bold;
+    font-family: 'GTWalsheimProBold';
+  }
+  .h3-order-details {
+    font-size: 28px;
+  }
+  .h4-order-details {
+    font-size: 25px;
+  }
+  .h5-order-details {
+    font-size: 20px;
+  }
+  .title-order-details {
+    font-weight: bold;
+  }
+  .button-order-details {
+    float: right;
+    margin-left: 270px;
+    margin-top: -10px;
+  }
+  .post-code-region {
+    width: 48%;
+    display: inline-block;
+  }
+  .country-region {
+    width: 48%;
+    float: right;
+    display: inline-block;
+  }
+}
+
+.order-details-page-content {
+  margin-top: -150px;
+  margin-bottom: 40px;
+  padding-right: 10px;
+  padding-left: 10px;
+  @include media($mqs-desktop-up) {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+.modal-primary-button{
+  background-color: #0dc5a0;
+  color: #ffffff;
+  border: 1px solid #dedede;
+  font-weight: inherit;
+  font-size: 16px;
+  margin-right: 20px;
+}
+.modal-primary-button:hover{
+  background-color: #087660;
+  color: #fff;
+}
+
+.modal-default-button {
+  background: none;
+  color: #000000;
+  border: 1px solid #dedede;
+  font-weight: inherit;
+  font-size: 16px;
+  margin-right: 20px;
+}
+.modal-default-button:hover{
+  background-color: #ffffff !important;
+  color: #000000;
+}
+.mandatory {
+  text-align: right;
+  color: red;
+}
+.input-error {
+  border-color: red !important;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,.06), 0 0 5px #ff0000 !important;
+}
+.text-description-error {
+  color: red;
+  display: inline-flex;
+}
+.text-error-content {
+  margin-top: 10px;
+  display: inline-table;
+  margin-left: 16px;
+}
+.country-region select {
+  height: 45px;
+  border: 1px solid #dedede;
+}
+.country-region select:focus {
+  height: 45px;
+  border-color: #0dc5a0;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,.06), 0 0 5px rgba(11,173,141,.7);
+  outline: none;
+}
+.back-to-product-detail {
+  cursor: pointer;
+}
+
+.supplier-order-details-page {
+  width: 100%;
+  padding: 10px;
+  background-color: #ffffff;
+  line-height: 1 !important;
+  position: relative;
+  @include media($mqs-desktop-up) {
+    width: 700px;
+    padding: 40px;
+  }
+  .margin-top-40-content {
+    margin-top: 30px;
+    &:after{
+      clear: both;
+      content: "";
+      display: block;
+    }
+  }
+  .margin-top-20-content {
+    margin-top: 20px;
+  }
+  .margin-top-16-content {
+    margin-top: 16px;
+  }
+  hr {
+    margin: 0;
+  }
+  .h2-order-details {
+    font-size: 42px;
+    font-weight: bold;
+    font-family: 'GTWalsheimProBold';
+  }
+  hr {
+    margin: 0;
+  }
+  .h2-order-details {
+    font-size: 42px;
+    font-weight: bold;
+    font-family: 'GTWalsheimProBold';
+  }
+  .h3-order-details {
+    font-size: 28px;
+  }
+  .h4-order-details {
+    font-size: 25px;
+  }
+  .h5-order-details {
+    font-size: 20px;
+  }
+  .title-order-details {
+    font-weight: bold;
+  }
+  .button-order-details {
+    float: right;
+    margin-left: 270px;
+    margin-top: -10px;
+  }
+  .post-code-region {
+    width: 48%;
+    display: inline-block;
+  }
+  .country-region {
+    width: 48%;
+    float: right;
+    display: inline-block;
+  }
+  .width-130px{
+    width: 130px;
+  }
+}

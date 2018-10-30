@@ -1,0 +1,273 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: rgba(0,0,0,.01) 0 0 1px;
+  margin: 0;
+}
+
+#app {
+  position: relative;
+  background-color: #f4f4f4;
+}
+
+.wrapper {
+  // padding: 0 $wrapper-margin-mob;
+
+  @include outer-container;
+
+  @include media($mqs-desktop-up) {
+    // padding: 0 $wrapper-margin-desk;
+  }
+}
+
+.layout-container {
+  padding: $base-spacing;
+
+
+  @include clearfix;
+
+  @include media($mqs-desktop-up) {
+    @include span-columns(8 of 12);
+
+    .path-asset-search &, .path-projects-search &, .path-challenges-search &, .path-user-search &, .path-articles-search & {
+      @include span-columns(12 of 12);
+    }
+
+    &:last-child {
+      float: none;
+      margin: 0 auto;
+    }
+  }
+}
+
+.sidebar {
+  padding: $base-spacing;
+
+  @include clearfix;
+
+  @include media($mqs-desktop-up) {
+    @include span-columns(4 of 12);
+    @include omega;
+  }
+}
+
+.bottom {
+  @include clearfix;
+}
+
+// helper class for any fixed height 'rows'
+.fixed-height {
+  display: flex;
+
+  > * {
+    flex: 1;
+  }
+}
+
+.clear-left {
+  clear: left;
+}
+
+.mobile-only {
+  @include media($mqs-tablet-portrait-up) {
+    display: none;
+  }
+}
+
+.tablet-only {
+  display: none;
+  @include media($mqs-tablet-portrait-up) {
+    display: block;
+  }
+  @include media($mqs-desktop-up) {
+    display: none;
+  }
+}
+
+// For mobile nav
+#outer-wrap {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  z-index: 1;
+}
+
+#inner-wrap {
+  position: relative;
+  width: 100%;
+  left: 0;
+
+  @include transition(all 0.3s ease);
+  @include transform(translateX(0px));
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+
+  &.show-nav {
+    @include transform(translateX(-70%));
+  }
+
+  // when we get to desktop we need to force break the mobile nav
+  @include media($mqs-desktop-up) {
+    @include transform(translateX(0px));
+
+    &.show-nav {
+      @include transform(translateX(0px));
+    }
+  }
+}
+
+.ui-state-default:first-of-type,
+.ui-widget-content .ui-state-default:first-of-type,
+.ui-widget-header .ui-state-default:first-of-type {
+  background: #0dc5a0;
+  font-weight: normal;
+  color: #fff;
+  font-family: GTWalsheimProReg;
+  font-size: 1.125em;
+  font-weight: 600;
+  line-height: 1;
+  text-align: center;
+  border: none;
+}
+
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default{
+  background: #fff;
+  font-weight: normal;
+  color: #0dc5a0;
+  font-family: GTWalsheimProReg;
+  font-size: 1.125em;
+  font-weight: 600;
+  line-height: 1;
+  text-align: center;
+}
+
+.ui-state-default:hover,
+.ui-widget-content .ui-state-default:hover,
+.ui-widget-header .ui-state-default:hover{
+  background: #fff;
+  font-weight: normal;
+  color: #0dc5a0;
+  font-family: GTWalsheimProReg;
+  font-size: 1.125em;
+  font-weight: 600;
+  line-height: 1;
+  text-align: center;
+  border: 1px solid #d3d3d3;
+}
+
+.ui-state-hover:first-of-type,
+.ui-widget-content .ui-state-hover:first-of-type,
+.ui-widget-header .ui-state-hover:first-of-type,
+.ui-widget-header .ui-state-focus:first-of-type {
+  background: #0dc5a0;
+  font-weight: normal;
+  color: #fff;
+  font-family: GTWalsheimProReg;
+  font-size: 1.125em;
+  font-weight: 600;
+  line-height: 1;
+  text-align: center;
+  border: none;
+}
+
+.ui-button-text-only .ui-button-text {
+  padding: 0px;
+}
+
+.ui-dialog-titlebar-close,
+.ui-widget-content .ui-dialog-titlebar-close,
+.ui-widget-header .ui-dialog-titlebar-close{
+  background: #e6e6e6 !important;
+}
+
+#button-update-requests-status{
+  font-size: 18px;
+  color: #ffffff;
+  height: 48px;
+  font-family: GTWalsheimProLight;
+  background: #2CB88C;
+  font-weight: 600;
+  border: transparent 2px solid;
+  &:hover{
+    border: #3CE19D 2px solid;
+  }
+  &:active{
+    background: #3CE19D;
+  }
+  &:focus{
+    outline: 0;
+  }
+}
+.path-profile,
+.path-login,
+.path-register {
+  .layout-container{
+    float: none;
+    margin: 0 auto;
+  }
+}
+
+.ui-dialog .ui-dialog-buttonpane button:first-of-type  {
+  background-color: #0dc5a0;
+  color: #fff;
+}
+.ui-dialog .ui-dialog-buttonpane button {
+  background-color: #fff;
+  border-radius: 10em;
+  color: #0dc5a0;
+  cursor: pointer;
+  display: inline-block;
+  font-family: GTWalsheimProReg;
+  font-size: 1.125em !important;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 600;
+  line-height: 1;
+  padding: .75em 1.75em;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color .15s ease;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  border: 1px solid #dedede !important;
+}
+#challenge-submission-edit-form {
+  .field-suffix {
+    .admin-link {
+      display: block;
+    }
+  }
+}
+#create-challenge-multistep-form-step-three {
+  .field-suffix {
+    .admin-link {
+      display: block;
+    }
+  }
+}
+.file--image{
+  a{
+    word-break:break-all;
+    word-wrap: break-word;
+  }
+}
+.padding-left-60px{
+  padding-left: 60px;
+}
+

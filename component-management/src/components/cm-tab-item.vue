@@ -1,8 +1,9 @@
 <template>
-    <div >
+    <div>
         <div style="padding: 12px 0">
-            <h2 class="headline cm-title" >Add External {{type}}</h2>
-            <p class="body-1">Any URL's added here will be added as tag <code> <{{getTag}}></code> in order, and before the {{type}} in the editor</p>
+            <h2 class="headline cm-title">Add External {{type}}</h2>
+            <p class="body-1">Any URL's added here will be added as tag <code> <{{getTag}}></code> in order, and before
+                the {{type}} in the editor</p>
         </div>
         <draggable v-model="tempUrls" :options="{group: type}" @start="drag=true" @end="drag=false">
             <div style="display: flex" v-for="(element, index) in tempUrls" :key="index">
@@ -18,8 +19,8 @@
                 ></v-text-field>
 
                 <div>
-                    <v-btn class="tinyButton" small icon :href="element" target="_blank" style="padding: 6px 0" >
-                        <v-icon small >mdi-eye</v-icon>
+                    <v-btn class="tinyButton" small icon :href="element" target="_blank" style="padding: 6px 0">
+                        <v-icon small>mdi-eye</v-icon>
                     </v-btn>
                     <v-btn class="tinyButton" small icon @click="removeURL(index)">
                         <v-icon small>mdi-delete</v-icon>
@@ -33,7 +34,8 @@
         <v-card-actions>
             <v-spacer></v-spacer>
             <v-btn small outline color="accent" @click="addUrl">
-                <v-icon small left>add</v-icon>add
+                <v-icon small left>add</v-icon>
+                add
             </v-btn>
         </v-card-actions>
 
@@ -48,8 +50,10 @@
         components: {draggable},
         props: {
             type: '',
-            urls: null,
-
+            urls: {
+                type: Array,
+                require: true,
+            },
         },
         data: function () {
             return {
@@ -68,9 +72,6 @@
         },
 
         methods: {
-            getUrls: function () {
-                return this.tempUrls;
-            },
             addUrl: function () {
                 this.tempUrls.push('');
             },
@@ -80,6 +81,11 @@
                 }
             },
         },
+        watch: {
+            urls() {
+                this.tempUrls = this.urls;
+            }
+        }
 
     }
 </script>

@@ -1,0 +1,376 @@
+.page-node-type-project {
+  .main-heading {
+    text-align: left;
+  }
+
+  #block-views-block-project-questions-block-1 {
+    .views-field {
+      padding: $base-spacing $base-spacing*2 $base-spacing $base-spacing;
+      border: $base-border;
+      border-bottom: none;
+      margin: 0 -1.5em;
+      cursor: pointer;
+      position: relative;
+
+      &:after {
+        content: "";
+        position: absolute;
+        right: 1em;
+        top: 2em;
+        background: url('../images/icon_plus.svg') no-repeat;
+        background-size: contain;
+        @include size(20px);
+
+        @include media($mqs-tablet-portrait-up) {
+          right: $base-spacing;
+        }
+      }
+
+      &:last-child {
+        border-bottom: $base-border;
+      }
+
+      .views-label {
+        @extend .heading--small;
+        @extend .heading--light;
+      }
+
+      .field-content {
+        max-height: 0;
+        overflow: hidden;
+        @include transition(max-height 0.5s cubic-bezier(0.22, 0.61, 0.36, 1));
+
+        p {
+          margin: $base-spacing 0;
+          word-wrap: break-word;
+          word-break: break-all;
+        }
+      }
+
+      &.open {
+        &:after {
+          background: url('../images/icon_minus.svg') no-repeat;
+        }
+
+        .field-content {
+          max-height: 2000px;
+        }
+      }
+    }
+  }
+
+  .layout-container{
+    &.has-tabs {
+      padding-left: 2em;
+    }
+
+    .tab-links {
+      padding-left: 0;
+    }
+
+    .challenge-tab-bodies {
+      .challenge-tab__main {
+        padding: 0;
+        margin: 0;
+      }
+    }
+
+  }
+
+  #block-views-block-project-questions-block-1 {
+    margin: 0 1.5em;
+  }
+
+  div[data-block-plugin-id="oen_community_upload_attachment_list_table"] {
+    display: none;
+  }
+  .attachment-item {
+    display: block;
+  }
+
+} // page-node-type-project
+
+#block-views-block-project-tools-block-1,
+#block-views-block-project-assets-block-1,
+#block-views-block-group-attachments-block-1,
+#block-views-block-project-questions-block-1,
+#block-views-block-project-members-block-block-1,
+#block-views-block-project-links-block-1 {
+
+  margin-bottom: 3em;
+
+  @include clearfix;
+
+  h2 {
+    @extend .heading--small;
+    @extend .heading--push-top;
+  }
+}
+
+.field__label {
+  font-family: $heading-font-family;
+}
+
+#block-views-block-project-owner-block-1 {
+  border: $base-border;
+  padding: $base-spacing;
+  margin-bottom: $base-spacing;
+
+  @include clearfix;
+
+  h2 {
+    color: $blue;
+    text-align: center;
+  }
+
+}
+
+#block-nokiavue-iwantto,
+#block-nokiavue-tools,
+#block-nokiavue-groupoperations-2,
+#block-projectsubmissionoptions {
+  a {
+    // @extend .btn;
+    display: block;
+    margin-bottom: $small-spacing;
+    -webkit-appearance: initial;
+  }
+
+  .dropbutton-widget {
+    padding-right: 0;
+  }
+
+  .dropbutton-toggle {
+    display: none;
+  }
+
+  .secondary-action {
+    display: block;
+  }
+}
+
+#block-views-block-project-comments-block-1 {
+  h2 a {
+    display: none;
+  }
+}
+
+#block-nokiavue-views-block-group-members-group-members-block {
+  .views-field-name {
+    width: 50%;
+  }
+  .views-field-edit-group-content {
+    width: 15%;
+  }
+  .views-field-delete-group-content {
+    width: 20%;
+  }
+}
+
+.project-tools {
+  display: flex;
+  flex-wrap: wrap;
+
+  .avatar {
+    width: 25%;
+    flex: initial;
+    margin-bottom: $base-spacing;
+
+    &__circle {
+      background: $white;
+      border: $base-border;
+      border-radius: 50%;
+      @include size(70px);
+      margin: .75em auto;
+    }
+
+    &__image {
+      border-radius: 0;
+      @include size(40px);
+    }
+
+    &__name {
+      color: $blue;
+    }
+
+    &__image--add-new {
+      border-radius: 50%;
+      @include size(90px);
+    }
+
+    // hide add button when we have all 5 filled
+    &:nth-child(6) {
+      display: none;
+      visibility: hidden;
+    }
+  }
+}
+
+// 'Assets' list block on the project page
+#block-views-block-project-assets-block-1,
+#block-views-block-group-attachments-block-1 {
+  clear: both;
+  margin-top: 10px;
+  @include clearfix;
+
+  footer a {
+    float: left;
+    margin-top: 1em;
+  }
+}
+
+// 'Challenge' block on the project page
+#block-views-block-project-challenge-block-1 {
+  .views-field {
+    @include clearfix;
+
+    .field-content {
+      display: inline-block;
+    }
+  }
+}
+
+.project__checklist {
+  margin-bottom: $base-spacing*2;
+  color: $dark-gray;
+  font-size: em(14px);
+
+  ol {
+    padding: 0 1em;
+    list-style: decimal inside;
+
+    li {
+      margin-bottom: $base-spacing;
+      padding-left: 30px;
+      position: relative;
+
+      span {
+        position: absolute;
+        left: 0;
+        top: 5px;
+        width: 12px;
+        height: 100%;
+      }
+    }
+  }
+}
+
+.project__linked-challenge {
+  //background: $white;
+  border: $base-border;
+  padding: 1em;
+  display: block;
+  //color: $base-font-color;
+  font-size: 14px;
+  color: #737373;
+
+  h4{
+    font-size: 14px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  &:hover{
+    //color: $base-font-color;
+    color: #599ee7;
+    border: 1px solid #599ee7;
+  }
+
+  &__name, &__date, p {
+    margin-bottom: 0;
+  }
+
+  &__date {
+    color: $dark-gray;
+  }
+}
+
+.project_team-member {
+  > div {
+    margin-bottom: 1em;
+    @include clearfix;
+  }
+  .member-actions {
+    margin-left: 52px;
+    margin-top: -1em;
+    a {
+      margin-right: 10px;
+    }
+  }
+}
+
+.node-project-snapshot {
+  .field {
+    margin-bottom: $base-spacing;
+  }
+
+  .links {
+    margin-top: $base-spacing;
+  }
+}
+
+
+@media all and (min-width: 600px) {
+  #block-views-block-project-members-block-block-1 {
+    border-bottom: 0 none !important;
+
+    >div {
+      >div {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+
+        .project_team-member {
+          -webkit-column-break-inside: avoid; 
+          page-break-inside: avoid;           
+          break-inside: avoid-column;         
+          overflow: hidden;                     
+        }
+      }
+    }
+  }
+}
+
+#block-views-block-project-links-block-1 {
+  >div {
+    >div {
+      >a {
+        display: inline-block;
+        width: 100%;
+        padding: $small-spacing;
+        border: 0 none;
+        border-bottom: $base-border;     
+      }
+    }
+  }
+
+  footer {
+    margin-top: $base-spacing;
+  }
+}
+
+#block-views-block-project-questions-block-1 {
+  height: auto;
+}
+
+.project-social{
+  position: absolute;
+  margin: 0 auto;
+  font-size: .875em;
+  color: #fff;
+  top: 15px;
+  right: 20px;
+  z-index: 9999;
+} 
+
+.title-upload-tab-project {
+  display: inline-block;
+}
+.icon-upload-tab-project {
+  float: right;
+  display: inline-flex;
+}
+.space-margin-icon-view {
+  width:5px;
+}

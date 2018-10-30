@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="36px" height="48px" viewBox="0 0 36 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48 (47235) - http://www.bohemiancoding.com/sketch -->
+    <title>Note</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-748.000000, -986.000000)">
+        <g id="Note" transform="translate(734.000000, 977.000000)">
+            <rect id="Rectangle-4-Copy-38" x="0" y="0" width="64" height="64"></rect>
+            <g id="note" transform="translate(14.000000, 9.000000)" fill="#5D5D5D">
+                <g id="Shape">
+                    <path d="M35.5,14.1 L22.7,0.5 C22.4,0.2 22,0 21.6,0 L3.4,0 C1.5,0 0,1.6 0,3.4 L0,44.5 C0,46.4 1.5,47.9 3.4,48 L32.6,48 C34.5,48 36,46.4 36,44.6 C36,44.6 36,44.6 36,44.6 L36,15.2 C36,14.8 35.8,14.4 35.5,14.1 Z M31.2,14 L25.7,14 C24.3,14 22.7,13 22.7,11.7 L22.7,4.9 L31.2,14 Z M32.5,45 L3.4,45 C3.2,45 3,44.8 3,44.6 L3,3.4 C3,3.2 3.2,3 3.4,3 L19.7,3 L19.7,11.6 C19.7,14.7 22.9,17 25.7,17 L32.9,17 L32.9,44.5 C32.9,44.7 32.7,44.9 32.5,45 Z" fill-rule="nonzero"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

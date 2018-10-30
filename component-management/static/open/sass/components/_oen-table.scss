@@ -1,0 +1,305 @@
+.oen-vue-table-wrapper{
+  overflow: auto;
+  .spinner-container {
+    z-index: 1;
+    position: absolute;
+  }
+  .nokia-table-opacity {
+    opacity: 0.4;
+    z-index: 0;
+  }
+}
+.wrapper-table-body-pagination{
+  min-width: 950px;
+}
+
+.oen-vue-table-wrapper table {
+  border: 1px solid #e3e3e3;
+  border-radius: 3px;
+  background-color: #fff;
+  margin: 0;
+}
+
+.oen-vue-table-wrapper th {
+  /*background-color: #42b983;*/
+  background-color: #efefef;
+  font-weight: 700;
+  font-family: GTWalsheimProBold;
+  color: #000000;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -user-select: none;
+}
+
+.oen-vue-table-wrapper td > div{
+  text-overflow: ellipsis;
+  overflow-x: hidden;
+  white-space: nowrap;
+}
+
+.oen-vue-table-wrapper th, .oen-vue-table-wrapper td {
+  //min-width: 120px;
+  padding: 10px;
+}
+//
+//.oen-vue-table-wrapper th.active {
+//  color: #fff;
+//}
+
+.oen-vue-table-wrapper th.active .arrow {
+  opacity: 1;
+}
+
+.oen-vue-table-wrapper .arrow {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0;
+  height: 0;
+  margin-left: 5px;
+  opacity: 0.66;
+}
+._vue-table-wrapper .arrow{
+  display: none;
+}
+._vue-table-wrapper .show-arrow {
+  display: inline-block;
+}
+
+.oen-vue-table-wrapper .arrow.asc {
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-bottom: 4px solid #000;
+}
+
+.oen-vue-table-wrapper .arrow.dsc {
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid #000;
+}
+
+.oen-vue-table-wrapper #search {
+  margin-bottom: 10px;
+}
+.oen-vue-table-wrapper .width-70px{
+  width: 70px;
+}
+.oen-vue-table-wrapper .td-action a{
+  color: #000;
+}
+
+.oen-vue-table-wrapper .td-description{
+  color: #a5a5a5;
+}
+.oen-vue-table-wrapper .oen-filter-wrapper{
+  position: relative;
+}
+.oen-vue-table-wrapper .oen-filter-wrapper .icon{
+  position: absolute;
+  left: 10px;
+  top: 13px;
+  color: #a0a0a0;
+}
+
+.oen-vue-table-wrapper .td-icon{
+  color: #555555;
+}
+
+.oen-vue-table-wrapper  .oen-filter-wrapper input{
+  border-radius: 25px;
+  padding: 0 30px;
+  margin-bottom: 0 !important;
+  height: 2.5em;
+}
+
+.oen-vue-table-wrapper .dropdown {
+  position: relative;
+  display: inline-block;
+  overflow-x: unset !important;
+  float: right;
+}
+
+.oen-vue-table-wrapper .dropbtn {
+  font-family: GTWalsheimProLight !important;
+  background-color: transparent;
+  color: #000000;
+  padding: 16px;
+  font-size: 16px;
+  //border: none;
+  cursor: pointer;
+  border-radius: 0;
+  //min-width: 160px;
+  min-width: 160px;
+  float: right !important;
+  border: 1px solid #e3e3e3;
+}
+
+.oen-vue-table-wrapper .dropbtn:hover, .oen-vue-table-wrapper .dropbtn:focus {
+  //background-color: #3e8e41;
+}
+
+.oen-vue-table-wrapper .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  margin-top: 35px;
+}
+
+.oen-vue-table-wrapper .dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.oen-vue-table-wrapper .dropdown-content a:hover {
+  background-color: #efefef;
+}
+
+.oen-vue-table-wrapper a:hover {cursor: pointer}
+
+.oen-vue-table-wrapper .show {display:block !important;}
+
+.oen-vue-table-wrapper .revoke-access{color: #ff0000}
+
+.oen-vue-table-wrapper .na-status{
+  display: inline-block;padding: 2px 5px; border: 1px solid #555555;
+}
+
+.oen-vue-table-wrapper .granted-status{
+  display: inline-block; padding: 2px 5px; border: 1px solid #599ee7; color: #599ee7;
+}
+
+.oen-vue-table-wrapper .previously-rejected-status{
+  display: inline-block; padding: 2px 5px; border: 1px solid #d2292b; color: #d2292b;
+}
+
+.oen-vue-table-wrapper .revoked-status{
+  display: inline-block; padding: 2px 5px; border: 1px solid #d2292b; color: #d2292b;
+}
+
+.td-user-name{
+  line-height: 40px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow-x: hidden;
+}
+.width-55px{
+  width: 55px;
+}
+.width-210px{
+  width: 210px;
+}
+.oen-vue-table-wrapper .pagination{
+  background: #ffffff; padding: 10px 0 0 10px; display: flex; justify-content: flex-end;
+
+  .rows-per-page-wrapper{
+    display: flex;
+    .item-per-page-mode-wrapper{
+      margin-left: 10px;
+      width: 50px
+    }
+  }
+
+  .select-page-wrapper{
+    margin-left: 20px; display: flex;
+
+    button.paging-control:hover{
+      background: #e3e3e3;
+    }
+    button.paging-control:focus{
+      background: #e3e3e3;
+    }
+  }
+}
+.dropdown-menu-wrapper{
+  overflow-x: unset !important;
+}
+.drop-down-api-consumer{
+  left: -14px;
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .dropdown-menu-wrapper{
+    min-width: 50px;
+    overflow-x: visible !important;
+  }
+
+  .oen-vue-table-wrapper .dropdown {
+    overflow-x: visible !important;
+  }
+}
+
+@media only screen and (max-width: 1740px) {
+  .modal-container .oen-vue-table-wrapper table{
+    table-layout: fixed;
+  }
+  .modal-mask .modal-wrapper .modal-container{
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 1740px) {
+  .oen-vue-table-wrapper .upload-attachment-list-view-table-tr td>div {
+    width: inherit;
+  }
+}
+
+@media only screen and (max-width: 1310px) {
+  .modal-mask .modal-wrapper .modal-container{
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .modal-mask .modal-wrapper .modal-container{
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .modal-mask .modal-wrapper .modal-container{
+    width: 90%;
+  }
+}
+.field-multiple-table {
+  margin-bottom: 0!important;
+}
+
+.open-search-box{
+  position: relative;
+  width: 350px;
+}
+.open-search-box .search-icon{
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  color: $green;
+}
+
+.group-pending-member-block th.user{
+  width: 300px !important;
+  padding: 5px 20px;
+}
+
+.group-pending-member-block th.time{
+  width: 150px;
+  padding: 5px;
+}
+
+.group-pending-member-block td{
+  padding: 5px 5px;
+}
+
+.group-pending-member-block td .user-avatar div:last-child{
+  width: 250px;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.oen-vue-table-wrapper .unsorted {
+  cursor: default;
+}

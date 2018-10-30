@@ -4,8 +4,8 @@ let projects = [
         projectId: 'pj1',
         projectHeadTag: "<meta charset=\"utf-8\">\n" +
             "<meta name=\"viewport\" content=\"width=device-width,initial-scale=1.0\">",
-        projectLinks: ["http://localhost:9090/static/css/style.css"],
-        projectScripts: ["http://localhost:9090/open.js"],
+        projectLinks: ["http://localhost:8080/static/open/css/style.css"],
+        projectScripts: ["http://localhost:8080/static/open/export.js"],
 
         listComponents: [
             {

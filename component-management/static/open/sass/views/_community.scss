@@ -1,0 +1,63 @@
+.page-node-type-community {
+	
+	.layout-container{
+		&.has-tabs {
+			padding-left: 2em;
+		}
+
+		.tab-links {
+			padding-left: 0;
+		}
+
+		.challenge-tab-bodies {
+			.challenge-tab__main {
+				padding: 0;
+				margin: 0;
+			}
+
+			.list-cards {
+				.card {
+					-webkit-flex-basis: 50%;
+					-ms-flex-preferred-size: 50%;
+					flex-basis: 50%;
+
+				}
+			}
+		}
+
+	}
+	.community-upload-tab-custom {
+		position: absolute;
+	}
+
+	.header-uploads-tab-community {
+		.title-upload-tab-community {
+			display: inline-block;
+			margin-top: 5px;
+		}
+		.icon-upload-tab-community {
+			display:  inline-flex;;
+			float: right;
+			.space-margin-icon-view {
+				width:5px;
+			}
+		}
+	}
+
+	div[data-block-plugin-id="oen_community_upload_attachment_list_table"] {
+		display: none;
+	}
+	.attachment-item {
+		display: block;
+	}
+}
+
+.community-social {
+	position: absolute;
+	margin: 0 auto;
+	font-size: .875em;
+	color: #fff;
+	z-index: 9999;
+	right: 10px;
+	top: 10px;
+}

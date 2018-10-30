@@ -1,0 +1,54 @@
+#block-nokiavue-contenttype {
+  clear: both;
+  padding: 0 $base-spacing;
+  background: $white;
+  border-top: $base-border;
+  border-left: $base-border;
+  border-right: $base-border;
+  @include clearfix;
+
+  h2 {
+    display: none;
+  }
+
+  ul {
+  	display: inline-block;
+    border-bottom: $base-border;
+    width: 100%;
+  }
+
+  .facet-item {
+    color: $medium-gray;
+    float: left;
+    padding: 1em 0;
+    margin-right: 1em;
+    border-bottom: 2px solid $lightest-gray;
+    cursor: pointer;
+    font-family: $font-reg;
+
+    a {
+      box-sizing: border-box;
+      color: $medium-gray;	
+    }
+
+    a:hover, a.is-active {
+      color: $black;
+    }
+
+    a:hover .underline, a.is-active .underline {
+      border-bottom: 3px solid $green;
+    }
+
+    .facet-item__status {
+    	display: inline-block;
+    	width: 1em;
+     	height: 1em;
+    	background-color: $medium-gray;
+    	color: white;
+    	border-radius: 50%;
+    	line-height: 0.9em;
+    	text-align: center;
+    	font-size: 1em;
+    }
+  }
+}

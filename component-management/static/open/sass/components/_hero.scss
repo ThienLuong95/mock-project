@@ -1,0 +1,166 @@
+.hero {
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	padding: 6em 0 0 0;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image: url('../images/hero_default.png');
+	transition: height 1s;
+
+	&.upper {
+		background-color: $medium-gray;
+
+		.hero--inner {
+			.hero--text {
+	  			padding-bottom: 0;
+				word-wrap: break-word;
+				overflow-wrap: break-word;
+	  		}
+	  	}
+	}
+
+	&.lower {
+	  	padding: 0;
+	  	background-image: none;
+	  	
+		.hero--inner {
+			.hero--text {
+	  			padding-top: 0;
+	  			height: auto;
+	  			overflow: hidden;
+	  			
+	  			.created,
+	  			.community {
+	  				border-top: $base-border;
+	  			}
+	  		}
+	  	}
+	}
+
+	h1 {
+		margin-bottom: 0;
+		padding-bottom: 0.5*$base-spacing;
+	}
+	
+
+	.hero--inner {
+		width:100%;
+		max-width: 75em;
+		margin: 0 auto;
+		height: auto;
+		overflow: hidden;
+	}
+
+	.hero--text {
+		position: relative;
+		width: 67%;
+		padding: 2em;
+		background-color: #fff;
+		float: left;
+		text-align: left;
+		height: auto;
+
+		@media all and (max-width: 1039px) {
+			width: 80%;
+		}
+
+		@media all and (max-width: 639px) {
+			width: 90%;
+			float: none;
+			margin: 0 auto;
+		}
+
+		.terms--link {
+			position: absolute;
+			right: 2em;
+			top: 1em;
+			width:auto;
+			height: auto;
+		}
+
+		.text-concertina {
+			padding-bottom: 0.5*$small-spacing;
+			overflow: hidden;
+			height: auto;
+			max-height: 6em;
+			position: relative;
+			transition: max-height 2s;
+
+			.inner {
+				height: auto;
+				overflow: hidden;
+			}
+
+			.read-more {
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				height: auto;
+				width: 100%;
+				background-color: $white;
+				padding-bottom: 0.5*$small-spacing;
+				padding-top: 0.5*$small-spacing;
+				text-align: right;
+				line-height: 1em;
+				display: none;
+
+				:before {
+					content: " ";
+					display: block;
+					width: 100%;
+					height: 2*$base-spacing;
+					position: absolute;
+					left: 0;
+					top: -2*$base-spacing;
+					background-image: linear-gradient(to bottom, rgba(255,255,255,0.0) 0%, rgba(255,255,255,1.0) 100%);
+				}
+			}
+
+			&.open {
+				height: auto;
+				max-height: 500em;
+
+				.read-more {
+					background-color: transparent;
+
+					:before {
+						display: none;
+					}
+				}
+			}
+		}
+
+		.community{
+			float:left;
+			width: 50%;
+			height: auto;
+			padding-top: $small-spacing;
+			text-align: left;
+			font-size: 1em;
+			line-height: 1.3em;
+			font-weight: normal;
+
+			span {
+				color: $medium-gray;
+			}
+		}
+
+		.created{
+			float: right;
+			width: 50%;
+			height: auto;
+			padding-top: $small-spacing;
+			text-align: right;
+			font-size: 1em;
+			line-height: 1.3em;
+			font-weight: normal;
+			color: $dark-gray;
+
+			span {
+				color: $medium-gray;
+			}
+		}
+	}
+}

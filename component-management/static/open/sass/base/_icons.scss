@@ -1,0 +1,272 @@
+@font-face {
+	font-family: "open-icons";
+	src: url('../fonts/icons/open-icons.eot');
+	src: url('../fonts/icons/open-icons.eot?#iefix') format('eot'),
+		url('../fonts/icons/open-icons.woff2') format('woff2'),
+		url('../fonts/icons/open-icons.woff') format('woff'),
+		url('../fonts/icons/open-icons.ttf') format('truetype'),
+		url('../fonts/icons/open-icons.svg#open-icons') format('svg');
+}
+
+@mixin icon-styles {
+	font-family: "open-icons";
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	// speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+	text-decoration: none;
+	text-transform: none;
+}
+
+%icon {
+	@include icon-styles;
+}
+
+@function icon-char($filename) {
+	$char: "";
+
+	@if $filename == burger {
+		$char: "\E001";
+	}
+	@if $filename == close {
+		$char: "\E002";
+	}
+	@if $filename == doc {
+		$char: "\E003";
+	}
+	@if $filename == double-arrow {
+		$char: "\E004";
+	}
+	@if $filename == empty_star {
+		$char: "\E005";
+	}
+	@if $filename == filled_star {
+		$char: "\E006";
+	}
+	@if $filename == group {
+		$char: "\E007";
+	}
+	@if $filename == key {
+		$char: "\E008";
+	}
+	@if $filename == lightbulb {
+		$char: "\E009";
+	}
+	@if $filename == login {
+		$char: "\E00A";
+	}
+	@if $filename == marketing_brand_guides {
+		$char: "\E00B";
+	}
+	@if $filename == notification {
+		$char: "\E00C";
+	}
+	@if $filename == panel-community {
+		$char: "\E00D";
+	}
+	@if $filename == panel-faq {
+		$char: "\E00E";
+	}
+	@if $filename == panel-overview {
+		$char: "\E00F";
+	}
+	@if $filename == panel-resources {
+		$char: "\E010";
+	}
+	@if $filename == panel-submissions {
+		$char: "\E011";
+	}
+	@if $filename == panel-updates {
+		$char: "\E012";
+	}
+	@if $filename == patent_portfolios {
+		$char: "\E013";
+	}
+	@if $filename == pencil {
+		$char: "\E014";
+	}
+	@if $filename == permission {
+		$char: "\E015";
+	}
+	@if $filename == png {
+		$char: "\E016";
+	}
+	@if $filename == ppt {
+		$char: "\E017";
+	}
+	@if $filename == product_catalogues {
+		$char: "\E018";
+	}
+	@if $filename == service_catalogues {
+		$char: "\E019";
+	}
+	@if $filename == source_code {
+		$char: "\E01A";
+	}
+	@if $filename == speech_bubble {
+		$char: "\E01B";
+	}
+	@if $filename == technical_documentation {
+		$char: "\E01C";
+	}
+	@if $filename == testing_lab_configurations {
+		$char: "\E01D";
+	}
+	@if $filename == tool_camera {
+		$char: "\E01E";
+	}
+	@if $filename == tool_cloud {
+		$char: "\E01F";
+	}
+	@if $filename == tool_headphone {
+		$char: "\E020";
+	}
+	@if $filename == tool_speech {
+		$char: "\E021";
+	}
+	@if $filename == tool_writing {
+		$char: "\E022";
+	}
+	@if $filename == user {
+		$char: "\E023";
+	}
+	@if $filename == white_papers {
+		$char: "\E024";
+	}
+	@if $filename == xls {
+		$char: "\E025";
+	}
+	@if $filename == zip {
+		$char: "\E026";
+	}
+
+	@return $char;
+}
+
+@mixin icon($filename, $insert: before, $extend: true) {
+	&:#{$insert} {
+		@if $extend {
+			@extend %icon;
+		} @else {
+			@include icon-styles;
+		}
+		content: icon-char($filename);
+	}
+}
+
+.icon-burger {
+	@include icon(burger);
+}
+.icon-close {
+	@include icon(close);
+}
+.icon-doc {
+	@include icon(doc);
+}
+.icon-double-arrow {
+	@include icon(double-arrow);
+}
+.icon-empty_star {
+	@include icon(empty_star);
+}
+.icon-filled_star {
+	@include icon(filled_star);
+}
+.icon-group {
+	@include icon(group);
+}
+.icon-key {
+	@include icon(key);
+}
+.icon-lightbulb {
+	@include icon(lightbulb);
+}
+.icon-login {
+	@include icon(login);
+}
+.icon-marketing_brand_guides {
+	@include icon(marketing_brand_guides);
+}
+.icon-notification {
+	@include icon(notification);
+}
+.icon-panel-community {
+	@include icon(panel-community);
+}
+.icon-panel-faq {
+	@include icon(panel-faq);
+}
+.icon-panel-overview {
+	@include icon(panel-overview);
+}
+.icon-panel-resources {
+	@include icon(panel-resources);
+}
+.icon-panel-submissions {
+	@include icon(panel-submissions);
+}
+.icon-panel-updates {
+	@include icon(panel-updates);
+}
+.icon-patent_portfolios {
+	@include icon(patent_portfolios);
+}
+.icon-pencil {
+	@include icon(pencil);
+}
+.icon-permission {
+	@include icon(permission);
+}
+.icon-png {
+	@include icon(png);
+}
+.icon-ppt {
+	@include icon(ppt);
+}
+.icon-product_catalogues {
+	@include icon(product_catalogues);
+}
+.icon-service_catalogues {
+	@include icon(service_catalogues);
+}
+.icon-source_code {
+	@include icon(source_code);
+}
+.icon-speech_bubble {
+	@include icon(speech_bubble);
+}
+.icon-technical_documentation {
+	@include icon(technical_documentation);
+}
+.icon-testing_lab_configurations {
+	@include icon(testing_lab_configurations);
+}
+.icon-tool_camera {
+	@include icon(tool_camera);
+}
+.icon-tool_cloud {
+	@include icon(tool_cloud);
+}
+.icon-tool_headphone {
+	@include icon(tool_headphone);
+}
+.icon-tool_speech {
+	@include icon(tool_speech);
+}
+.icon-tool_writing {
+	@include icon(tool_writing);
+}
+.icon-user {
+	@include icon(user);
+}
+.icon-white_papers {
+	@include icon(white_papers);
+}
+.icon-xls {
+	@include icon(xls);
+}
+.icon-zip {
+	@include icon(zip);
+}

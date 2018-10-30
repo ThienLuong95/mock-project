@@ -1,0 +1,16 @@
+diff a/docroot/themes/custom/nokiavue/sass/views/_project.scss b/docroot/themes/custom/nokiavue/sass/views/_project.scss	(rejected hunks)
+@@ -334,4 +334,14 @@
+   height: auto;
+ }
+ 
++.project-social {
++  position: absolute;
++  margin: 0 auto;
++  font-size: .875em;
++  color: #fff;
++  top: 15px;
++  right: 20px;
++  z-index: 9999;
++}
++
+ 

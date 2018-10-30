@@ -1,0 +1,145 @@
+$modular-scale-ratio: 1.125;
+$modular-scale-base: 1em;
+
+body {
+  color: $base-font-color;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $heading-font-family;
+  font-size: modular-scale(1);
+  font-weight: normal;
+  line-height: $heading-line-height;
+  margin: 0 0 $small-spacing;
+  word-wrap: break-word;
+}
+
+h2.header-upper-margin {
+  margin-top: $base-spacing*2;
+}
+
+.heading {
+  strong {
+    font-family: $font-bold;
+  }
+
+  &--huge {
+    font-size: em(36);
+    font-family: $font-bold;
+
+    @include media($mqs-desktop-up) {
+      font-size: em(60);
+    }
+  }
+
+  &--larger {
+    font-size: em(36);
+    font-family: $font-bold;
+
+    @include media($mqs-desktop-up) {
+      font-size: em(48);
+    }
+  }
+
+  &--large {
+    font-size: em(32);
+    font-family: $heading-font-family;
+  }
+
+  &--medium {
+    font-size: em(26);
+    font-family: $heading-font-family;
+  }
+
+  &--small {
+    font-size: em(22);
+    font-family: $heading-font-family;
+    &--light {
+      font-family: $font-light;
+    }
+  }
+
+  &--smallest {
+    font-size: em(18);
+    font-family: $heading-font-family;
+  }
+
+  &--central {
+    text-align: center;
+  }
+
+  &--push-top {
+    margin-top: 0.75em;
+  }
+
+  &--light {
+    font-family: $font-light;
+  }
+
+  &--regular {
+    font-family: $font-reg;
+  }
+
+  &--no-margin {
+    margin: 0;
+  }
+}
+
+.sub-heading {
+  font-size: em(22);
+  font-family: $font-reg;
+
+  &--light {
+    font-family: $font-light;
+    font-size: em(22);
+  }
+
+  &--small {
+    font-size: $base-font-size;
+    font-family: $font-light;
+  }
+
+  &--central {
+    text-align: center;
+  }
+}
+
+p {
+  margin: 0 0 $small-spacing;
+}
+.terms-conditions-group-viewer-form p{
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+a {
+  color: $blue;
+  text-decoration: none;
+  transition: color $base-duration $base-timing;
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: $blue;
+  }
+}
+
+.hero-body {
+  font-size: modular-scale(2);
+}
+
+hr {
+  border-bottom: $base-border;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  margin: $base-spacing 0;
+}

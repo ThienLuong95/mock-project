@@ -1,0 +1,244 @@
+.modal-mask {
+  position: fixed;
+  z-index: 9998;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+  display: table;
+  transition: opacity .3s ease;
+}
+
+.modal-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.modal-container {
+  width: 55%;
+  margin: 0 auto;
+  padding: 20px 30px;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
+  transition: all .3s ease;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.modal-enter, .modal-leave {
+  opacity: 0;
+}
+
+.modal-enter .modal-container,
+.modal-leave .modal-container {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.width-300px{
+  width: 300px;
+}
+
+.oen-nip-service-confirmation-modal .modal-container {
+  width: 640px;
+  font-family: GTWalsheimProLight !important;
+}
+.oen-nip-service-confirmation-modal .modal-container .modal-header{
+  padding-top: 3px;
+  text-align: center;
+  margin-top: 0;
+  font-family: GTWalsheimProLight !important;
+  font-size: 26px;
+  font-weight: 600;
+}
+.oen-nip-service-confirmation-modal .modal-container .modal-body{
+  margin: 15px 0;
+  text-align: center;
+  font-family: GTWalsheimProLight !important;
+  .oen-vue-table-wrapper{
+    font-size: 18px;
+    font-weight: 600;
+    color: #555;
+  }
+  .reject-info{
+    margin: 0 12px;
+  }
+}
+.oen-nip-service-confirmation-modal .modal-container .modal-footer{
+  overflow: auto;
+  padding-right: 10px;
+}
+
+.oen-nip-service-confirmation-modal .modal-footer .modal-agree-button{
+  font-size: 18px;
+  color: #ffffff;
+  height: 48px;
+  font-family: GTWalsheimProLight;
+  background: #2CB88C;
+  font-weight: 600;
+  border: transparent 2px solid;
+  float: right;
+  max-width: 240px;
+  margin-left: 20px;
+  &:hover{
+    border: #3CE19D 2px solid;
+  }
+  &:active{
+    background: #3CE19D;
+  }
+  &:focus{
+    outline: 0;
+  }
+}
+
+.oen-nip-service-confirmation-modal .modal-footer .modal-default-button{
+  font-size: 18px;
+  color: #2CB88C;
+  height: 48px;
+  font-family: "GTWalsheimProLight";
+  background: #ffffff;
+  font-weight: 600;
+  border: #CCCCCC 2px solid;
+  float: right;
+  max-width: 240px;
+  &:hover{
+    border: #3CE19D 2px solid;
+    background: #ffffff;
+    color: #2CB88C;
+  }
+  &:active{
+    background: #3CE19D;
+    color: #ffffff;
+    border: transparent 2px solid;
+  }
+  &:focus{
+    outline: 0;
+    background: #3CE19D;
+    color: #ffffff;
+    border: transparent 2px solid;
+  }
+}
+
+
+.modal-container .modal-header{
+    text-align: center;
+}
+
+.modal-header h3 {
+    margin-top: 0;
+    /*color: #42b983;*/
+}
+
+.modal-body {
+    margin: 20px 0;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.modal-default-button {
+    float: right;
+    background: none;
+    color: #0dc5a0!important;
+    border: 1px solid #dedede;
+    font-weight: inherit;
+    height: 45px;
+    margin-left: 30px;
+}
+.modal-default-button:hover,
+.modal-default-button:active{
+    background-color: #ffffff !important;
+    color: #0dc5a0!important;
+    height: 45px;
+    margin-left: 30px;
+}
+
+.modal-footer .modal-agree-button{
+    float: right;
+}
+
+.modal-enter, .modal-leave {
+    opacity: 0;
+}
+
+.modal-enter .modal-container,
+.modal-leave .modal-container {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+.modal-footer{
+    overflow: auto;
+}
+.width-300px{
+    width: 300px;
+}
+.nip-service .modal-container {
+    width: 35%;
+}
+.nokia-stats-terms-of-use-modal {
+  width: 650px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
+  transition: all .3s ease;
+  font-family: Helvetica, Arial, sans-serif;
+  .modal-header {
+    text-align: center;
+    border-bottom: 2px solid #dedede;
+    h3 {
+      margin-top: 0;
+      text-align: center;
+      font-size: 28px;
+      font-weight: 700;
+    }
+  }
+  .modal-body {
+    border-bottom: 2px solid #dedede;
+    max-height: 500px;
+    overflow: auto;
+    margin: 40px 0;
+    padding-bottom: 20px;
+    padding-right: 10px;
+    text-align: left !important;
+  }
+}
+
+.nokia-lab-modal {
+    &.modal-container {
+        .modal-header {
+            position: relative;
+            .fa {
+                position: absolute;
+                left: 0;
+                font-size: 3.3em;
+                color: $red;
+            }
+            h3 {
+                text-align: left !important;
+                padding-left: 60px !important;
+                line-height: 50px !important;
+                margin-bottom: .2em;
+            }
+        }
+    }
+    .modal-body {
+        text-align: left !important;
+        margin-top: 0;
+        padding-left: 60px !important;
+    }
+    .modal-footer {
+        display: block !important;
+        justify-content: right !important;
+    }
+}
+.leave-nokia-lab-modal {
+    .modal-primary-button{
+        margin-left: 60px;
+        float: initial;
+    }
+    .modal-default-button{
+        float: initial;
+    }
+}

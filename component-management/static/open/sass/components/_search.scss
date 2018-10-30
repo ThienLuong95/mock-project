@@ -1,0 +1,56 @@
+.path-search {
+	.taxonomy-teaser__container:last-child .search-card__wrapper {
+		border-bottom: 0 none;
+	}
+
+	#block-nokiavue-content {
+		border-bottom: $base-border;
+	}
+}
+
+#views-exposed-form-combined-search-page-1 {
+	margin-bottom: 1.5em;
+
+	.form-item {
+		float: left;
+
+		&:nth-child(1) {
+			width: 50%;
+		}
+
+		&:nth-child(2) {
+			width: 30%;
+			box-sizing: border-box;
+			margin-left: -1px;
+
+			label {
+				display: none;
+			}
+		}
+
+	}
+
+	.form-actions {
+		width: 20%;
+		float: left;
+		box-sizing: border-box;
+		padding-left: 0.5em;
+		margin-top: 0;
+	}
+
+
+}
+
+.path-projects-search,
+.path-asset-search,
+.path-challenges-search {
+	.views-element-container {
+		.views-exposed-form {
+			.form-actions {
+				margin-top: 0 !important;
+			}
+		}
+	}
+
+}
+

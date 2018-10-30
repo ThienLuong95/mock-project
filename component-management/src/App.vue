@@ -43,7 +43,7 @@
             <v-avatar v-on:click="rightDrawer = !rightDrawer" style=" cursor: pointer "
                       size='48px'
             >
-                <img src="/static/asset/avatar.svg" alt="avatar">
+                <img src="@/assets/avatar.svg" alt="avatar">
             </v-avatar>
         </v-toolbar>
 
@@ -58,7 +58,7 @@
                 fixed
                 app
         >
-            <img src="/static/asset/user-profile.png">
+            <img src="@/assets/user-profile.png">
 
         </v-navigation-drawer>
 

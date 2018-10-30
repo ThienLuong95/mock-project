@@ -34,29 +34,31 @@
     import 'codemirror/mode/css/css.js'
     import 'codemirror/mode/htmlembedded/htmlembedded.js'
     import CmSettingFrame from "./cm-setting-frame";
+
     export default {
         name: "cm-view-code-panel",
         components: {CmSettingFrame},
         props: {
-            html:{
+            html: {
                 type: String,
                 default: '',
             },
             css: {
-               type: String,
-               default: '',
+                type: String,
+                default: '',
             },
             js: {
                 type: String,
                 default: '',
-            }
+            },
+
         },
 
         data: function () {
             return {
                 dialog: false,
                 cmItems: [
-                    {name: 'HTML', value:  this.html},
+                    {name: 'HTML', value: this.html},
                     {name: 'CSS', value: this.css},
                     {name: 'JS', value: this.js}
                 ],
@@ -85,20 +87,26 @@
                 }
             },
             onRun() {
-                // this.$emit('onRun', this.cmItems);
-                this.$eventBus.$emit('onRun', this.cmItems)
+                let html = this.cmItems[0].value;
+                let css = this.cmItems[1].value;
+                let js = this.cmItems[2].value;
+                this.$eventBus.$emit('onRun', html, css, js);
             },
             onSetting(name) {
                 this.$eventBus.$emit('onFrameSetting', name);
             },
-
         },
-        computed: {
 
-
-        },
         watch: {
-
+            html: function () {
+                this.cmItems[0].value = this.html;
+            },
+            css: function () {
+                this.cmItems[1].value = this.css;
+            },
+            js: function () {
+                this.cmItems[2].value = this.js;
+            }
         },
 
     }

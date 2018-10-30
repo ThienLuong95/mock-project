@@ -1,0 +1,32 @@
+// styling part of drupal's default grid layouts
+.views-view-grid {
+
+  .views-col {
+    width: 100%;
+  }
+
+  &.cols-3 {
+    .views-row {
+      clear: none;
+      float: none;
+      width: auto;
+
+      &:after {
+        display: none;
+      }
+
+      @include media($mqs-desktop-up) {
+        @include clearfix;
+      }
+    }
+    .views-col {
+      @include media($mqs-tablet-portrait-up) {
+        width: 50%;
+      }
+      @include media($mqs-desktop-up) {
+        width: 33.33333333333%;
+      }
+    }
+  } // .col-3
+
+} // .views.view-grid

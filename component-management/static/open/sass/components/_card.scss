@@ -1,0 +1,469 @@
+.card {
+  border: $base-border;
+  // margin: 0 -1px;
+  background: $white;
+  color: $dark-gray;
+  // overflow: hidden;
+  position: relative;
+  width: 100%;
+  word-wrap: break-word; // firefox ignores this on flex
+  min-width: 0; // firefox hack. stops layout breaking
+
+  .flickity & {
+    width: 80%;
+  }
+
+  @include transition(all 0.1s ease-in-out);
+
+  &__bodyshort {
+    max-height: 3em;
+    overflow: hidden;
+    position: absolute;
+    left: 1.25em;
+    bottom: $base-spacing;
+    box-sizing: border-box;
+    padding-right: 1.25em;
+    transition: max-height 0.1s ease-in-out 0s;
+  }
+
+  @include media($mqs-desktop-up) {
+    float: left;
+    width: 25%;
+
+    .flickity & {
+      width: 25%;
+    }
+
+    .has-sidebar & {
+      width: 50%;
+    }
+
+    .sidebar & {
+      width: 100%;
+    }
+  }
+
+  &:hover {
+    z-index: 9;
+    // box-shadow: 0 7px 15px 0 rgba(0,0,0,0.08);
+    box-shadow: 0 7px 25px 9px rgba(0, 0, 0, 0.08);
+  }
+
+  // add specific hover functions for chllenges and articles
+  &--challenge, &--article, &--community, &--partner{
+    &:hover {
+      @include media($mqs-desktop-up) {
+        .card__image {
+          opacity: 0.7;
+        }
+        .card__title {
+          &--concat {
+            display: none;
+          }
+          &--full {
+            display: block;
+          }
+        }
+        .card__link__image {
+          background-color: $black;
+        }
+
+        .card__bodyshort {
+          max-height: 7.2em;
+          transition: max-height 1s ease-in-out 0.3s;
+        }
+      }
+    }
+  }
+
+  &--product {
+    min-height: 550px;
+  }
+
+  &__link {
+    color: $dark-gray;
+    display: block;
+    display: relative;
+    z-index: -1;
+
+    @include transition(all 0.3s ease-in-out);
+
+    &:hover, &:active, &:focus {
+      color: $dark-gray;
+
+      // .card__title, + .card__wrapper .card__title {
+      //   text-decoration: underline;
+      // }
+    }
+
+    &.card__link__image {
+      overflow: hidden;
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__category {
+    font-size: em(14px);
+  }
+
+  &__image {
+    margin: 0 -1px;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 180px;
+    max-height: 180px;
+
+    @include transition(opacity 0.3s ease-in-out);
+
+    @include media($mqs-tablet-portrait-up) {
+      height: 400px;
+    }
+    @include media($mqs-desktop-up) {
+      height: 180px;
+    }
+
+    img {
+      display: block;
+      max-width: none;
+    }
+  }
+
+  &__comments-bubble {
+    position: absolute;
+    right: $base-spacing;
+    top: $base-spacing;
+  }
+
+  &__content {
+    @include padding(1.25em);
+    padding: 1.25em 1.25em 2em 1.25em;
+    &.bottom {
+      position: absolute;
+      bottom: 0;
+    }
+  }
+
+  &__title {
+    color: $black;
+    display: block;
+    height: 80px;
+
+    @include media($mqs-desktop-up) {
+      height: 55px;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+
+    &--full {
+      display: none;
+      @include media($mqs-tablet-portrait-up) {
+        display: block;
+      }
+      @include media($mqs-desktop-up) {
+        display: none;
+      }
+    }
+    &--concat {
+      @include media($mqs-tablet-portrait-up) {
+        display: none;
+      }
+      @include media($mqs-desktop-up) {
+        display: block;
+      }
+    }
+  }
+
+  &__text {
+    font-size: em(14);
+
+    .card--challenge & {
+      margin: 0;
+    }
+  }
+
+  &__tag-list {
+    span {
+      &:after {
+        content: ',\0020';
+      }
+
+      &:last-child {
+        &:after {
+          content: '';
+        }
+      }
+    }
+  }
+
+  &__actions {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+
+    // Fade out the card content when we hover on the actions
+    &:hover {
+      + .card__link {
+        opacity: 0.2;
+      }
+    }
+
+    a {
+      color: $medium-gray;
+      float: right;
+      padding: $base-spacing $base-spacing 0 $base-spacing;
+      text-align: center;
+
+      &:hover {
+        color: $green;
+      }
+    }
+  }
+
+  &--add {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 235px;
+  }
+  &--community {
+    height: 360px;
+  }
+
+} // card
+
+.cards {
+  float: left;
+  clear: both;
+  width: 100%;
+  position: relative;
+
+  .flickity-page-dots, .flickity-prev-next-button {
+    display: none;
+  }
+}
+
+.list-cards {
+  @include media($mqs-desktop-up) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  @include clearfix;
+
+  .card {
+    flex-basis: 25%;
+    min-width: 0; // firefox hack. stops layout breaking
+  }
+
+  .flickity-page-dots, .flickity-prev-next-button {
+    display: none;
+  }
+}
+
+_:-ms-fullscreen, :root .list-cards {
+  @include media($mqs-desktop-up) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  @include clearfix;
+
+  .card {
+    flex-basis: 24.7%;
+    min-width: 0;
+  }
+
+  .flickity-page-dots, .flickity-prev-next-button {
+    display: none;
+  }
+}
+
+.challenge-tab-bodies {
+  .list-cards {
+    .card {
+      flex-basis: 50%;
+    }
+
+    footer {
+      width: 100%;
+      flex: none;
+    }
+  }
+}
+
+// Enable card styles on grid views
+.views-grid-cards {
+
+  .views-row {
+    @extend .cards;
+    border-bottom:1px solid transparent;
+  }
+
+  .views-col {
+    @extend .card;
+    @include padding($base-spacing);
+    width:33%;
+    position:relative;
+  }
+
+  .card-category {
+    font-size: em(14px);
+    display: block;
+  }
+
+  .card-title {
+    @extend .card__title;
+    @extend .heading--small;
+    @extend h5;
+
+    display:block;
+  }
+
+  .card-link a {
+    display:block;
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    text-indent:-999em;
+    outline:0;
+  }
+
+  header {
+    p {
+      text-align: left;
+      width: 730px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 2em;
+    }
+  }
+}
+
+// because: Drupal
+.article-list {
+  > div > div {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+
+.paragraph-row {
+  &.columns-1 {
+    .card {
+      width: 100%;
+    }
+  }
+
+  &.columns-2 {
+    .card {
+      width: 50%;
+      flex-basis: 50%;
+    }
+  }
+
+  &.columns-3 {
+    .card {
+      width: 33%;
+      flex-basis: 33%;
+    }
+  }
+
+  &.columns-4 {
+    .card {
+      width: 25%;
+      flex-basis: 25%;
+    }
+  }
+
+  .card {
+    min-height: 425px;
+  }
+
+  @media all and (max-width: 1039px) {
+    &.columns-1,
+    &.columns-2,
+    &.columns-3,
+    &.columns-4 {
+      .card {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.path-our-network {
+  @include media($mqs-desktop-up) {
+    .views-element-container {
+      >div {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        header {
+          text-align: left;
+          width: 730px!important;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        .card {
+          width: 25% !important;
+          flex-basis: 25%;
+          min-width: 0; // firefox hack. stops layout breaking
+        }
+      }
+    }
+  }
+
+  .card__image__wrapper {
+    padding: 0 2*$base-spacing;
+    .card__image {
+      background-size: contain;
+    }
+  }
+}
+
+.card__image__wrapper .card_icon_challenge {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  z-index: 1000;
+}
+.card__image__wrapper .card_icon_challenge .fa {
+  font-size:24px !important;
+  color: gray;
+}
+
+// Card partner
+.card--partner{
+  height: 370px;
+  .card__bodyshort {
+    max-height: 1.5em;
+    bottom: 5.5em;
+    -ms-word-break: break-all;
+    word-break: break-all;
+  }
+  .card__tag-list{
+    height: 42px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-weight: 600;
+  }
+}
+
+.card__content{
+  word-wrap: break-word;
+  word-break: break-word;
+}

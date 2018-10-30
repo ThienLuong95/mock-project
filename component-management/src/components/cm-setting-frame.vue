@@ -37,11 +37,11 @@
                 </v-tab-item>
 
                 <v-tab-item value="tabCss" class="tab-item">
-                    <cm-tab-item type="CSS" :urls="listLinkAppend" ref="tabCss"></cm-tab-item>
+                    <cm-tab-item type="CSS" :urls="listLinkAppend" ></cm-tab-item>
                 </v-tab-item>
 
                 <v-tab-item value="tabJs" class="tab-item">
-                    <cm-tab-item type="JS" :urls="listScriptAppend" ref="tabJs"></cm-tab-item>
+                    <cm-tab-item type="JS" :urls="listScriptAppend" ></cm-tab-item>
                 </v-tab-item>
 
             </v-tabs-items>
@@ -55,27 +55,27 @@
     export default {
         name: "cm-setting-frame",
         components: {CmTabItem},
-        props: {
-            listScriptAppend: Array,
-            listLinkAppend: Array,
-            componentHeadText: '',
-        },
+
         data: function () {
             return {
+
                 dialog: false,
                 activeTab: 'tabHtml',
-                textArea: '',
                 items: ['meta', 'link', 'script', 'style'],
-                headItem: 'head'
+                headItem: 'head',
+                selectedProject: null,
+                textArea: '',
+                listLinkAppend: [],
+                listScriptAppend: [],
             }
 
         },
         methods: {
             onSettingSave() {
-
+                //write to iframe
             },
             onFrameSetting(activeTab) {
-               this.setActiveTab(activeTab);
+                this.setActiveTab(activeTab);
                 this.dialog = !this.dialog;
             },
             setActiveTab(name) {
@@ -94,13 +94,29 @@
                         break;
                 }
             },
+            onProjectSelected(projectId) {
+                this.selectedProject = this.$store.getters.getProjectById(projectId);
+            }
         },
+
         created: function () {
-            this.$eventBus.$on('onFrameSetting', this.onFrameSetting)
+            this.$eventBus.$on('onFrameSetting', this.onFrameSetting);
+            this.$eventBus.$on('onProjectSelectedId', this.onProjectSelected);
+            this.selectedProject = this.$store.getters.getProjectById(localStorage.selectedProjectId);
+
         },
+
         destroyed: function () {
-            this.$eventBus.$off('onFrameSetting', this.onFrameSetting)
-        }
+            this.$eventBus.$off('onFrameSetting', this.onFrameSetting);
+            this.$eventBus.$off('onProjectSelectedId', this.onProjectSelected);
+        },
+        watch: {
+            selectedProject() {
+                this.textArea = this.selectedProject.projectHeadTag;
+                this.listLinkAppend = this.selectedProject.projectLinks;
+                this.listScriptAppend = this.selectedProject.projectScripts;
+            }
+        },
 
     }
 

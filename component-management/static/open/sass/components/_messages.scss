@@ -1,0 +1,64 @@
+.inbox {
+
+  .messages {
+    // border-top: $base-border;
+    padding: $base-spacing 0;
+  }
+
+  .message {
+    &:hover {
+      &:before {
+        content: "";
+        height: 100%;
+        border-left: 4px solid $blue;
+        position: absolute;
+        left: -1px;
+        top: 0;
+      }
+    }
+
+    // overwrites
+    &__date {
+      border-bottom: none;
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+  } //.message
+
+}
+
+.message {
+  color: $base-font-color;
+  background: white;
+  margin-bottom: $base-spacing;
+  padding: $base-spacing;
+  border: $base-border;
+  position: relative;
+  @include clearfix;
+
+  &__divider {
+    @include media($mqs-desktop-up) {
+      float: left;
+      width: 30%;
+
+      &--content {
+        width: 70%;
+      }
+    }
+  }
+
+  &__sender {
+    margin-bottom: 2em;
+  }
+
+  &__subject {
+      font-family: $font-bold;
+  }
+
+  &__date {
+    color: $dark-gray;
+    border-bottom: $base-border;
+    padding-bottom: 1em;
+    margin-bottom: 2em;
+  }
+} //.message

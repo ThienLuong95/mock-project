@@ -1,0 +1,65 @@
+.path-taxonomy {
+
+  .feed-icon {
+    // introduced to hide subscribe button
+    display: none;
+
+    float: left;
+    clear: left;
+
+    @extend .btn;
+    @extend .btn--ghost;
+  }
+
+  .card {
+    flex-basis: 25%;
+    width: 25%;
+
+    margin-bottom: $base-spacing;
+
+    &--asset {
+      clear: left;
+
+      ~ .card--asset {
+        clear: none;
+      }
+    }
+    &--article {
+      clear: left;
+
+      ~ .card--article {
+        clear: none;
+      }
+    }
+    &--challenge {
+      clear: left;
+
+      ~ .card--challenge {
+        clear: none;
+      }
+    }
+    &--project {
+      clear: left;
+
+      ~ .card--project {
+        clear: none;
+      }
+    }
+  }
+
+  .taxonomy-teaser__container {
+    &:last-of-type {
+      border-bottom: $base-border;
+
+      .taxonomy-teaser {
+        .search-card__wrapper {
+          border-bottom: none;
+        }
+      }
+    }
+
+    &:first-of-type {
+      border-top: $base-border;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+.search-bar {
+  transform: translateY(-108px);
+  position: absolute;
+  left: 0;
+  z-index: 99999999;
+  width: 100%;
+  background: white;
+  transition: 0.3s;
+  display: none;
+
+  .search-is-visible & {
+    // transform: translateY(0);
+  }
+
+ &__inner {
+  @include outer-container;
+  form {
+    width: 100%;
+    height: 108px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    @include margin(null -10px);
+  }
+
+  input {
+    margin: 0 10px;
+  }
+ }
+}
+
+body {
+  transition: transform 0.3s $ease-out-expo;
+
+  &.search-is-visible {
+    transform: translateY(108px);
+  }
+}

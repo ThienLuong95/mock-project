@@ -1,0 +1,461 @@
+.path-our-network {
+  .layout-container {
+    width: 100%;
+
+    header {
+      text-align: center;
+      margin-bottom: $base-spacing;
+    }
+
+    .views-grid-cards {
+      width: 100%;
+    }
+  }
+}
+
+#views-exposed-form-partners-search-page-1 {
+  width: 100%;
+
+  #edit-actions {
+    margin-top: 0px;
+  }
+}
+
+.partner-top-content {
+  margin: 1.5em 0 3em;
+
+  .partner__main {
+    padding: 1.5em;
+    margin-bottom: 50px;
+
+    .partner_tab_content {
+      margin: 0 -1.5em -1.5em;
+
+      .challenge-tab-bodies {
+        padding: 0 0 2em;
+        border-bottom: none;
+      }
+    }
+  }
+  @media screen and (min-width: 65rem) {
+    .partner__sidebar {
+      float: right;
+    }
+  }
+  &:after {
+    clear: both;
+    content: '';
+    display: block;
+  }
+}
+
+.oen-partner-sidebar-logo-block {
+  text-align: center;
+
+  .oen-partner-sidebar-title {
+    margin: 1em 0;
+    border-bottom: 1px solid #dedede;
+    h1 {
+      font-size: 2em;
+    }
+    .oen-partner-contact-information{
+      margin-bottom: 20px;
+      padding-left: 30px;
+      .oen-partner-contact-item{
+        margin-bottom: 3px;
+        text-align: left;
+        i{
+          margin-right: 5px;
+          width: 20px;
+          color: #000;
+        }
+        a {
+          word-wrap: break-word;
+          word-break: break-all;
+          -ms-word-break:break-all;
+        }
+      }
+    }
+  }
+
+  .oen-partner-contact-person {
+    text-align: left;
+    .contact-title {
+      margin-bottom: 10px;
+      font-family: GTWalsheimProMed;
+      font-size: 1.125em;
+    }
+  }
+
+}
+
+.oen-partner-block-sidebar-ctas {
+  margin: 2em 0;
+
+  .challenge-sidebar__cta:last-child {
+    border-bottom: 1px solid #dedede;
+    padding-bottom: 1.5em;
+  }
+}
+
+.oen-partner-overview-tab-block {
+  img {
+    display: block;
+    height: auto;
+    min-width: 100%;
+  }
+  h2 {
+    font-size: em(26);
+    font-family: $heading-font-family;
+  }
+
+  h3 {
+    font-size: em(22);
+    font-family: $heading-font-family;
+  }
+  h4 {
+    font-size: em(22);
+    font-family: $font-light;
+  }
+
+  ul {
+    list-style: disc outside;
+  }
+
+  ol {
+    list-style: decimal outside;
+  }
+
+  p {
+    margin-bottom: $base-spacing;
+  }
+
+  ul, ol {
+    padding-left: 20px;
+    margin-bottom: $base-spacing;
+    li {
+      margin-bottom: 0.25*$base-spacing;
+      word-wrap: break-word;
+      word-break: break-all;
+    }
+  }
+}
+
+.oen-partner-overview-content {
+  margin-top: 2em;
+  font-family: GTWalsheimProlight;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+}
+
+.partner-tags {
+  margin: 1.5em 0;
+  overflow: hidden;
+  height: auto;
+
+  .field__label {
+    font-family: GTWalsheimProMed;
+    font-size: 1.125em;
+    font-weight: 400;
+    line-height: 1.2;
+    margin: 0 0 .75em;
+    word-wrap: break-word;
+  }
+
+  .field__item {
+    float: left;
+    max-width: 100%;
+
+    a {
+      display: block;
+      border: 1px solid #dedede;
+      color: #737373;
+      font-size: .875em;
+      padding: .5em 1.5em;
+      margin: 0 10px 10px 0;
+      float: left;
+      font-family: GTWalsheimProReg;
+      max-width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      &:hover {
+        color: $blue;
+        border-color: $blue;
+      }
+    }
+  }
+}
+
+#oen-partner-interest-tab-wrapper {
+  font-family: $font-reg;
+  .oen-partner-interest-tab-header {
+    font-weight: 700;
+    margin-bottom: 40px;
+    font-size: 1.5em;
+  }
+  .oen-partner-interest-tab-content {
+    padding-left: 40px;
+    .oen-partner-interest-tab-content-region {
+      margin-bottom: 20px;
+    }
+    .oen-partner-interest-tab-content-title {
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .oen-partner-interest-tab-content-body{
+      word-wrap: break-word;
+      -ms-word-break: break-all;
+    }
+  }
+  .oen-partner-interest-tab-empty-message{
+    font-family: $font-light;
+  }
+}
+
+@media screen and (max-width: 65em) {
+  .region--one {
+    width: 100% !important;
+    margin-bottom: 1em;
+  }
+  .region--two, .region--three {
+    width: 50% !important;
+  }
+}
+
+.oen-partner-interest-tab-use-cases-wrapper {
+  padding: 1em 0;
+
+  .use-cases--list-item {
+    background: #fff;
+    margin-bottom: 1.5em;
+    padding: 1.5em;
+    border: 1px solid #dedede;
+    position: relative;
+    font-family: GTWalsheimProlight;
+
+    .use-cases-item-content {
+      height: 120px;
+      overflow: auto;
+    }
+    .use-cases-region {
+      float: left;
+      padding-right: 1em;
+    }
+    .use-cases-region-title {
+      font-weight: 700;
+    }
+    .region--one {
+      width: 50%;
+      .use-cases-description {
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+      }
+    }
+
+    .region--two {
+      width: 25%;
+
+      .use-cases-location-content, .use-cases-partner-content {
+        height: 60px;
+      }
+    }
+
+    .region--three {
+      width: 25%;
+
+      .use-cases-status-content, .use-cases-link-content {
+        height: 60px;
+      }
+    }
+    .use-cases-information {
+      display: block;
+      text-overflow: ellipsis;
+      overflow-x: hidden;
+      white-space: nowrap;
+    }
+  }
+
+  .use-cases-pagination {
+    padding: 10px 0 0 10px;
+    display: flex;
+
+    .item-per-page-mode-wrapper {
+      margin-left: 10px;
+      width: 50px;
+    }
+
+    .select-page-wrapper {
+      //margin-left: 20px;
+      display: flex;
+    }
+
+    .rows-per-page-wrapper {
+      display: flex;
+    }
+
+    .paging-control {
+      background-color: #f4f4f4;
+    }
+  }
+}
+
+.oen-partner-asset-search-wrapper {
+  margin-bottom: 3em;
+
+  .oen-partner-asset-search-header {
+    font-weight: 700;
+    margin-bottom: 40px;
+    font-size: 1.5em;
+  }
+
+  .oen-partner-asset-search-filter-region {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2em;
+
+    .oen-partner-filter-string {
+      margin-right: 1.5em;
+      width: 60%;
+    }
+  }
+
+  .list-cards {
+    .card {
+      flex-basis: 33%;
+    }
+
+    .card__title, .card__tag-list {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .partner-asset-search-pagination {
+    padding: 10px 0 0 10px;
+    display: flex;
+
+    .item-per-page-mode-wrapper {
+      margin-left: 10px;
+      width: 50px;
+    }
+
+    .select-page-wrapper {
+      //margin-left: 20px;
+      display: flex;
+    }
+
+    .rows-per-page-wrapper {
+      display: flex;
+    }
+
+    .paging-control {
+      background-color: #f4f4f4;
+    }
+  }
+}
+
+.spinner-container {
+  text-align: center;
+  position: relative;
+  width: 100%;
+  height: 100px;
+}
+
+.spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -30px 0 0 -30px;
+  display: inline-block;
+  height: 2em;
+  width: 2em;
+  -webkit-animation: rotation .6s infinite linear;
+  -moz-animation: rotation .6s infinite linear;
+  -o-animation: rotation .6s infinite linear;
+  animation: rotation .6s infinite linear;
+  border: 6px solid rgba(0, 174, 249, .15);
+  border-top: 6px solid rgba(0, 174, 249, .8);
+  border-radius: 100%;
+}
+
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+  }
+}
+
+@-moz-keyframes rotation {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(359deg);
+  }
+}
+
+@-ms-keyframes rotation {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(359deg);
+  }
+}
+
+@-o-keyframes rotation {
+  from {
+    -o-transform: rotate(0deg);
+  }
+  to {
+    -o-transform: rotate(359deg);
+  }
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.page-node-type-partner_profile {
+  .header-uploads-tab-partner {
+    .title-upload-tab-partner {
+      display: inline-block;
+      margin-top: 5px;
+    }
+  }
+  .attachment-item {
+    display: block;
+  }
+}
+
+.resource-upload-list:after {
+  clear: both;
+  content: "";
+  display: block;
+}
+.oen-partner-resources-link-list{
+  li{
+    margin-bottom: 5px;
+  }
+  .oen-partner-resources-link-item{
+    word-wrap: break-word;
+    -ms-word-break: break-all;
+  }
+}
+div[data-block-plugin-id="oen_partner_upload_attachment_list_table"]{
+  .attachment-wrapper{
+    a{
+      word-wrap: normal;
+      text-overflow: ellipsis;
+    }
+  }
+}

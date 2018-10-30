@@ -1,0 +1,94 @@
+.comment {
+
+  padding: $base-spacing;
+  word-wrap: break-word;
+  position: relative;
+
+  &__credits {
+    @include clearfix;
+    @media all and (max-width: 599px) {
+      margin-top: $base-spacing;
+    }
+  }
+
+  &__name {
+    margin-right: $small-spacing;
+    float: left;
+
+    .indented & {
+      float: right;
+      margin-left: $small-spacing;
+      margin-right: 0;
+    }
+
+    a {
+      color: $base-font-color;
+      &:hover {
+        color: $green;
+      }
+    }
+  }
+
+  &__date {
+    color: $mediumdark-gray;
+    position: absolute;
+    right: $base-spacing;
+    top: $base-spacing;
+    @media all and (max-width: 599px) {
+      font-size: 0.8em;
+    }
+  }
+
+  &__actions {
+    margin-left: 2.15*$base-spacing;
+    a {
+      color: $action-color;
+      margin: 0 2*$small-spacing 0 0;
+      @media all and (max-width: 599px) {
+        font-size: 0.9em;
+      }
+    }
+  }
+
+  &__subject {
+    margin-left: 2.15*$base-spacing;
+  }
+
+  &__text {
+    margin-left: 2.15*$base-spacing;
+  }
+
+}
+
+.links.inline {
+  .private-message,
+  .edit {
+    a {
+      color: $green;
+      &:hover {
+        color: $green;
+      }
+    }
+  }
+}
+
+.reply {
+  .comment {
+    &__text {
+      color: $dark-gray;
+    }
+  }
+}
+
+.reply-reply {
+  .comment {
+    &__text {
+      color: $dark-gray;
+    }
+  }
+}
+
+#block-views-block-project-comments-block-1 > div {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}

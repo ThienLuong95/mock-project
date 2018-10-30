@@ -1,0 +1,103 @@
+.path-our-network {
+	.partner {
+		background: transparent;
+		color: $dark-gray;
+		position: relative;
+		width: 100%;
+		word-wrap: break-word; // firefox ignores this on flex
+		min-width: 0; // firefox hack. stops layout breaking
+		text-align: center;
+		padding: $base-spacing;
+		box-sizing: border-box;
+
+		.flickity & {
+			width: 80%;
+		}
+
+		@include media($mqs-desktop-up) {
+			float: left;
+			width: 25%;
+
+			.flickity & {
+				width: 25%;
+			}
+
+			.has-sidebar & {
+				width: 50%;
+			}
+
+			.sidebar & {
+				width: 100%;
+			}
+		}
+
+		&__link {
+			color: $dark-gray;
+		    display: block;
+		    display: relative;
+		    z-index: -1;
+		}
+
+		&__image {
+			margin: 0 auto $base-spacing auto;
+			border: $base-border;
+			background: $white;
+			border-radius: 50%;
+			width: 180px;
+			height: 180px;
+			padding: 20px;
+
+			.image-inner {
+				width: 140px;
+				height: 140px;
+				background-size: contain;
+	    		background-repeat: no-repeat;
+	    		background-position: center;
+			}
+		}
+
+		&__title {
+			text-align: center;
+		}
+
+		&__content {
+			text-align: center;
+			height: 200px;
+		}
+
+
+	}
+}
+.partner-resources-links{
+	padding-top: 1.5em;
+}
+
+.ic-view-upload-tab {
+	display: inline-flex;;
+	float: right;
+	.ic-upload-tab-space-margin {
+		width: 5px;
+	}
+	.ic-view-table-upload-tab {
+		display: block;
+		background: transparent url(../images/grid-icon-disable.png) no-repeat top left;
+		width: 32px;
+		height: 32px;
+		cursor: not-allowed;
+		&.enable {
+			background-image: url(../images/grid-icon-enable.png);
+			cursor: pointer;
+		}
+	}
+	.ic-view-list-upload-tab {
+		display: block;
+		background: transparent url(../images/list-icon-disable.png) no-repeat top left;
+		width: 32px;
+		height: 32px;
+		cursor: not-allowed;
+		&.enable {
+			background-image: url(../images/list-icon-enable.png);
+			cursor: pointer;
+		}
+	}
+}

@@ -1,0 +1,51 @@
+.attachment-item {
+  float: left;
+  text-align: center;
+  width: 100%;
+  @include clearfix;
+
+  @include media($mqs-tablet-portrait-up) {
+    width: 33%;
+
+    &.challenge-attachment {
+      width: 25%;
+    }
+  }
+}
+
+.attachment-wrapper {
+  padding: $base-spacing 0;
+  position: relative;
+  z-index: 1;
+  height: 180px;
+  border: $base-border;
+  > a {
+    padding: 0 $base-spacing;
+    color: $black;
+    display: block;
+    word-wrap: break-word;
+    position: relative;
+    z-index: 3;
+    font-family: $font-med;
+    font-size: em(14);
+    overflow: hidden;
+    height: 3.1em;
+  }
+
+  .attachment__icon {
+    color: $blue;
+    position: absolute;
+    top: 70px;
+    font-size: 50px
+  }
+
+  span {
+    color: $dark-gray;
+    position: absolute;
+    bottom: $base-spacing / 2;
+    width: 100%;
+    display: block;
+    z-index: 2;
+  }
+
+}
