@@ -13,7 +13,7 @@
                 style="z-index: 998"
         >
             <v-toolbar-side-icon @click.stop="onNavDrawer"></v-toolbar-side-icon>
-            <v-toolbar-title v-text="title"></v-toolbar-title>
+            <img src="@/assets/cm-logo2.svg" alt="logo" width="128"  >
             <v-spacer></v-spacer>
             <!--Toolbar items-->
             <v-toolbar-items style="margin: 0 24px;">
@@ -43,7 +43,7 @@
 
             <!--Avatar-->
             <v-avatar v-on:click="rightDrawer = !rightDrawer" style=" cursor: pointer "
-                      size='48px'
+                      size='40px'
             >
                 <img src="@/assets/avatar.svg" alt="avatar">
             </v-avatar>
@@ -93,6 +93,11 @@
         },
         created: function () {
             this.$store.commit('setProjects', this.projects)
+
+
+
+
+
         }
     }
 </script>
