@@ -1,7 +1,7 @@
 <template>
     <v-app>
         <!--Navigation-->
-        <cm-navigation :projects="projects">
+        <cm-navigation :projects="projects" style="z-index: 999">
 
         </cm-navigation>
 
@@ -9,6 +9,8 @@
         <v-toolbar
                 dark
                 app
+                color="secondary"
+                style="z-index: 998"
         >
             <v-toolbar-side-icon @click.stop="onNavDrawer"></v-toolbar-side-icon>
             <v-toolbar-title v-text="title"></v-toolbar-title>
@@ -57,6 +59,7 @@
                 v-model="rightDrawer"
                 fixed
                 app
+                style="z-index: 999"
         >
             <img src="@/assets/user-profile.png">
 

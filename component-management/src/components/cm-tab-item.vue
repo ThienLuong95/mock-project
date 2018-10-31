@@ -33,7 +33,7 @@
 
         <v-card-actions>
             <v-spacer></v-spacer>
-            <v-btn small outline color="accent" @click="addUrl">
+            <v-btn small outline color="accentDark" @click="addUrl">
                 <v-icon small left>add</v-icon>
                 add
             </v-btn>
@@ -74,16 +74,21 @@
         methods: {
             addUrl: function () {
                 this.tempUrls.push('');
+                this.$emit('onUrlsChange',  this.tempUrls);
             },
             removeURL: function (index) {
                 if (index > -1) {
                     this.tempUrls.splice(index, 1);
                 }
+                this.$emit('onUrlsChange',  this.tempUrls);
             },
         },
         watch: {
             urls() {
                 this.tempUrls = this.urls;
+            },
+            tempUrls(){
+                this.$emit('onUrlsChange',  this.tempUrls);
             }
         }
 

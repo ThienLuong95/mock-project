@@ -3,14 +3,14 @@
 
         <v-layout row wrap>
             <v-flex xs12>
-                <h1 class="display-1 cm-title"> {{componentData.name}}</h1>
+                <h1 class="display-1 cm-title" > {{componentData.name}}</h1>
                 <p class="body-1" style="margin-bottom: 8px">Component description</p>
             </v-flex>
 
             <v-flex xs12 lg12>
                 <h2 id="localLinkUsage" class="headline cm-title">Usage</h2>
                 <p class="body-1">You can change below code to make effect</p>
-                <v-card style="background-color: #BDBDBD">
+                <v-card style="background-color: #eeeeee">
                     <v-card-actions class="cm-action-bar">
                         <v-btn icon medium href="#localLinkUsage" class="cm-icon-grey">
                             <v-icon medium>mdi-pound-box</v-icon>

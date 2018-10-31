@@ -5,7 +5,7 @@ let projects = [
         projectHeadTag: "<meta charset=\"utf-8\">\n" +
             "<meta name=\"viewport\" content=\"width=device-width,initial-scale=1.0\">",
         projectLinks: ["http://localhost:8080/static/open/css/style.css"],
-        projectScripts: ["http://localhost:8080/static/open/export.js"],
+        projectScripts: ['https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js',"http://localhost:8080/static/open/export.js"],
 
         listComponents: [
             {

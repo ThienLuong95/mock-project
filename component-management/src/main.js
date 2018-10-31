@@ -7,6 +7,7 @@ import '@mdi/font/css/materialdesignicons.css'
 import VueCodemirror from 'vue-codemirror'
 import 'codemirror/lib/codemirror.css'
 import '../node_modules/vuetify/src/stylus/app.styl'
+import './style/styles.scss'
 //Event bus
 const EventBus = new Vue();
 Vue.prototype.$eventBus = EventBus;
@@ -59,6 +60,7 @@ import {
     VDialog,
     VTabs,
     VTextarea,
+    VProgressLinear,
     transitions
 } from 'vuetify'
 Vue.use(Vuetify, {
@@ -81,12 +83,14 @@ Vue.use(Vuetify, {
         VDialog,
         VTabs,
         VTextarea,
+        VProgressLinear,
         transitions
     },
     theme: {
-        primary: '#ee44aa',
-        secondary: '#424242',
-        accent: '#82B1FF',
+        primary: '#157EB2',
+        secondary: '#165F83',
+        accent: '#3BC587',
+        accentDark: '#1EA568',
         error: '#FF5252',
         info: '#2196F3',
         success: '#4CAF50',

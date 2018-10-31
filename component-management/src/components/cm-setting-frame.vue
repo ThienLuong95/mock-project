@@ -1,10 +1,10 @@
 <template>
-    <v-dialog v-model="dialog" max-width="450px">
-        <v-card style="padding: 4px">
-            <v-card-title style="height: 100px; background-color: darkgrey">
-                <h1 class="display-1" style="color: #757575">Component Setting</h1>
+    <v-dialog v-model="dialog" max-width="412px">
+        <v-card style="padding: 4px;">
+            <v-card-title style="height: 88px;" class="back-ground-dark">
+                <h1 class="display-2" style="color: #FFFFFF">Setting</h1>
                 <v-spacer></v-spacer>
-                <v-btn color="primary" @click="onSettingSave">Save</v-btn>
+                <v-btn color="accentDark" style="color: #FFFFFF" @click="onSettingSave">Save</v-btn>
             </v-card-title>
             <v-tabs dark color="secondary" grow v-model="activeTab" slider-color="accent">
 
@@ -36,12 +36,12 @@
 
                 </v-tab-item>
 
-                <v-tab-item value="tabCss" class="tab-item">
-                    <cm-tab-item type="CSS" :urls="listLinkAppend" ></cm-tab-item>
+                <v-tab-item value="tabCss" class="tab-item" >
+                    <cm-tab-item type="CSS" :urls="listLinkAppend" @onUrlsChange="onLinksChange"></cm-tab-item>
                 </v-tab-item>
 
                 <v-tab-item value="tabJs" class="tab-item">
-                    <cm-tab-item type="JS" :urls="listScriptAppend" ></cm-tab-item>
+                    <cm-tab-item type="JS" :urls="listScriptAppend" @onUrlsChange="onScriptChange"></cm-tab-item>
                 </v-tab-item>
 
             </v-tabs-items>
@@ -72,11 +72,18 @@
         },
         methods: {
             onSettingSave() {
-                //write to iframe
+                this.$eventBus.$emit('onSaveSetting', this.textArea, this.listLinkAppend, this.listScriptAppend);
+                this.dialog = !this.dialog;
             },
             onFrameSetting(activeTab) {
                 this.setActiveTab(activeTab);
                 this.dialog = !this.dialog;
+            },
+            onLinksChange(urls){
+               this.listLinkAppend=urls;
+            },
+            onScriptChange(urls){
+              this.listScriptAppend=urls;
             },
             setActiveTab(name) {
                 switch (name) {

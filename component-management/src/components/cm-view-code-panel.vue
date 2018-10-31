@@ -22,6 +22,7 @@
             <v-btn color="primary" dark @click="onRun">Run
                 <v-icon dark right>play_arrow</v-icon>
             </v-btn>
+
         </v-card-actions>
         <cm-setting-frame>
         </cm-setting-frame>
