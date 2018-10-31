@@ -22,17 +22,19 @@
   overflow-y: auto;
   transition: none;
 }
-
 .tab-item::-webkit-scrollbar {
   width: 4px;
 }
-.tab-item::-webkit-scrollbar-track {
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
   background: #f1f1f1;
 }
-.tab-item::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
   background: #888;
 }
-.tab-item::-webkit-scrollbar-thumb:hover {
+::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
 
