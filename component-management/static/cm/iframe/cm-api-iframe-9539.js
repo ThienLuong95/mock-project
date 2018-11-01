@@ -61,7 +61,7 @@ function _cmRemoveElementsInDOM(parentName, elements) {
 }
 
 function _cmWriteHeadTag(headText) {
-    document.head.innerHTML=headText;
+    document.head.innerHTML = headText;
 }
 
 function _cmAppendElementToParent(parentName, element) {
@@ -101,24 +101,28 @@ function _cmAppendScriptsToDOM(scriptUrls) {
         _cmAppendAndStoredScriptElement(_tempElement);
     }
 }
+
 function _cmInnerElement(element, text) {
-    element.innerHTML=text;
+    element.innerHTML = text;
 }
+
 function _cmInnerTemplate(template) {
-    if(!_cmIsEquals(_cmTemplateLastContent, template)){
-        _cmTemplateLastContent=template;
-        _cmInnerElement(_cmTemplate9539, template);
-    }
+    _cmInnerElement(_cmTemplate9539, template);
+    console.log(template)
+
 }
+
 function _cmInnerStyle(style) {
-    if(!_cmIsEquals(_cmStyleLastContent, style)){
-        _cmStyleLastContent=style;
-        _cmInnerElement(_cmStyle9539, style);
-    }
+    _cmInnerElement(_cmStyle9539, style);
+    console.log(style)
+
 }
+
 function _cmEvalScript(script) {
     eval(script);
+    console.log(script);
 }
+
 // main function
 function cmWriteExternalSource(headText, linkUrls, scriptUrls) {
     //appLinks and headText
@@ -131,7 +135,7 @@ function cmWriteExternalSource(headText, linkUrls, scriptUrls) {
         _cmAppendLinksToDOM(linkUrls);
 
     } else {
-        _cmLastHeadText=headText;
+        _cmLastHeadText = headText;
         _cmWriteHeadTag(headText);
         _cmClearArrayLink();
         //append and stored

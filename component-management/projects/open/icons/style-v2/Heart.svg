@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="48px" height="42px" viewBox="0 0 48 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48 (47235) - http://www.bohemiancoding.com/sketch -->
+    <title>Heart</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-743.000000, -873.000000)">
+        <g id="Heart" transform="translate(734.000000, 862.000000)">
+            <rect id="Rectangle-4-Copy-32" x="0" y="0" width="64" height="64"></rect>
+            <g id="like2" transform="translate(8.000000, 11.000000)" fill="#5D5D5D">
+                <g id="Shape">
+                    <path d="M25,42 C24.4,42 23.8,41.6 23.6,41 C23.2,39.5 19.9,35.2 14.8,31.9 C14,31.4 13.2,30.9 12.3,30.4 C7.2,27.3 0.9,23.5 1,15.4 C1.1,7.5 5.1,1.6 11.4,0.3 C16.7,-0.8 21.8,1.8 25,6.9 C28.5,1.3 34.2,-0.5 38.6,0.4 C44.9,1.7 49,7.5 49,15.2 C49,22.9 43.1,26.8 38.2,29.8 C37.1,30.5 36.1,31.1 35.2,31.8 C30.4,35.2 26.8,39.7 26.4,41 C26.3,41.6 25.7,42 25,42 Z M13.8,2.9 C13.2,2.9 12.6,2.9 12,3 C7.1,4 3.9,8.8 3.9,15.3 C3.9,21.8 8.9,24.9 13.9,27.8 C14.8,28.3 15.7,28.9 16.5,29.4 C19.8,31.6 22.7,34.3 25,37.5 C27.4,34.4 30.3,31.6 33.5,29.3 C34.5,28.6 35.6,27.9 36.7,27.2 C41.4,24.3 46.2,21.3 46.1,15.1 C46.1,7.4 41.9,3.8 38.1,3.1 C34.3,2.4 29,4.2 26.4,10.4 C26.2,10.9 25.7,11.3 25.1,11.3 C24.5,11.3 24,11 23.8,10.4 C21.6,5.7 17.8,2.9 13.8,2.9 Z" fill-rule="nonzero"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

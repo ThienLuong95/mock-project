@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="39px" height="39px" viewBox="0 0 39 39" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="6" y="5.92555831" width="27" height="26.6650124"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="27" height="26.6650124" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="1-Create-a-Challenge-(flow)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="5.-Challenge-accepted" transform="translate(-490.000000, -265.000000)" stroke="#599EE7">
+            <g id="Challenge-welcome" transform="translate(128.000000, 98.000000)">
+                <g id="Resources" transform="translate(362.000000, 165.915633)">
+                    <g id="Group" transform="translate(0.000000, 0.987593)">
+                        <use id="Rectangle-6" mask="url(#mask-2)" stroke-width="2" transform="translate(19.500000, 19.258065) rotate(-315.000000) translate(-19.500000, -19.258065) " xlink:href="#path-1"></use>
+                        <path d="M23.5,10.369727 L13.9951991,26.6770432" id="Line" stroke-linecap="square" fill="#9B9B9B"></path>
+                        <polyline id="Path-3" points="13.9565598 14.5829044 9.31630158 19.1655912 13.3657931 23.1648409"></polyline>
+                        <polyline id="Path-3-Copy" transform="translate(26.636431, 18.873873) scale(-1, 1) translate(-26.636431, -18.873873) " points="28.9565598 14.5829044 24.3163016 19.1655912 28.3657931 23.1648409"></polyline>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

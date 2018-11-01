@@ -1,0 +1,4 @@
+1. <nokia-select> at line 11 unknown "jQuery('.select2').select2"
+2. <nokia-flickity> unknown line, unknown 'url.indexOf'
+3. <nokia-socials> at line 6 => unknown  'title'
+3. <nokia-socials> at line 16 => unknown  'encodeURIComponent(window.location.href)'

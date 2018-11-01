@@ -9,7 +9,8 @@
     "start": "npm run dev",
     "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
     "test": "npm run unit",
-    "build": "node build/build.js"
+    "build": "node build/build.js",
+    "open-export": "webpack --config projects/open/webpack.open.conf.js"
   },
   "dependencies": {
     "@mdi/font": "^3.0.39",

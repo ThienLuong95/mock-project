@@ -5,7 +5,7 @@ let projects = [
         projectHeadTag: "<meta charset=\"utf-8\">\n" +
             "<meta name=\"viewport\" content=\"width=device-width,initial-scale=1.0\">",
         projectLinks: ["http://localhost:8080/static/open/css/style.css"],
-        projectScripts: ['https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js',"http://localhost:8080/static/open/export.js"],
+        projectScripts: ["https://code.jquery.com/jquery-3.3.1.min.js","http://localhost:8080/static/open/open.js"],
 
         listComponents: [
             {
@@ -31,14 +31,21 @@ let projects = [
                 id: 'cmp1',
                 name: 'Nokia Hero',
                 template: "<div id=\"demo\">\n" +
-                    "<nokia-hero :title=\"title\" :image=\"image\"></nokia-hero>\n" +
+                    "  <nokia-hero\n" +
+                    "    category='Project'          \n" +
+                    "    title=\"Collaboration Workspace\"\n" +
+                    "    subtitle='This is subtitle'\n" +
+                    "\tcontent_color=''\n" +
+                    "    :image=\"image\" \n" +
+                    "\t:directory=\"directory\">\n" +
+                    "  </nokia-hero>\n" +
                     "</div>",
                 script: "new Vue({\n" +
                     "   el:'#demo',\n" +
                     "   data: function () {\n" +
                     "     return {\n" +
-                    "       title:'Hello'\, \n " +
-                    "       image:'http://localhost:8080/img/hero_default.8547bb5.png'\n" +
+                    "        image:'http://localhost:8080/static/open/images/hero_default.png',\n" +
+                    "        directory:'static/open',\n" +
                     "     }\n" +
                     "   }\n" +
                     " });",
@@ -51,14 +58,35 @@ let projects = [
                 id: 'cmp2',
                 name: 'Nokia Header',
                 template: "<div id=\"demo\">\n" +
-                    "<nokia-header :title=\"title\" :image=\"image\"></nokia-header>\n" +
+                    "  <nokia-header \n" +
+                    "  title=\"To day we change to morrow\" \n" +
+                    "  :image=\"image\"\n" +
+                    "  subtitle='Welcome to the hub of open collaboration and innovation'\n" +
+                    "  created=\"25/12/2017\"\n" +
+                    "  :page=\"page\"\n" +
+                    "  meta_1=\"https://www.google.com\"\n" +
+                    "  meta_1_url=\"https://www.google.com\"\n" +
+                    "  meta_2=\"https://www.google.com\"\n" +
+                    "  meta_3=\"https://www.google.com\"\n" +
+                    "  url=\"https://www.google.com\"\n" +
+                    "  video=\"1\"\n" +
+                    "  content_color=\"black\"\n" +
+                    "  author=\"Ani kama\"\n" +
+                    "  loggedin=\"true\"\n" +
+                    "  authcontent=\"authorcontent\"\n" +
+                    "  authbuttons=\"author button\"\n" +
+                    "  anoncontent=\"\"\n" +
+                    "  anonbuttons=\"\"\n" +
+                    "  >\n" +
+                    "  </nokia-header>\n" +
                     "</div>",
                 script: "new Vue({\n" +
                     "   el:'#demo',\n" +
                     "   data: function () {\n" +
                     "     return {\n" +
-                    "       title:'Hello'\, \n " +
-                    "       image:'http://localhost:8080/img/hero_default.8547bb5.png'\n" +
+                    "       page:'challenge',\n" +
+                    "       pageList:['challenge', 'asset', 'article'],\n" +
+                    "       image:'http://localhost:8080/static/open/images/video_cover.jpg'\n" +
                     "     }\n" +
                     "   }\n" +
                     " });",
@@ -71,18 +99,24 @@ let projects = [
                 id: 'cmp3',
                 name: 'Nokia Carousel',
                 template: "<div id=\"demo\">\n" +
-                    "<nokia-carousel :groupNumber=\"groupNumber\" :duration=\"duration\"></nokia-carousel>\n" +
+                    "  <nokia-carousel \n" +
+                    "      :group-number=\"group\"\n" +
+                    "      :duration=\"duration\"\n" +
+                    "      type=\"type\"\n" +
+                    "      :auto-play=\"isplay\">\n" +
+                    "  </nokia-carousel>\n" +
                     "</div>",
                 script: "new Vue({\n" +
                     "   el:'#demo',\n" +
                     "   data: function () {\n" +
                     "     return {\n" +
-                    "       groupNumber:1\, \n " +
-                    "       duration:10\n" +
+                    "       duration:10,\n" +
+                    "       group:2,\n" +
+                    "       isplay: true\n" +
                     "     }\n" +
                     "   }\n" +
                     " });",
-                style: '.red{background-color: red}',
+                style: '#demo {padding: 20px}',
                 headText: "",
                 links: [],
                 scripts: [],
@@ -105,20 +139,22 @@ let projects = [
                 id: 'cmp5',
                 name: 'Nokia Pagination',
                 template: "<div id=\"demo\">\n" +
-                    "<nokia-pagination :item-per-page-modes=\"itemPerPageModes\" \n" +
-                    " :item-selected=\"itemSelected\" \n" +
-                    " :total-page=\"totalPage\" \n" +
-                    " :current-page=\"currentPage\" \n" +
-                    "></nokia-pagination>\n" +
+                    "  <nokia-pagination\n" +
+                    "   :item-per-page-modes=\"itemPerPageModes\" \n" +
+                    "   :item-selected=\"itemSelected\" \n" +
+                    "   :total-page=\"totalPage\" \n" +
+                    "   :current-page=\"currentPage\" \n" +
+                    "  >\n" +
+                    "  </nokia-pagination>\n" +
                     "</div>",
                 script: "new Vue({\n" +
                     "   el:'#demo',\n" +
                     "   data: function () {\n" +
                     "     return {\n" +
-                    "       itemPerPageModes:[]\, \n " +
-                    "       itemSelected:'Adudu'\, \n" +
-                    "       totalPage:10\, \n " +
-                    "       currentPage:5\, \n" +
+                    "       itemPerPageModes:['5', '10', '15', '20'], \n" +
+                    "       itemSelected:'5', \n" +
+                    "       totalPage:10, \n" +
+                    "       currentPage:5, \n" +
                     "     }\n" +
                     "   }\n" +
                     " });",
@@ -146,7 +182,7 @@ let projects = [
                 id: 'cmp7',
                 name: 'Nokia Navigation',
                 template: "<div id=\"demo\">\n" +
-                    "<nokia-select></nokia-select>\n" +
+                    "\t<nokia-navigation></nokia-navigation>\n" +
                     "</div>",
                 script: "new Vue({\n" +
                     "   el:'#demo',\n" +
@@ -172,26 +208,22 @@ let projects = [
                 id: 'cmp9',
                 name: 'Nokia Avatar User',
                 template: "<div id=\"demo\">\n" +
-                    "<nokia-avatar-user :name=\"name\" \n" +
-                    " :title=\"title\" \n" +
-                    " :link=\"link\" \n" +
+                    "<nokia-avatar-user \n" +
+                    " name=\"Ani kama Nanika\" \n" +
+                    " title=\"Fontend Dev\" \n" +
+                    " link=\"https://www.google.com\" \n" +
                     " :image=\"image\" \n" +
                     " :directory=\"directory\" \n" +
-                    " :mail=\"mail\" \n" +
-                    " :location=\"location\" \n" +
+                    " mail=\"somone@domain.com\" \n" +
+                    " location=\"Ho Chi Minh city, Vietnam\" \n" +
                     "></nokia-avatar-user>\n" +
                     "</div>",
                 script: "new Vue({\n" +
                     "   el:'#demo',\n" +
                     "   data: function () {\n" +
                     "     return {\n" +
-                    "       name:'Adudu'\, \n " +
-                    "       title:'Adudu nunuku'\, \n" +
-                    "       link:'google.com'\, \n" +
-                    "       image:'someimage'\, \n" +
-                    "       directory:'directory'\, \n " +
-                    "       mail: 'somone@domain.com'\, \n" +
-                    "       location:'hcm'\, \n" +
+                    "       image:'http://localhost:8080/static/img/avatar.05aa881.svg', \n" +
+                    "       directory:'static/open', \n" +
                     "     }\n" +
                     "   }\n" +
                     " });",
@@ -226,17 +258,6 @@ let projects = [
                 links: [],
                 scripts: [],
             },
-            {
-                id: 'cmpdemo',
-                name: 'demo',
-                template: "<h1>HELLO</h1>",
-                script: "console.log('Hello From iframe')",
-                style: '#demo {padding : 20px}',
-                headText: "",
-                links: [],
-                scripts: [],
-            },
-
         ]
     },
     {
@@ -245,8 +266,8 @@ let projects = [
         listComponents: [],
         projectHeadTag: "<meta charset=\"utf-8\">\n" +
             "<meta name=\"viewport\" content=\"width=device-width,initial-scale=1.0\">",
-        projectLinks: ["http://localhost:9090/static/css/style.css"],
-        projectScripts: ["http://localhost:9090/open.js"],
+        projectLinks: [""],
+        projectScripts: [""],
     },
 ];
 
