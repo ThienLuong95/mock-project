@@ -112,6 +112,11 @@
             }
 
         },
+        watch:{
+            isDrawer (){
+                this.$emit('onDrawer', this.isDrawer);
+            }
+        },
         destroyed() {
             this.$eventBus.$off('onNavDrawer', this.onNavDrawer)
         }

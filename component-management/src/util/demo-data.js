@@ -1,6 +1,6 @@
 let projects = [
     {
-        projectName: 'Nokia Open Eco System',
+        projectName: 'Open Ecosystem Network',
         projectId: 'pj1',
         projectHeadTag: "<meta charset=\"utf-8\">\n" +
             "<meta name=\"viewport\" content=\"width=device-width,initial-scale=1.0\">",

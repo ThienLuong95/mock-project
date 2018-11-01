@@ -1,7 +1,10 @@
 <template>
     <v-app>
         <!--Navigation-->
-        <cm-navigation :projects="projects" style="z-index: 999">
+        <cm-navigation
+                :projects="projects"
+                @onDrawer="onDrawer"
+                style="z-index: 999">
 
         </cm-navigation>
 
@@ -13,7 +16,7 @@
                 style="z-index: 998"
         >
             <v-toolbar-side-icon @click.stop="onNavDrawer"></v-toolbar-side-icon>
-            <img src="@/assets/cm-logo2.svg" alt="logo" width="128"  >
+            <img src="@/assets/cm-logo.svg" alt="logo" width="128"  >
             <v-spacer></v-spacer>
             <!--Toolbar items-->
             <v-toolbar-items style="margin: 0 24px;">
@@ -67,7 +70,8 @@
 
         <!--Footer-->
         <v-footer>
-            <span>&copy; ATM</span>
+            <div v-if="isShow" style="width: 300px"></div>
+            <span style="padding: 0 20px">Powered by <strong class="cm-title">@ AtM</strong></span>
         </v-footer>
     </v-app>
 </template>
@@ -83,12 +87,17 @@
                 menuItems: ['New Project', 'New Component', 'New User'],
                 projects: projects,
                 rightDrawer: false,
+                isShow:false,
                 title: 'Component Management'
             }
         },
         methods: {
             onNavDrawer(){
                 this.$eventBus.$emit('onNavDrawer')
+
+            },
+            onDrawer(isDrawer){
+                this.isShow= isDrawer;
             }
         },
         created: function () {
