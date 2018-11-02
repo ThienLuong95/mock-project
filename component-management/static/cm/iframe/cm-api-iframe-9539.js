@@ -1,8 +1,8 @@
 var _cmTemplate9539 = _cmGetElementByID('cmTemplate9539');
 var _cmStyle9539 = _cmGetElementByID('cmStyle9539');
-var _cmScript9539 = _cmGetElementByID('cmScript9539');
-var _cmTemplateLastContent = '';
-var _cmStyleLastContent = '';
+// var _cmScript9539 = _cmGetElementByID('cmScript9539');
+// var _cmTemplateLastContent = '';
+// var _cmStyleLastContent = '';
 
 var _cmLastHeadText = '';
 var _cmLastListLink = [];
@@ -108,19 +108,19 @@ function _cmInnerElement(element, text) {
 
 function _cmInnerTemplate(template) {
     _cmInnerElement(_cmTemplate9539, template);
-    console.log(template)
+    // console.log(template)
 
 }
 
 function _cmInnerStyle(style) {
     _cmInnerElement(_cmStyle9539, style);
-    console.log(style)
+    // console.log(style)
 
 }
 
 function _cmEvalScript(script) {
     eval(script);
-    console.log(script);
+    // console.log(script);
 }
 
 // main function
@@ -137,6 +137,8 @@ function cmWriteExternalSource(headText, linkUrls, scriptUrls) {
     } else {
         _cmLastHeadText = headText;
         _cmWriteHeadTag(headText);
+
+
         _cmClearArrayLink();
         //append and stored
         _cmAppendLinksToDOM(linkUrls);
